@@ -1,16 +1,27 @@
 import React from "react";
-import { View, Image } from "react-native";
+import { View, Image,Text } from "react-native";
 import styles from "../../styles/lista";
-
+import {Ionicons, MaterialIcons} from '@expo/vector-icons'
 
 
 const Lista = () => {
     return(
         <View style={styles.container}>
             <View style={styles.header}>
-            <Image style={styles.controleIndex} source={require('../../styles/assets/controle.png')} />
-            <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
+                <Image style={styles.controleIndex} source={require('../../styles/assets/controle.png')} />
+                <Text style={styles.numerosHeader}>3/3</Text>
+                <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>
+            <View style={styles.main}>
+                <Text style={styles.titulo}>Lista de Tarefas</Text>
+                <View style={styles.containerLista}>
+                    <View style={styles.tarefaCriada}>
+                        <Text style={styles.textTarefa}>Tomar 2L de Àgua</Text>
+                        <MaterialIcons name="delete-forever" size={35}/>
+                    </View>
+                </View>
+            </View>
+            
         </View>
     )
 }
