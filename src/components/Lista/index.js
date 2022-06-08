@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Image,Text } from "react-native";
 import styles from "../../styles/lista";
-import {Ionicons, MaterialIcons} from '@expo/vector-icons'
+import {Ionicons, MaterialIcons, FontAwesome} from '@expo/vector-icons'
 
 
 const Lista = () => {
+    
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -18,7 +19,7 @@ const Lista = () => {
                 <View style={styles.containerLista}>
                     <View style={styles.tarefaCriada}>
                         <Text style={styles.textTarefa}>Tomar 2L de Àgua</Text>
-                        <MaterialIcons name="delete-forever" size={35}/>
+                        <FontAwesome name="check-square-o" size={35} style={styles.icon}/>
                     </View>
                 </View>
             </View>
