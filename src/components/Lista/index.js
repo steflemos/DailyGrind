@@ -12,6 +12,7 @@ const Lista = () => {
                 <Text style={styles.numerosHeader}>3/3</Text>
                 <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>
+                <View style={styles.form}></View>
             <View style={styles.main}>
                 <Text style={styles.titulo}>Lista de Tarefas</Text>
                 <View style={styles.containerLista}>

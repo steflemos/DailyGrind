@@ -1,24 +1,25 @@
 import React from "react";
-import {View, Text, StyleSheet} from 'react-native'
+import { View, Image,Text, } from "react-native";
+import styles from "../../styles/conquistas";
+import {Ionicons, MaterialIcons} from '@expo/vector-icons'
 
-export default function Conquistas(){
+
+const Conquistas = () => {
     return(
         <View style={styles.container}>
-            <Text style={styles.text}>Conquistas</Text>
+            <View style={styles.header}>
+                <Image style={styles.controleIndex} source={require('../../styles/assets/controle.png')} />
+              
+                <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
+            </View>
+            <View style={styles.form}></View>
+            <View style={styles.main}>
+                <Text style={styles.titulo}>Conquistas</Text>
+                
+            </View>
+    
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor: '#6F8AB7'
-    },
-
-    text:{
-        fontSize:25,
-        fontWeight:'bold'
-    }
-})
+export default Conquistas

@@ -38,40 +38,15 @@ main:{
  
 },
 form:{
-  borderTopWidth: 1,
-  borderColor: "#fff"
+    borderTopWidth: 1,
+    borderColor: "#fff"
 },
 titulo:{
   color:"#fff",
   fontWeight:"bold",
   fontSize:35
 },
-containerLista:{
-  backgroundColor:"#fff",
-  width:'95%',
-  height:'100%',
-  borderRadius:7,
-  alignItems:"center"
-},
-tarefaCriada:{
-  backgroundColor:'#CAE5FF',
-  width:'90%',
-  marginTop:30,
-  height:70,
-  justifyContent:"space-around",
-  flexDirection:"row",
-  alignItems:"center",
-  borderRadius:5,
 
-
-},
-textTarefa:{
-  fontWeight:"bold",
-  color:'#615D6C',
-  fontSize:20,
-  
-  
-}
 
 
 
