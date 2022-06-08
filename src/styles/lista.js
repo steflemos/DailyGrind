@@ -58,6 +58,16 @@ tarefaCriada:{
   flexDirection:"row",
   alignItems:"center",
   borderRadius:5,
+  shadowOffset:{
+  width:1,
+  height:1,
+  },
+shadowRadius:5,
+shadowColor:'#C1C1C1',
+
+
+  
+  
 
 
 },
@@ -67,6 +77,9 @@ textTarefa:{
   fontSize:20,
   
   
+},
+icon:{
+  color:"#5DC277"
 }
 
 
