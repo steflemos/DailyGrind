@@ -1,6 +1,5 @@
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-
 import Lista from './src/components/Lista/index'
 import Ranking from './src/components/Ranking/index'
 import Conquistas from './src/components/Conquistas/index';

@@ -82,9 +82,7 @@ textTarefa:{
   
   
 },
-icon:{
-  color:"#5DC277"
-}
+
 
 
 
