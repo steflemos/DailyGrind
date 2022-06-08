@@ -18,7 +18,7 @@ const Lista = () => {
                 <View style={styles.containerLista}>
                     <View style={styles.tarefaCriada}>
                         <Text style={styles.textTarefa}>Tomar 2L de Àgua</Text>
-                        <FontAwesome name="check-square-o" size={35} color={'#5DC277'}/>
+                        <FontAwesome name="check-square-o" size={35} color={"#5DC277"}/>
                     </View>
                 </View>
             </View>

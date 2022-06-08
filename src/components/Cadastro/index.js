@@ -11,6 +11,9 @@ const Cadastro = ({navigation}) =>{
         <Image style={styles.controle} source={require('../../styles/assets/controle.png')} />
         </View>
         <View style={styles.containerInputs}>
+          <View style={styles.iconSenha}>
+
+          </View>
             <TextInput placeholder="Nome" style={styles.input} />
             <TextInput placeholder="E_mail" style={styles.inputSenha} />
             <TextInput placeholder="Senha" style={styles.inputSenha} />
