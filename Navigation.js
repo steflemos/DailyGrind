@@ -2,7 +2,6 @@ import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 import Lista from './src/components/Lista/index'
-import New from './src/components/New/index'
 import Ranking from './src/components/Ranking/index'
 import Conquistas from './src/components/Conquistas/index';
 import Opcoes from './src/components/Opcoes'
@@ -59,13 +58,7 @@ export default function Routes(){
             }}
             />
        
-            {/* <Tab.Screen name="Nova tarefa" component={New}
-             options={{
-                tabBarIcon:({size,color})=>(
-                    <Entypo name="menu" size={size} color={color}/>
-                )
-            }}
-            /> */}
+           
 
         </Tab.Navigator>
 

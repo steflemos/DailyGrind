@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image,Text } from "react-native";
 import styles from "../../styles/lista";
-import {Ionicons, MaterialIcons, FontAwesome} from '@expo/vector-icons'
+import {FontAwesome} from '@expo/vector-icons'
 
 
 const Lista = () => {
@@ -13,7 +13,6 @@ const Lista = () => {
                 <Text style={styles.numerosHeader}>3/3</Text>
                 <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>
-                <View style={styles.form}></View>
             <View style={styles.main}>
                 <Text style={styles.titulo}>Lista de Tarefas</Text>
                 <View style={styles.containerLista}>
