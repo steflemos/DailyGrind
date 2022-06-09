@@ -45,7 +45,7 @@ export default StyleSheet.create({
         marginTop: 30,
         fontSize: 17,
         fontWeight:"bold",
-        paddingLeft: 15
+        paddingLeft: 50
 
         
 
@@ -89,6 +89,14 @@ export default StyleSheet.create({
         fontWeight:"bold",
         
     },
+    icon: {
+        position: 'absolute',
+        alignItems:'center',
+        padding: 13,
+        marginTop: 30,
+        marginRight:240,
+       
+      }
    
    
 

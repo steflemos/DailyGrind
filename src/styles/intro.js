@@ -22,10 +22,10 @@ export default StyleSheet.create({
 
     },
     titleIntro:{
+        marginTop: 55,
         color:'#fff',
         fontSize:44,
         fontWeight:'bold',
-        fontFamily:'Sams-serif'
     },
 
     textIntro:{

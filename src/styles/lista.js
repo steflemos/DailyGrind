@@ -37,6 +37,7 @@ main:{
  alignItems:"center",
  height:'80%',
  
+ 
 },
 form:{
   borderTopWidth: 1,
