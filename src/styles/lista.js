@@ -68,11 +68,9 @@ tarefaCriada:{
   width:1,
   height:1,
   },
-shadowRadius:5,
-shadowColor:'#C1C1C1',
-
-
-  
+  shadowRadius:5,
+  shadowColor:'#C1C1C1',
+  elevation: 3
 },
 textTarefa:{
   fontWeight:"bold",

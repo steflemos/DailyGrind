@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-container:{
+  container:{
     flex:1,
     backgroundColor:"#6F8AB7",
     paddingTop:15
@@ -37,17 +37,48 @@ main:{
  alignItems:"center",
  height:'80%',
  
+ 
 },
 form:{
-    borderTopWidth: 1,
-    borderColor: "#fff"
+  borderTopWidth: 1,
+  borderColor: "#fff"
 },
 titulo:{
   color:"#fff",
   fontWeight:"bold",
   fontSize:35
 },
-
+containerLista:{
+  backgroundColor:"#fff",
+  width:'95%',
+  height:'100%',
+  borderRadius:7,
+  alignItems:"center"
+},
+icon:{
+  flex:1,
+  flexDirection:"row",
+  justifyContent:'space-around',
+  width:'100%',
+  marginTop:30,
+},
+iconBox:{
+  shadowOffset:{
+    width:1,
+    height:1,
+    },
+  shadowRadius:5,
+  shadowColor:'#C1C1C1',
+  borderRadius:5,
+  height:100,
+  width:100,
+  alignItems: "center",
+  elevation: 3
+},
+imgIcon:{
+  marginTop: 22,
+  width:55,
+},
 
 
 
