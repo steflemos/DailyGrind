@@ -4,6 +4,8 @@ import styles from '../../styles/login';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 
+
+
 const Login = ({navigation}) =>{
 
     return(
@@ -19,9 +21,11 @@ const Login = ({navigation}) =>{
         
             <TextInput placeholder="E-mail" style={styles.input}
             />
-            <Icon style={styles.icon} name="email" size={23} color="#666" />
 
-            <TextInput placeholder="Senha" style={styles.inputSenha} />
+            <TextInput placeholder="Senha" style={styles.inputSenha}
+            secureTextEntry={true}
+            />
+
             <TouchableOpacity onPress={() => navigation.navigate('Navigation')} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Login</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Cadastro')} ><Text  style={styles.cadastrar}>Cadastrar-se</Text></TouchableOpacity>
         </View>
