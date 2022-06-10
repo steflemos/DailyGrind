@@ -80,7 +80,8 @@ textTarefa:{
   
 },
 viewBtn:{
-  justifyContent:'flex-end',
+  alignSelf: "flex-end",
+  alignItems:'flex-end',
 },
 btnAdd:{
 backgroundColor:'#ACEDFF',
@@ -88,11 +89,14 @@ width:50,
 height:50,
 alignItems:'center',
 justifyContent:'center',
+marginRight:25,
+marginTop:-15,
 borderRadius:50,
 
 },
 btnText:{
 fontSize: 40,
+marginBottom:8
 }
 
 

@@ -5,7 +5,7 @@ import Navigation from './Navigation'
 import Intro from './src/components/Intro';
 import Login from './src/components/Login';
 import Cadastro from './src/components/Cadastro';
-
+import New from './src/components/New/';
 
 const Routes = () =>{
     const Stack = createStackNavigator();
@@ -18,6 +18,7 @@ const Routes = () =>{
           <Stack.Screen options={{headerShown: false}} name="Login" component={Login}/>
           <Stack.Screen options={{headerShown: false}} name="Cadastro" component={Cadastro}/>
           <Stack.Screen options={{headerShown: false}} name="Navigation" component={Navigation}/>
+          <Stack.Screen options={{headerShown: false}} name="New" component={New}/>
 
           </Stack.Navigator>
         </NavigationContainer>

@@ -4,7 +4,7 @@ import styles from "../../styles/lista";
 import {FontAwesome} from '@expo/vector-icons'
 
 
-const Lista = () => {
+const Lista = ({navigation}) => {
     
     return(
         <View style={styles.container}>
@@ -23,7 +23,8 @@ const Lista = () => {
                 </View>
             </View>
             <View style={styles.viewBtn}>
-                <TouchableOpacity style={styles.btnAdd}>
+                <TouchableOpacity onPress={() => navigation.navigate("New")} 
+                style={styles.btnAdd}>
                     <Text style={styles.btnText}>+</Text>
                 </TouchableOpacity>
             </View>
