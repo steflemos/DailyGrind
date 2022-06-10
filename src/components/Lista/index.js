@@ -24,9 +24,7 @@ const Lista = () => {
             </View>
             <View style={styles.viewBtn}>
                 <TouchableOpacity style={styles.btnAdd}>
-                    <Text style={styles.btnText}>
-                        +
-                    </Text>
+                    <Text style={styles.btnText}>+</Text>
                 </TouchableOpacity>
             </View>
             

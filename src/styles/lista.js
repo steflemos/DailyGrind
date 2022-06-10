@@ -82,32 +82,19 @@ textTarefa:{
   
 },
 viewBtn:{
-width:50,
-height:50,
-position:"absolute",
-zIndex:99,
-bottom:25,
-right:30
-
-
-
+  justifyContent:'flex-end',
 },
 btnAdd:{
 backgroundColor:'#ACEDFF',
 width:50,
 height:50,
-alignItems:"center",
-justifyContent:"center",
-borderRadius:'100%',
-
+alignItems:'center',
+justifyContent:'center',
+borderRadius:50,
 
 },
 btnText:{
 fontSize: 40,
-justifyContent:"center",
-alignItems:"center",
-marginBottom:11
-
 }
 
 
