@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image,Text } from "react-native";
+import { View, Image,Text, TouchableOpacity } from "react-native";
 import styles from "../../styles/lista";
 import {FontAwesome} from '@expo/vector-icons'
 
@@ -21,6 +21,13 @@ const Lista = () => {
                         <FontAwesome name="check-square-o" size={35} color={"#5DC277"}/>
                     </View>
                 </View>
+            </View>
+            <View style={styles.viewBtn}>
+                <TouchableOpacity style={styles.btnAdd}>
+                    <Text style={styles.btnText}>
+                        +
+                    </Text>
+                </TouchableOpacity>
             </View>
             
         </View>
