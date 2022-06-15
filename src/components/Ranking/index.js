@@ -16,9 +16,7 @@ const Ranking = () => {
             <View style={styles.main}>
                 <Text style={styles.titulo}>Ranking</Text>
                 <View style={styles.containerLista}>
-                    <View style={styles.containerGrupoTitle}>
-                        <Text style={styles.grupoTitle}>Grupos</Text>
-                    </View>
+                    <Text style={styles.grupoTitle}>Grupos</Text>
                     <View style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Grupo da Igreja</Text>
                     </View>

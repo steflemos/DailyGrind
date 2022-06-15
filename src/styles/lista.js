@@ -14,8 +14,8 @@ header:{
   width:'100%',
   height:70,
   alignItems:"center",
-  
-  
+  borderBottomColor: "#fff",
+  borderBottomWidth: 1,
 },
 controleIndex:{
     height:45,
@@ -46,14 +46,17 @@ form:{
 titulo:{
   color:"#fff",
   fontWeight:"bold",
-  fontSize:35
+  fontSize:35,
+  marginTop:10,
+
 },
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
   height:'100%',
   borderRadius:7,
-  alignItems:"center"
+  alignItems:"center",
+  marginTop:10,
 },
 tarefaCriada:{
   backgroundColor:'#CAE5FF',

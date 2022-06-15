@@ -50,20 +50,14 @@ titulo:{
   marginTop:10
 },
 containerLista:{
-  backgroundColor:"#CAE5FF",
+  backgroundColor:"#fff",
   width:'95%',
   height:'100%',
   borderRadius:7,
   alignItems:"center",
   marginTop:10,
 },
-containerGrupoTitle:{
-    borderBottomColor: "#fff",
-    borderBottomWidth: 1,
-    width: "100%",
-    alignItems: "center",
-    height: 70,
-},
+
 grupoTitle:{
     marginTop: 14,
     color:"#615D6C",
@@ -71,7 +65,7 @@ grupoTitle:{
     fontSize:30
 },
 grupoList:{
-  backgroundColor:'#fff',
+  backgroundColor:'#CAE5FF',
   width:'90%',
   marginTop:20,
   height:50,
