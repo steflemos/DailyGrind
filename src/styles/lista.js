@@ -93,7 +93,7 @@ height:50,
 alignItems:'center',
 justifyContent:'center',
 marginRight:25,
-marginTop:-25,
+marginTop:-7.5,
 borderRadius:100,
 
 },
