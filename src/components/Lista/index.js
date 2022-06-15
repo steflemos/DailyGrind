@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image,Text, TouchableOpacity } from "react-native";
 import styles from "../../styles/lista";
-import {FontAwesome} from '@expo/vector-icons'
+import {FontAwesome,MaterialIcons} from '@expo/vector-icons'
 
 
 const Lista = ({navigation}) => {
@@ -25,7 +25,7 @@ const Lista = ({navigation}) => {
             <View style={styles.viewBtn}>
                 <TouchableOpacity onPress={() => navigation.navigate("New")} 
                 style={styles.btnAdd}>
-                    <Text style={styles.btnText}>+</Text>
+                   <MaterialIcons name="add"  size={35} color='black'/>
                 </TouchableOpacity>
             </View>
             

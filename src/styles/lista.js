@@ -93,16 +93,9 @@ height:50,
 alignItems:'center',
 justifyContent:'center',
 marginRight:25,
-marginTop:-15,
-borderRadius:50,
+marginTop:-25,
+borderRadius:100,
 
 },
-btnText:{
-fontSize: 40,
-marginBottom:8
-}
-
-
-
 
 })
