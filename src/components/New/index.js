@@ -1,24 +1,22 @@
 import React from "react";
-import {View, Text, StyleSheet} from 'react-native'
+import { View,Text, TouchableOpacity } from "react-native";
+import styles from "../../styles/new";
+import {FontAwesome} from '@expo/vector-icons'
 
-export default function New(){
+
+const New = () => {
+    
     return(
         <View style={styles.container}>
-            <Text style={styles.text}>Nova tarefa</Text>
+            <View style={styles.header}>
+                <Text style={styles.titulo}>Nova Tarefa</Text>
+            </View>
+            <View style={styles.main}>
+
+            </View>
+            
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor: '#6F8AB7'
-    },
-
-    text:{
-        fontSize:25,
-        fontWeight:'bold'
-    }
-})
+export default New
