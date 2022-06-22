@@ -34,28 +34,32 @@ const New = () => {
             <View style={styles.prioridade}>
             <View style={styles.viewPrioridade}>
                 <Text style={styles.text}>Definir prioridade</Text>
-        <View style={{flexDirection:'row'}}>
+
+        <View style={styles.urgenteMedia}>
+            
                 <View style={{flexDirection:'row'}}>
                  <TouchableOpacity style={styles.botao}></TouchableOpacity>
-                 <Text>Urgente</Text>
+                 <Text style={styles.texto}>Urgente</Text>
                 </View>
 
                 <View style={{flexDirection:'row'}}>
-                 <TouchableOpacity style={styles.botao}></TouchableOpacity>
-                 <Text>Média</Text>
+                 <TouchableOpacity style={styles.botao2}></TouchableOpacity>
+                 <Text style={styles.texto}>Média</Text>
                 </View>
         </View>
-        <View style={{flexDirection:'row'}}>
+
+        <View style={styles.altaBaixa}>
 
                 <View style={{flexDirection:'row'}}>
-                 <TouchableOpacity style={styles.botao}></TouchableOpacity>
-                 <Text>Alta</Text>
+                 <TouchableOpacity style={styles.botao3}></TouchableOpacity>
+                 <Text style={styles.texto}>Alta</Text>
                 </View>
                 <View style={{flexDirection:'row'}}>
-                 <TouchableOpacity style={styles.botao}></TouchableOpacity>
-                 <Text>Baixa</Text>
+                 <TouchableOpacity style={styles.botao4}></TouchableOpacity>
+                 <Text style={styles.texto}>Baixa</Text>
                 </View>
-                </View>
+        </View>
+
             </View>
             </View>
 

@@ -90,12 +90,45 @@ text:{
    marginTop:5,
     
 },
+texto:{
+    paddingLeft:5,
+    fontWeight:"bold",
+    color:'#615d6c',
+    fontSize:17,
+   marginTop:5,
+    
+},
+
+urgenteMedia:{
+    flexDirection:'row',
+},
+altaBaixa:{
+    flexDirection:'row',
+},
 botao:{
     width:40,
     height:40,
     backgroundColor:'#FF6464',
+    borderRadius:40,
+},
+botao2:{
+    width:40,
+    height:40,
+    backgroundColor:'#86C5FF',
     borderRadius:40
-}
+},
+botao3:{
+    width:40,
+    height:40,
+    backgroundColor:'#FEB055',
+    borderRadius:40
+},
+botao4:{
+    width:40,
+    height:40,
+    backgroundColor:'#79FF87',
+    borderRadius:40
+},
 
 
 })
