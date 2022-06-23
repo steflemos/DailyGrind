@@ -35,14 +35,15 @@ const New = () => {
             <View style={styles.viewPrioridade}>
                 <Text style={styles.text}>Definir prioridade</Text>
 
+    <View style={styles.botoes}>
         <View style={styles.urgenteMedia}>
             
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.urgente}>
                  <TouchableOpacity style={styles.botao}></TouchableOpacity>
                  <Text style={styles.texto}>Urgente</Text>
                 </View>
 
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.medio}>
                  <TouchableOpacity style={styles.botao2}></TouchableOpacity>
                  <Text style={styles.texto}>Média</Text>
                 </View>
@@ -50,15 +51,16 @@ const New = () => {
 
         <View style={styles.altaBaixa}>
 
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.alta}>
                  <TouchableOpacity style={styles.botao3}></TouchableOpacity>
                  <Text style={styles.texto}>Alta</Text>
                 </View>
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.baixa}>
                  <TouchableOpacity style={styles.botao4}></TouchableOpacity>
                  <Text style={styles.texto}>Baixa</Text>
                 </View>
         </View>
+    </View>
 
             </View>
             </View>

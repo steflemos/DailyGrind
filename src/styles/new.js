@@ -91,7 +91,7 @@ text:{
     
 },
 texto:{
-    paddingLeft:5,
+    paddingLeft:15,
     fontWeight:"bold",
     color:'#615d6c',
     fontSize:17,
@@ -101,10 +101,42 @@ texto:{
 
 urgenteMedia:{
     flexDirection:'row',
+    padding:12
 },
 altaBaixa:{
     flexDirection:'row',
 },
+
+urgente:{
+    flexDirection:'row',
+    width:130,
+    marginRight:100
+   
+},
+
+medio:{
+    flexDirection:'row',
+    width:130,
+  
+},
+
+alta:{
+    flexDirection:'row',
+    width:130,
+     marginRight:100
+   
+},
+baixa:{
+    flexDirection:'row',
+    width:130,
+   
+},
+
+
+botoes:{
+    alignItems:'center',
+},
+
 botao:{
     width:40,
     height:40,
