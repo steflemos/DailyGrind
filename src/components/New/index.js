@@ -35,18 +35,22 @@ const New = () => {
             <View style={styles.viewPrioridade}>
                 <Text style={styles.text}>Definir prioridade</Text>
 
-    <View style={styles.botoes}>
+    <View style={styles.botoes}>          
         <View style={styles.urgenteMedia}>
-            
+        
                 <View style={styles.urgente}>
                  <TouchableOpacity style={styles.botao}></TouchableOpacity>
                  <Text style={styles.texto}>Urgente</Text>
                 </View>
 
+               
+
                 <View style={styles.medio}>
                  <TouchableOpacity style={styles.botao2}></TouchableOpacity>
                  <Text style={styles.texto}>Média</Text>
+                 
                 </View>
+                
         </View>
 
         <View style={styles.altaBaixa}>

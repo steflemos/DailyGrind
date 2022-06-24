@@ -68,7 +68,7 @@ prioridade:{
 viewPrioridade:{
     marginTop: 20,
     width:'95%',
-    height:149,
+    height:185,
     borderRadius:5,
     backgroundColor:'#fff',
     paddingBottom:25,
@@ -101,40 +101,41 @@ texto:{
 
 urgenteMedia:{
     flexDirection:'row',
-    padding:12
+    justifyContent:'space-between',
+    paddingBottom:25,
+    marginLeft:22
 },
 altaBaixa:{
     flexDirection:'row',
+    justifyContent:'space-between',
+    marginLeft:22
 },
 
 urgente:{
     flexDirection:'row',
     width:130,
-    marginRight:100
-   
+
 },
 
 medio:{
     flexDirection:'row',
     width:130,
-  
 },
 
 alta:{
     flexDirection:'row',
     width:130,
-     marginRight:100
+    
    
 },
 baixa:{
     flexDirection:'row',
     width:130,
-   
 },
 
 
 botoes:{
-    alignItems:'center',
+    paddingTop:25,
 },
 
 botao:{
