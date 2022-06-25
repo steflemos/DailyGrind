@@ -17,21 +17,22 @@ const Opcoes = ({navigation}) => {
                 <Text style={styles.titulo}>Opcões</Text>
                 <View style={styles.containerLista}>
                     
-                    <View style={styles.grupoList}>
-                        <TouchableOpacity
-                   onPress={() => navigation.navigate("Conta")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Conta")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Conta</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.grupoList}>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate("Notificacoes")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Notificações</Text>
-                    </View>
-                    <View style={styles.grupoList}>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity onPress={() => navigation.navigate("Ajuda")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Ajuda</Text>
-                    </View>
-                    <View style={styles.grupoList}>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate("Sobre")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Sobre</Text>
-                    </View>
+                    </TouchableOpacity>
+
                 </View>
             </View>
         </View>

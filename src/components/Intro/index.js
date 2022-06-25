@@ -22,7 +22,10 @@ const Intro = ({navigation}) => {
             </Text>
         </View>
         
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btnComeçar}><Text style={styles.TextComeçar}>Começar!</Text></TouchableOpacity>     
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} 
+        style={styles.btnComeçar}>
+            <Text style={styles.TextComeçar}>Começar!</Text>
+            </TouchableOpacity>     
         </View>
         
     )
