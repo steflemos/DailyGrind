@@ -4,7 +4,7 @@ import styles from "../../styles/opcoes.js";
 import {FontAwesome} from '@expo/vector-icons'
 
 
-const Opcoes = () => {
+const Opcoes = ({navigation}) => {
     
     return(
         <View style={styles.container}>
@@ -16,8 +16,12 @@ const Opcoes = () => {
             <View style={styles.main}>
                 <Text style={styles.titulo}>Opcões</Text>
                 <View style={styles.containerLista}>
+                    
                     <View style={styles.grupoList}>
+                        <TouchableOpacity
+                   onPress={() => navigation.navigate("Conta")}>
                         <Text style={styles.textTarefa}>Conta</Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Notificações</Text>
