@@ -9,9 +9,7 @@ import Cadastro from './src/components/Cadastro';
 import New from './src/components/New/';
 
 import Conta from './src/components/Conta';
-import Notificacoes from './src/components/Notificacoes';
-import Ajuda from './src/components/Ajuda';
-import Sobre from './src/components/Sobre';
+
 
 
 const Routes = () =>{
@@ -27,9 +25,7 @@ const Routes = () =>{
           <Stack.Screen options={{headerShown: false}} name="Navigation" component={Navigation}/>
           <Stack.Screen options={{headerShown: false}} name="New" component={New}/>
           <Stack.Screen options={{headerShown: false}} name="Conta" component={Conta}/>
-          <Stack.Screen options={{headerShown: false}} name="Notificacoes" component={Notificacoes}/>
-          <Stack.Screen options={{headerShown: false}} name="Ajuda" component={Ajuda}/>
-          <Stack.Screen options={{headerShown: false}} name="Sobre" component={Sobre}/>
+       
 
           </Stack.Navigator>
         </NavigationContainer>
