@@ -9,8 +9,10 @@ import Cadastro from './src/components/Cadastro';
 import New from './src/components/New/';
 
 import Conta from './src/components/Conta';
-
-
+import Notificacoes from './src/components/Notificacoes/index.';
+import Sobre from './src/components/Sobre';
+import Ajuda from './src/components/Ajuda';
+import Opcoes from './src/components/Opcoes';
 
 const Routes = () =>{
     const Stack = createStackNavigator();
@@ -25,6 +27,10 @@ const Routes = () =>{
           <Stack.Screen options={{headerShown: false}} name="Navigation" component={Navigation}/>
           <Stack.Screen options={{headerShown: false}} name="New" component={New}/>
           <Stack.Screen options={{headerShown: false}} name="Conta" component={Conta}/>
+          <Stack.Screen options={{headerShown: false}} name="Sobre" component={Sobre}/>
+          <Stack.Screen options={{headerShown: false}} name="Opcoes" component={Opcoes}/>
+          <Stack.Screen options={{headerShown: false}} name="Notificacoes" component={Notificacoes}/>
+          <Stack.Screen options={{headerShown: false}} name="Ajuda" component={Ajuda}/>
        
 
           </Stack.Navigator>

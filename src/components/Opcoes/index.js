@@ -14,7 +14,7 @@ const Opcoes = ({navigation}) => {
                 <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>
             <View style={styles.main}>
-                <Text style={styles.titulo}>Opcões</Text>
+                <Text style={styles.titulo}>Opções</Text>
                 <View style={styles.containerLista}>
                     
                 <TouchableOpacity onPress={() => navigation.navigate("Conta")}style={styles.grupoList}>
