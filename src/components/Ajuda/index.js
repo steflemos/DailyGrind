@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { View,Text, TouchableOpacity, TextInput } from "react-native";
-import styles from "../../styles/sobre";
+import styles from "../../styles/ajuda";
 import {FontAwesome, Ionicons} from '@expo/vector-icons'
 
 const Ajuda = ({navigation}) => {
@@ -16,6 +16,11 @@ const Ajuda = ({navigation}) => {
 
          </View>
             <Text style={styles.titulo}>Ajuda</Text>
+        </View>
+        <View style = {styles.main}>
+        <View style ={styles.containerSobre}>
+            
+        </View>
         </View>
         </View>
     )
