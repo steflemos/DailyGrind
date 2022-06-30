@@ -6,6 +6,7 @@ export default StyleSheet.create({
 container:{
     flex:1,
     backgroundColor:"#6F8AB7",
+<<<<<<< HEAD
     paddingTop:15
 },
 header:{
@@ -157,35 +158,81 @@ textTarefa:{
   fontSize:15,
   
   
+=======
+    paddingTop:15,
+    width:'100%'
+    
 },
+header:{
+  flexDirection:'row',
+  justifyContent:'center',
+  width:'100%',
+  height:85,
+  alignItems:"center",
+  borderBottomColor: "#FFF",
+  borderBottomWidth: 1,
+},
+
+
+titulo:{
+  color:"#fff",
+  fontWeight:"bold",
+  fontSize:35,
+  marginTop:10,
+  marginRight:55,
+  marginLeft:-30,
+>>>>>>> a3471b163c74e5beb779a5a3d66f8cd94f370b69
+},
+
 viewBtn:{
-width:50,
-height:50,
-position:"absolute",
-zIndex:99,
-bottom:25,
-right:30
-
-
-
+  alignSelf: "flex-start",
+  alignItems:'flex-start',
+  marginRight:60,
 },
-btnAdd:{
-backgroundColor:'#ACEDFF',
-width:50,
-height:50,
-alignItems:"center",
-justifyContent:"center",
-borderRadius:'100%',
 
-
+btnVoltar:{
+    alignItems:'center',
+    justifyContent:'center',
+    marginLeft:20,
+    marginTop:23,
+    borderRadius:100,
 },
-btnText:{
-fontSize: 40,
-justifyContent:"center",
-alignItems:"center",
-marginBottom:11
+main:{
+    alignItems:"center",
+    height:'80%',
+    
+},
+containerSobre:{
+  backgroundColor:"#fff",
+  width:'95%',
+  height:'105%',
+  borderRadius:7,
+  marginTop:10,
+},
+textos:{
+},
+oque:{
+  fontSize:30,
+  fontWeight:"bold",
+  marginLeft:20,
+  marginTop:40,
+},
+text1:{
+  padding:23,
+  fontSize:17,
+  marginTop: -10,
+},
+qual:{
+  fontSize:25,
+  fontWeight:"bold",
+  marginLeft:20,
+},
+text2:{
+  padding:23,
+  fontSize:17,
+  marginTop: -10,
+},
 
-}
 
 
 

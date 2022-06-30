@@ -20,8 +20,10 @@ const Sobre = ({navigation}) => {
         <View style = {styles.main}>
         <View style ={styles.containerSobre}>
             <View styles = {styles.textos}>
-            <Text style = {styles.oque}> O que é?</Text>
-            <Text style = {styles.text1}> DailyGrind é um aplicativo de tarefas criado pelo grupo 4Code onde a cada tarefa que você conclui, pontos de expêriencia são ganhos. Conquistas são desbloqueadas ao longo da sua jornada no app.</Text>
+            <Text style = {styles.oque}>O que é?</Text>
+            <Text style = {styles.text1}>DailyGrind é um aplicativo de tarefas criado pelo grupo 4Code onde a cada tarefa que você conclui, pontos de expêriencia são ganhos. Conquistas são desbloqueadas ao longo da sua jornada no app.</Text>
+            <Text style = {styles.qual}>Qual o objetivo do DailyGrind?</Text>
+            <Text style = {styles.text2}>O objetivo do DailyGrind é ajudá-lo organizar sua rotina de forma simples e divertida.</Text>
             </View>
         </View>
         </View>

@@ -65,8 +65,19 @@ oque:{
 },
 text1:{
   padding:23,
-  fontSize:17,
-}
+  fontSize:20,
+  marginTop: -10,
+},
+qual:{
+  fontSize:30,
+  fontWeight:"bold",
+  marginLeft:20,
+},
+text2:{
+  padding:23,
+  fontSize:20,
+  marginTop: -10,
+},
 
 
 
