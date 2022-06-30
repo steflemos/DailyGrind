@@ -10,12 +10,20 @@ const Sobre = ({navigation}) => {
         <View style={styles.header}>
 
             <View style ={styles.viewBtn}>
-        <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Opcoes")}>
+        <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Navigation")}>
                         <Ionicons name="arrow-back-circle-sharp"  size={45} color='#fff'/>
          </TouchableOpacity>
 
          </View>
             <Text style={styles.titulo}>Sobre o App</Text>
+        </View>
+        <View style = {styles.main}>
+        <View style ={styles.containerSobre}>
+            <View styles = {styles.textos}>
+            <Text style = {styles.oque}> O que é?</Text>
+            <Text style = {styles.text1}> DailyGrind é um aplicativo de tarefas criado pelo grupo 4Code onde a cada tarefa que você conclui, pontos de expêriencia são ganhos. Conquistas são desbloqueadas ao longo da sua jornada no app.</Text>
+            </View>
+        </View>
         </View>
         </View>
     )
