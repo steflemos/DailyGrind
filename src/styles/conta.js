@@ -52,6 +52,13 @@ containerLista:{
   alignItems:"center",
   marginTop:10,
 },
+viewInputs:{
+  width:'100%',
+  justifyContent:"center",
+  alignItems:"center",
+  
+
+},
 containerGrupoTitle:{
     borderBottomColor: "#fff",
     borderBottomWidth: 1,
@@ -67,10 +74,10 @@ grupoTitle:{
 },
 nick:{
   backgroundColor:'#fff',
-  width:'90%',
+  width:'95%',
   marginTop:20,
   marginBottom: 20,
-  height:70,
+  height:170,
   justifyContent:"space-around",
   flexDirection:"row",
   alignItems:"center",
@@ -87,10 +94,10 @@ nick:{
 },
 email:{
     backgroundColor:'#fff',
-    width:'90%',
+    width:'95%',
     marginTop:20,
     marginBottom: 20,
-    height:70,
+    height:60,
     justifyContent:"space-around",
     flexDirection:"row",
     alignItems:"center",
@@ -107,10 +114,10 @@ email:{
   },
   senha:{
     backgroundColor:'#fff',
-    width:'90%',
+    width:'95%',
     marginTop:20,
     marginBottom: 20,
-    height:70,
+    height:60,
     justifyContent:"space-around",
     flexDirection:"row",
     alignItems:"center",
@@ -127,10 +134,10 @@ email:{
   },
   deletar:{
     backgroundColor:'#fff',
-    width:'90%',
+    width:'95%',
     marginTop:20,
     marginBottom: 20,
-    height:70,
+    height:60,
     justifyContent:"space-around",
     flexDirection:"row",
     alignItems:"center",
@@ -146,9 +153,8 @@ email:{
       
   },
 textTarefa:{
-  fontWeight:"bold",
-  color:'#615D6C',
-  fontSize:20,
+  color:'#8F8F8F',
+  fontSize:15,
   
   
 },
