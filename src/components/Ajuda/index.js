@@ -10,7 +10,7 @@ const Ajuda = ({navigation}) => {
         <View style={styles.header}>
 
             <View style ={styles.viewBtn}>
-        <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Opcoes")}>
+        <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Navigation")}>
                         <Ionicons name="arrow-back-circle-sharp"  size={45} color='#fff'/>
          </TouchableOpacity>
 
