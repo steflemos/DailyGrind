@@ -6,7 +6,6 @@ export default StyleSheet.create({
 container:{
     flex:1,
     backgroundColor:"#6F8AB7",
-<<<<<<< HEAD
     paddingTop:15
 },
 header:{
@@ -153,12 +152,10 @@ email:{
   
       
   },
+
 textTarefa:{
   color:'#8F8F8F',
   fontSize:15,
-  
-  
-=======
     paddingTop:15,
     width:'100%'
     
@@ -181,7 +178,6 @@ titulo:{
   marginTop:10,
   marginRight:55,
   marginLeft:-30,
->>>>>>> a3471b163c74e5beb779a5a3d66f8cd94f370b69
 },
 
 viewBtn:{
