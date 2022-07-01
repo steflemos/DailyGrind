@@ -6,18 +6,42 @@ export default StyleSheet.create({
 container:{
     flex:1,
     backgroundColor:"#6F8AB7",
-<<<<<<< HEAD
+/*<<<<<<< HEAD
     paddingTop:15
-},
+*/},
 header:{
-  flexDirection: "row",
-  justifyContent:"space-between",
+  flexDirection:'row',
+  justifyContent:'center',
   width:'100%',
-  height:70,
+  height:85,
   alignItems:"center",
-  borderBottomColor: "#fff",
+  borderBottomColor: "#FFF",
   borderBottomWidth: 1,
 },
+
+titulo:{
+  color:"#fff",
+  fontWeight:"bold",
+  fontSize:35,
+  marginTop:10,
+  marginRight:10,
+  marginLeft:-40,
+},
+
+viewBtn:{
+  alignSelf: "flex-start",
+  alignItems:'flex-start',
+  marginRight:60,
+},
+
+btnVoltar:{
+    alignItems:'center',
+    justifyContent:'center',
+    marginLeft:-90,
+    marginTop:23,
+    borderRadius:100,
+},
+
 controleIndex:{
     height:45,
     width:45,
@@ -156,9 +180,6 @@ email:{
 textTarefa:{
   color:'#8F8F8F',
   fontSize:15,
-  
-  
-=======
     paddingTop:15,
     width:'100%'
     
@@ -181,7 +202,6 @@ titulo:{
   marginTop:10,
   marginRight:55,
   marginLeft:-30,
->>>>>>> a3471b163c74e5beb779a5a3d66f8cd94f370b69
 },
 
 viewBtn:{
@@ -231,10 +251,6 @@ text2:{
   padding:23,
   fontSize:17,
   marginTop: -10,
-},
+}
 
-
-
-
-
-})
+});

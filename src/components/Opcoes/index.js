@@ -20,10 +20,6 @@ const Opcoes = ({navigation}) => {
                 <TouchableOpacity onPress={() => navigation.navigate("Conta")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Conta</Text>
                     </TouchableOpacity>
-
-                    <TouchableOpacity onPress={() => navigation.navigate("Notificacoes")}style={styles.grupoList}>
-                        <Text style={styles.textTarefa}>Notificações</Text>
-                    </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate("Ajuda")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Ajuda</Text>
