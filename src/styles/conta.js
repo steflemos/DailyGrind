@@ -27,20 +27,6 @@ titulo:{
   marginLeft:-40,
 },
 
-viewBtn:{
-  alignSelf: "flex-start",
-  alignItems:'flex-start',
-  marginRight:60,
-},
-
-btnVoltar:{
-    alignItems:'center',
-    justifyContent:'center',
-    marginLeft:-90,
-    marginTop:23,
-    borderRadius:100,
-},
-
 controleIndex:{
     height:45,
     width:45,
@@ -96,7 +82,7 @@ grupoTitle:{
     fontWeight:"bold",
     fontSize:30
 },
-nick:{
+usuarioBox:{
   backgroundColor:'#fff',
   width:'95%',
   marginTop:20,
@@ -116,73 +102,53 @@ nick:{
 
     
 },
-email:{
-    backgroundColor:'#fff',
-    width:'95%',
-    marginTop:20,
-    marginBottom: 20,
-    height:60,
-    justifyContent:"space-around",
-    flexDirection:"row",
-    alignItems:"center",
-    borderRadius:5,
-    shadowOffset:{
-    width:1,
-    height:1,
-    },
-    shadowRadius:5,
-    shadowColor:'#C1C1C1',
-    elevation: 3
-  
-      
-  },
-  senha:{
-    backgroundColor:'#fff',
-    width:'95%',
-    marginTop:20,
-    marginBottom: 20,
-    height:60,
-    justifyContent:"space-around",
-    flexDirection:"row",
-    alignItems:"center",
-    borderRadius:5,
-    shadowOffset:{
-    width:1,
-    height:1,
-    },
-    shadowRadius:5,
-    shadowColor:'#C1C1C1',
-    elevation: 3
-  
-      
-  },
-  deletar:{
-    backgroundColor:'#fff',
-    width:'95%',
-    marginTop:20,
-    marginBottom: 20,
-    height:60,
-    justifyContent:"space-around",
-    flexDirection:"row",
-    alignItems:"center",
-    borderRadius:5,
-    shadowOffset:{
-    width:1,
-    height:1,
-    },
-    shadowRadius:5,
-    shadowColor:'#C1C1C1',
-    elevation: 3
-  
-      
-  },
 
-textTarefa:{
-  color:'#8F8F8F',
+dadosContaBox:{
+  backgroundColor:'#fff',
+  width:'95%',
+  marginTop:20,
+  marginBottom: 20,
+  height:50,
+  justifyContent:"space-around",
+  flexDirection:"column",
+  alignItems:"center",
+  borderRadius:5,
+  shadowOffset:{
+  width:1,
+  height:1,
+  },
+  shadowRadius:5,
+  shadowColor:'#C1C1C1',
+  elevation: 3
+},
+
+upperDadosBox:{
+  height:20,
+  justifyContent:"space-around",
+  flexDirection:"row",
+  alignItems:"center",
+  borderColor: '#000',
+  borderWidth: 1,
+  marginLeft: 20,
+  marginRight: 20,
+  width: '100%',
+},
+textContaDadosTitle:{
+  color:'#000',
   fontSize:15,
-    paddingTop:15,
-    width:'100%'
-    
+},
+btnEditarDados:{
+  color:'#000',
+  fontSize:15,
+},
+textDadoUsuario:{
+  color:'#fff'
+},
+btnDeletar:{
+  color: '#000',
+  fontSize: 15,
+  width: '100%',
+  fontWeight: 'bold'
 },
 header:{
   flexDirection:'row',
