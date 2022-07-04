@@ -13,33 +13,40 @@ const Opcoes = ({navigation}) => {
                         <Ionicons name="arrow-back-circle-sharp"  size={45} color='#fff'/>
                     </TouchableOpacity>
                 </View>
+                <Text style={styles.titulo}>Conta</Text>
             </View>
             <View style={styles.main}>
                
                 <View style={styles.containerLista}>
                     <View style={styles.viewInputs}>
-                    
-                <View style={styles.nick}>
-                    <View style={styles.view}>
-                        <View style={styles.viewNick}>
-                        <Text style={styles.textTarefa}>Nick</Text>
-                        <Text>Stef_Fodona</Text>
+                        <View style={styles.usuarioBox}>
+                            <View style={styles.view}>
+                                <View style={styles.viewNick}>
+                                    <Text style={styles.textContaDadosTitle}>Nome de usuário</Text>
+                                    <Text>Stef_Fodona</Text>
+                                </View>
+                                <TouchableOpacity style={styles.btnEditarDados}><Text>Editar nome de usuário</Text></TouchableOpacity>
+                                </View>
                         </View>
-                        <TouchableOpacity style={styles.btnAlterarNick}><Text>Editar Nick</Text></TouchableOpacity>
+
+                        <View style={styles.dadosContaBox}>
+                            <View style={styles.upperDadosBox}>
+                                <Text style={styles.textContaDadosTitle}>Email</Text>
+                                <TouchableOpacity style={styles.btnEditarDados}>
+                                <Text styles={styles.textDadoUsuario}>Editar email</Text>
+                            </TouchableOpacity>
+                            </View>
+                            <Text style={styles.textContaDados}>vini22bubu@gmail.com</Text>
                         </View>
-                    </View>
+                        
+                        <View style={styles.dadosContaBox}>
+                            <Text style={styles.textContaDadosTitle}>Senha</Text>
+                            <TouchableOpacity style={styles.btnEditarDados}><Text>Editar senha</Text></TouchableOpacity>
+                        </View>
 
-                    <View style={styles.email}>
-                        <Text style={styles.textTarefa}>Email</Text>
-                    </View>
-                    
-                    <View style={styles.senha}>
-                        <Text style={styles.textTarefa}>Senha</Text>
-                    </View>
-
-                    <View style={styles.deletar}>
-                        <TouchableOpacity><Text style={styles.textTarefa}>Deletar</Text></TouchableOpacity>
-                    </View>
+                        <View style={styles.dadosContaBox}>
+                            <TouchableOpacity><Text style={styles.btnDeletar}>Deletar</Text></TouchableOpacity>
+                        </View>
                     </View>
 
                 </View>
