@@ -66,6 +66,21 @@ prioridade:{
     alignItems:"center",
    
 },
+viewDataAndAddLembrete:{
+    flex:1,
+    width:'95%',
+    marginTop:20,
+},
+addLembrete:{
+    backgroundColor:'#fff',
+    width:'60%',
+    height:30,
+    color:'#615d6c',
+    fontWeight:"bold",
+    fontSize:17,
+
+},
+
 viewPrioridade:{
     marginTop: 20,
     width:'95%',
