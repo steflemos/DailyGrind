@@ -15,6 +15,8 @@ import Notificacoes from './src/components/Notificacoes/index.';
 import Sobre from './src/components/Sobre';
 import Ajuda from './src/components/Ajuda';
 
+import Lista from './src/components/Lista';
+
 const Routes = () =>{
     const Stack = createStackNavigator();
 
@@ -37,7 +39,11 @@ const Routes = () =>{
           <Stack.Screen options={{headerShown: false}} name="Sobre" component={Sobre}/>
           <Stack.Screen options={{headerShown: false}} name="Notificacoes" component={Notificacoes}/>
           <Stack.Screen options={{headerShown: false}} name="Ajuda" component={Ajuda}/>
+          
+          
+          <Stack.Screen options={{headerShown: false}} name="Lista" component={Lista}/>
         
+
        
 
           </Stack.Navigator>

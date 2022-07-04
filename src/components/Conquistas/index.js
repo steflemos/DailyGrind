@@ -1,15 +1,17 @@
 import React from "react";
-import { View, Image,Text, } from "react-native";
+import { View, Image,Text, TouchableOpacity } from "react-native";
 import styles from "../../styles/conquistas";
 
 
 
-const Conquistas = () => {
+const Conquistas = ({navigation}) => {
     
     return(
         <View style={styles.container}>
             <View style={styles.header}>
+                <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
                 <Image style={styles.controleIndex} source={require('../../styles/assets/controle.png')} />
+            </TouchableOpacity>
                 <Text style={styles.numerosHeader}>3/3</Text>
                 <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>

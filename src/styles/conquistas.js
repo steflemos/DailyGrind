@@ -20,8 +20,10 @@ header:{
 controleIndex:{
     height:45,
     width:45,
-    marginLeft:'10%',
    
+},
+btnControle:{
+  marginLeft:'10%',
 },
 levels:{
 height:35,

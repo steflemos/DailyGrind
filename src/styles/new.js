@@ -54,6 +54,7 @@ name:{
 },
 data:{
     width:350,
+    height: 350
 },
 
 main:{

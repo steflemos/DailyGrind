@@ -4,12 +4,14 @@ import styles from "../../styles/ranking";
 import {FontAwesome} from '@expo/vector-icons'
 
 
-const Ranking = () => {
+const Ranking = ({navigation}) => {
     
     return(
         <View style={styles.container}>
             <View style={styles.header}>
+            <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
                 <Image style={styles.controleIndex} source={require('../../styles/assets/controle.png')} />
+            </TouchableOpacity>
                 <Text style={styles.numerosHeader}>3/3</Text>
                 <Image style={styles.levels} source={require('../../styles/assets/levels.png')} />
             </View>

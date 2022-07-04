@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { View,Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "../../styles/new";
 import {FontAwesome} from '@expo/vector-icons'
-// import DatePicker from "react-native";
+import DatePicker from "react-native";
+
 
 
 
@@ -17,9 +18,10 @@ const New = () => {
             </View>
             <View style={styles.main}>
             <View style={styles.inputs}>
-                <TextInput placeholder="Nome da tarefa" style={styles.name} placeholderTextColor="#615d6c"/>
-                <TextInput placeholder="Descrição" style={styles.name} placeholderTextColor="#615d6c"/>
+                <TextInput placeholder="Nome da tarefa" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
+                <TextInput placeholder="Descrição" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
             </View>
+       
             {/* <View>
 
             <DatePicker

@@ -51,7 +51,7 @@ main:{
 containerSobre:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'105%',
+  height:'104%',
   borderRadius:7,
   marginTop:10,
 },

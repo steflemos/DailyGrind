@@ -18,11 +18,14 @@ header:{
   borderBottomWidth: 1,
 },
 controleIndex:{
-    height:45,
-    width:45,
-    marginLeft:'10%',
-   
+  height:45,
+  width:45,
+ 
 },
+btnControle:{
+marginLeft:'10%',
+},
+
 levels:{
     height:35,
     width:35,
@@ -52,7 +55,7 @@ titulo:{
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'96%',
+  height:'100%',
   borderRadius:7,
   alignItems:"center",
   marginTop:10,
