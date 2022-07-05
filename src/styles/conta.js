@@ -57,7 +57,7 @@ form:{
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'96.5%',
+  height:'105%',
   borderRadius:7,
   alignItems:"center",
   marginTop:10,
@@ -66,8 +66,6 @@ viewInputs:{
   width:'100%',
   justifyContent:"center",
   alignItems:"center",
-  
-
 },
 containerGrupoTitle:{
     borderBottomColor: "#fff",
@@ -82,14 +80,13 @@ grupoTitle:{
     fontWeight:"bold",
     fontSize:30
 },
-usuarioBox:{
+nickBox:{
   backgroundColor:'#fff',
-  width:'95%',
+  width:'100%',
   marginTop:20,
   marginBottom: 20,
-  height:170,
   justifyContent:"space-around",
-  flexDirection:"row",
+  flexDirection:"column",
   alignItems:"center",
   borderRadius:5,
   shadowOffset:{
@@ -99,16 +96,64 @@ usuarioBox:{
   shadowRadius:5,
   shadowColor:'#C1C1C1',
   elevation: 3
-
-    
 },
-
+usuarioBox:{
+  backgroundColor:'#fff',
+  width:'95%',
+  marginTop:20,
+  marginBottom: 20,
+  height:170,
+  justifyContent:"space-around",
+  flexDirection:"row",
+  alignItems:"center",
+},
+dadosContaBoxNick:{
+  backgroundColor:'#fff',
+  width:'95%',
+  marginTop:20,
+  marginBottom: 20,
+  height:75,
+  justifyContent:"space-around",
+  flexDirection:"column",
+  alignItems:"center",
+  borderRadius:5,
+},
+view:{
+  borderColor: "000",
+  borderWidth: 2,
+  borderRadius:300,
+  justifyContent:"space-around",
+  flexDirection:"row",
+  alignItems:"center",
+  width: "30%",
+  padding: 25,
+  margin: 40,
+  backgroundColor: '#ebebeb',
+},
 dadosContaBox:{
   backgroundColor:'#fff',
   width:'95%',
   marginTop:20,
   marginBottom: 20,
-  height:50,
+  height:75,
+  justifyContent:"space-around",
+  flexDirection:"column",
+  alignItems:"center",
+  borderRadius:5,
+  shadowOffset:{
+  width:1,
+  height:1,
+  },
+  shadowRadius:5,
+  shadowColor:'#C1C1C1',
+  elevation: 3
+},
+dadosContaBoxDelete:{
+  backgroundColor:'#e05a5a',
+  width:'95%',
+  marginTop:20,
+  marginBottom: 20,
+  height:75,
   justifyContent:"space-around",
   flexDirection:"column",
   alignItems:"center",
@@ -127,28 +172,43 @@ upperDadosBox:{
   justifyContent:"space-around",
   flexDirection:"row",
   alignItems:"center",
-  borderColor: '#000',
-  borderWidth: 1,
   marginLeft: 20,
   marginRight: 20,
-  width: '100%',
+  width: '100%'
 },
 textContaDadosTitle:{
   color:'#000',
   fontSize:15,
+  marginRight: 100
+},
+textContaDadosTitleEmail:{
+  color:'#000',
+  fontSize:15,
+  marginLeft: -300
 },
 btnEditarDados:{
   color:'#000',
   fontSize:15,
+  marginLeft: 100,
+  alignItems:"center",
+  backgroundColor: '#c8c7c9',
+  padding: 1,
+  width: 50,
+  borderRadius: 4
 },
-textDadoUsuario:{
-  color:'#fff'
+textContaDados:{
+  color:'#000',
+  fontSize:20,
+  marginBottom: 15
+},
+txtEditarDados:{
+  color:'#000'
 },
 btnDeletar:{
-  color: '#000',
   fontSize: 15,
   width: '100%',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  color: "#fff"
 },
 header:{
   flexDirection:'row',

@@ -20,24 +20,17 @@ const New = () => {
             <View style={styles.inputs}>
                 <TextInput placeholder="Nome da tarefa" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
                 <TextInput placeholder="Descrição" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
+                <View style={styles.viewDataAndAddLembrete}>
+                <TextInput style={styles.inputDate} placeholder="Data" placeholderTextColor="#615d6c"/>
+                <TouchableOpacity style={styles.addLembrete} >Adicionar Lembrete</TouchableOpacity>
             </View>
-       
-            {/* <View>
-
-            <DatePicker
-            format="DD-MM-YYYY"
-            style={styles.data}
-            date = {data}
-            onDateChange = {() => setData('')}
-       
-             />   
-
-            </View> */}
+            </View>
+            
             <View style={styles.prioridade}>
             <View style={styles.viewPrioridade}>
                 <Text style={styles.text}>Definir prioridade</Text>
 
-    <View style={styles.botoes}>          
+     <View style={styles.botoes}>          
         <View style={styles.urgenteMedia}>
         
                 <View style={styles.urgente}>

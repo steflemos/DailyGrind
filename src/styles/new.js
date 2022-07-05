@@ -67,6 +67,50 @@ prioridade:{
     alignItems:"center",
    
 },
+viewDataAndAddLembrete:{
+    flex:1,
+    width:'95%',
+    marginTop:20,
+    flexDirection:"row",
+    fontWeight:"bold",
+    justifyContent:"space-between",
+   
+    
+   
+   
+},
+addLembrete:{
+    backgroundColor:'#fff',
+    width:'60%',
+    height:30,
+    color:'#615d6c',
+    shadowOffset:{
+        width:1,
+        height:1
+    },
+    shadowRadius:5,
+    shadowColor:'#333',
+    borderRadius:5,
+    alignItems:"center",
+    justifyContent:"center",
+
+},
+inputDate:{
+    width:'30%',
+    alignItems:"center",
+    height:40,
+    borderRadius:5,
+    backgroundColor:'#fff',
+    fontWeight:"bold",
+    fontSize:17,
+    shadowOffset:{
+        width:1,
+        height:1
+    },
+    shadowRadius:5,
+    shadowColor:'#333'
+},
+
 viewPrioridade:{
     marginTop: 20,
     width:'95%',
