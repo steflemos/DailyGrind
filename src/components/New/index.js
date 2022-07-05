@@ -20,9 +20,10 @@ const New = () => {
             <View style={styles.inputs}>
                 <TextInput placeholder="Nome da tarefa" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
                 <TextInput placeholder="Descrição" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
+                <View style={styles.viewDataAndAddLembrete}>
+                <TextInput style={styles.inputDate} placeholder="Data" placeholderTextColor="#615d6c"/>
+                <TouchableOpacity style={styles.addLembrete} >Adicionar Lembrete</TouchableOpacity>
             </View>
-            <View style={styles.viewDataAndAddLembrete}>
-                <TouchableOpacity style={styles.addLembrete} placeholderTextColor='#615d6c'>Adicionar lembrete</TouchableOpacity>
             </View>
             
             <View style={styles.prioridade}>
