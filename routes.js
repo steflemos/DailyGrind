@@ -17,6 +17,8 @@ import Ajuda from './src/components/Ajuda';
 
 import Lista from './src/components/Lista';
 
+import Novogrupo from './src/components/Novogrupo';
+
 const Routes = () =>{
     const Stack = createStackNavigator();
 
@@ -42,6 +44,10 @@ const Routes = () =>{
           
           
           <Stack.Screen options={{headerShown: false}} name="Lista" component={Lista}/>
+          
+          <Stack.Screen options={{headerShown: false}} name="Novogrupo" component={Novogrupo}/>
+
+
         
 
        

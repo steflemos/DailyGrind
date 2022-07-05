@@ -48,7 +48,8 @@ name:{
         height:1
     },
     shadowRadius:5,
-    shadowColor:'#333'
+    shadowColor:'#333',
+    
     
  
 },

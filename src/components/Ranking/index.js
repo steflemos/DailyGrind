@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image,Text, TouchableOpacity } from "react-native";
 import styles from "../../styles/ranking";
-import {FontAwesome} from '@expo/vector-icons'
+import {FontAwesome,MaterialIcons} from '@expo/vector-icons'
 
 
 const Ranking = ({navigation}) => {
@@ -23,6 +23,12 @@ const Ranking = ({navigation}) => {
                         <Text style={styles.textTarefa}>Grupo da Igreja</Text>
                     </View>
                 </View>
+            </View>
+            <View style={styles.viewBtn}>
+                <TouchableOpacity onPress={() => navigation.navigate("Novogrupo")} 
+                style={styles.btnAdd}>
+                   <MaterialIcons name="add"  size={35} color='black'/>
+                </TouchableOpacity>
             </View>
         </View>
     )
