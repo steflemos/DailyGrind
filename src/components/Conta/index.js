@@ -19,32 +19,60 @@ const Opcoes = ({navigation}) => {
                
                 <View style={styles.containerLista}>
                     <View style={styles.viewInputs}>
-                        <View style={styles.usuarioBox}>
-                            <View style={styles.view}>
-                                <View style={styles.viewNick}>
-                                    <Text style={styles.textContaDadosTitle}>Nome de usuário</Text>
-                                    <Text>Stef_Fodona</Text>
+                        <View style={styles.nickBox}>
+                            <View style={styles.usuarioBox}>
+                                <View style={styles.view}>
+                                    <View style={styles.iconBox}>
+                                        <Image style={styles.imgIcon} source={require('../../styles/assets/batman.png')} />
+                                    </View>
                                 </View>
-                                <TouchableOpacity style={styles.btnEditarDados}><Text>Editar nome de usuário</Text></TouchableOpacity>
-                                </View>
-                        </View>
+                                
+                            </View>
 
+                            <View style={styles.dadosContaBoxNick}>
+                                <View style={styles.upperDadosBox}>
+                                    <Text style={styles.textContaDadosTitle}>
+                                        Apelido
+                                    </Text>
+                                    <TouchableOpacity style={styles.btnEditarDados}>
+                                        <Text style={styles.txtEditarDados}>
+                                            Editar
+                                        </Text>
+                                    </TouchableOpacity>
+                                </View>
+                                <Text style={styles.textContaDadosTitleSenha}>
+                                        TeTeFANI666
+                                </Text>
+                            </View>
+                        </View>
                         <View style={styles.dadosContaBox}>
                             <View style={styles.upperDadosBox}>
-                                <Text style={styles.textContaDadosTitle}>Email</Text>
-                                <TouchableOpacity style={styles.btnEditarDados}>
-                                <Text styles={styles.textDadoUsuario}>Editar email</Text>
-                            </TouchableOpacity>
+                                <Text style={styles.textContaDadosTitleEmail}>
+                                    Email
+                                </Text>
                             </View>
-                            <Text style={styles.textContaDados}>vini22bubu@gmail.com</Text>
+                            <Text style={styles.textContaDados}>
+                                vini22bubu@gmail.com
+                            </Text>
                         </View>
                         
                         <View style={styles.dadosContaBox}>
-                            <Text style={styles.textContaDadosTitle}>Senha</Text>
-                            <TouchableOpacity style={styles.btnEditarDados}><Text>Editar senha</Text></TouchableOpacity>
+                            <View style={styles.upperDadosBox}>
+                                <Text style={styles.textContaDadosTitle}>
+                                    Senha
+                                </Text>
+                                <TouchableOpacity style={styles.btnEditarDados}>
+                                    <Text style={styles.txtEditarDados}>
+                                        Editar
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
+                            <Text style={styles.textContaDadosTitleSenha}>
+                                    *********************************
+                            </Text>
                         </View>
 
-                        <View style={styles.dadosContaBox}>
+                        <View style={styles.dadosContaBoxDelete}>
                             <TouchableOpacity><Text style={styles.btnDeletar}>Deletar</Text></TouchableOpacity>
                         </View>
                     </View>
