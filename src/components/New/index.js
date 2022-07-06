@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import { View,Text, TouchableOpacity, TextInput, Platform } from "react-native";
+import { View,Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "../../styles/new";
-import {FontAwesome} from '@expo/vector-icons';
+import {FontAwesome} from '@expo/vector-icons'
+import DatePicker from "react-native";
 
 
 
@@ -58,7 +59,15 @@ const New = () => {
 
             </View>
             </View>
-
+            <View style={styles.position}>
+          <View style={styles.recompensa}>
+            <Text style={styles.text}>Pontos de recompensa</Text>
+            <View style={styles.row}>
+            <FontAwesome style={styles.diamont} name='diamond' size={20} color = '#615d6c'/>
+            <Text style={styles.pontos}>0RP</Text>
+            </View>
+          </View>
+          </View>
             </View>
             
         </View>

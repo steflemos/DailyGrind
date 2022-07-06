@@ -182,6 +182,41 @@ botao4:{
     backgroundColor:'#79FF87',
     borderRadius:40
 },
+recompensa:{
+    width:'95%',
+    marginTop:20,
+    height:60,
+    borderRadius:5,
+    backgroundColor:'#fff',
+    fontSize:17,
+    shadowOffset:{
+        width:1,
+        height:1
+    },
+    shadowRadius:5,
+    shadowColor:'#333'
+},
+position:{
+    justifyContent:'center',
+    alignItems:'center',
+},
+
+diamont:{
+    paddingLeft:5,
+    paddingTop:3,
+},
+
+row:{
+    flexDirection:'row',
+
+},
+
+pontos:{
+    paddingLeft:10,
+    fontWeight:"bold",
+    color:'#615d6c',
+    fontSize:17,
+},
 
 
 })
