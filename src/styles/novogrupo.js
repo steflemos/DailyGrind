@@ -67,7 +67,7 @@ export default StyleSheet.create({
     viewPrioridade:{
         marginTop: 20,
         width:'95%',
-        height:185,
+        height:280,
         borderRadius:5,
         backgroundColor:'#fff',
         paddingBottom:25,
@@ -93,23 +93,102 @@ export default StyleSheet.create({
         fontWeight:"bold",
         color:'#878294',
         fontSize:14,
-        marginLeft:15,
-        marginTop:7
+        marginLeft:8,
+        marginTop:5
     },
     ViewImput:{
-        alignItems:'center'
+        marginLeft:10,
+    },
+    ViewAddParticipante:{
+        marginTop:5,
+        width:'95%',
+        height:60,
+        borderWidth:0.5,
+        borderRadius:10
     },
     inputEmail:{
-        width:'95%',
-        height:30,
-        shadowOffset:{
-            width:1,
-            height:1
-        },
-        shadowRadius:5,
-        shadowColor:'#333'
-    }
+        width:'83%',
+        height:25,
+       
+            
+    },
+    viewBtn:{
+        alignSelf: "flex-end",
+        alignItems:'flex-end',
+      },
+      btnAdd:{
+      backgroundColor:'#ACEDFF',
+      width:40,
+      height:40,
+      alignItems:'center',
+      justifyContent:'center',
+      marginRight:10,
+      marginTop:-37,
+      borderRadius:100,
+      },
+      urgenteMedia:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        paddingBottom:25,
+        marginLeft:22
+    },
+    urgenteMedia:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        paddingBottom:25,
+        marginLeft:22
+    },
+    
+    urgente:{
+        flexDirection:'row',
+        width:130,
+        marginTop:10,
+        
+    
+    },
+    
+    medio:{    
+        flexDirection:'row',
+        width:130,
+        marginTop:10,
+    },
 
+    botao:{
+        width:40,
+        height:40,
+        backgroundColor:'#FFF',
+        borderRadius:40,
+        alignSelf: "center",
+        alignItems:'center',
+    },
+    botao2:{
+        width:40,
+        height:40,
+        backgroundColor:'#fFF',
+        borderRadius:40
+    },
+    texto:{
+        paddingLeft:15,
+        fontWeight:"bold",
+        color:'#FFF',
+        fontSize:17,
+       marginTop:20,
+        
+    },
+    viewBtnCancel:{
+        alignSelf: "flex-end",
+        alignItems:'flex-end',
+      },
+      btnAddCancel:{
+      backgroundColor:'#fFF',
+      width:40,
+      height:40,
+      alignItems:'center',
+      justifyContent:'center',
+      marginRight:10,
+      marginTop:-37,
+      borderRadius:100,
+      },
 
 
 

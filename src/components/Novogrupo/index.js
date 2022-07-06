@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import { View,Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "../../styles/novogrupo";
-import {FontAwesome} from '@expo/vector-icons'
+import {FontAwesome,MaterialIcons, Feather} from '@expo/vector-icons'
 import DatePicker from "react-native";
 import { styleProps } from "react-native-web/dist/cjs/modules/forwardedProps";
 
 
 
 
-const Novogrupo = () => {
+const Novogrupo = ({navigation}) => {
     
     const [data, setData] = useState()
 
@@ -24,18 +24,59 @@ const Novogrupo = () => {
             </View>
     <View style ={{alignItems: 'center'}}>
             <View style={styles.viewPrioridade}>
-                <Text style=
-                {styles.textAdd}>
+                <View>
+                <Text style={styles.textAdd}>
                     Adicionar Participante
                 </Text>
+
+            <View style ={{alignItems:'center'}}>
+
+                <View style ={styles.ViewAddParticipante}>
                  <Text style={styles.TextEmail}>Email do participante</Text>
-        <View style={styles.ViewImput}>
-                <TextInput style={styles.inputEmail}>
-        
-                </TextInput>
-         </View>
+                <View style={styles.ViewImput}>
+                <TextInput style={styles.inputEmail}></TextInput>
+
+                <View style={styles.viewBtn}>
+                <TouchableOpacity onPress={() => navigation.navigate("New")} 
+                style={styles.btnAdd}>
+                   <MaterialIcons name="add"  size={25} color='black'/>
+                </TouchableOpacity>
+            </View>
+                </View>
+                </View>
+
+            </View>
+            </View>
+          
             </View>
     </View>
+    <View style={styles.urgenteMedia}>
+        
+        <View style={styles.urgente}>
+
+        <View style={styles.viewBtnCancel}>
+                <TouchableOpacity onPress={() => navigation.navigate("Ranking")} 
+                style={styles.btnAddCancel}>
+                   <Feather name="x"  size={25} color='#6F8AB7'/>
+                </TouchableOpacity>
+            </View>
+         <Text style={styles.texto}>Cancelar</Text>
+        </View>
+
+       
+
+        <View style={styles.medio}>
+        <View style={styles.viewBtnCancel}>
+                <TouchableOpacity onPress={() => navigation.navigate("Ranking")} 
+                style={styles.btnAddCancel}>
+                   <Feather name="check"  size={25} color='#6F8AB7'/>
+                </TouchableOpacity>
+            </View>
+         <Text style={styles.texto}>Salvar</Text>
+         
+        </View>
+        
+</View>
         
 
             </View>
