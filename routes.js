@@ -17,7 +17,9 @@ import Ajuda from './src/components/Ajuda';
 
 import Lista from './src/components/Lista';
 
+import Ranking from './src/components/Ranking';
 import Novogrupo from './src/components/Novogrupo';
+import Classificacao from './src/components/Classificacao';
 
 const Routes = () =>{
     const Stack = createStackNavigator();
@@ -44,8 +46,10 @@ const Routes = () =>{
           
           
           <Stack.Screen options={{headerShown: false}} name="Lista" component={Lista}/>
-          
+         
+          <Stack.Screen options={{headerShown: false}} name="Ranking" component={Ranking}/>
           <Stack.Screen options={{headerShown: false}} name="Novogrupo" component={Novogrupo}/>
+          <Stack.Screen options={{headerShown: false}} name="Classificacao" component={Classificacao}/>
 
 
         

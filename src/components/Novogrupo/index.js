@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View,Text, TouchableOpacity, TextInput } from "react-native";
+import { View,Text, TouchableOpacity, TextInput,ScrollView } from "react-native";
 import styles from "../../styles/novogrupo";
 import {FontAwesome,MaterialIcons, Feather} from '@expo/vector-icons'
 import DatePicker from "react-native";
@@ -14,14 +14,18 @@ const Novogrupo = ({navigation}) => {
 
     return(
         <View style={styles.container}>
+
             <View style={styles.header}>
                 <Text style={styles.titulo}>Novo Grupo</Text>
             </View>
+        <ScrollView>
             <View style={styles.main}>
+
             <View style={styles.inputs}>
                 <TextInput placeholder="Nome da tarefa" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
                 <TextInput placeholder="Descrição" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
             </View>
+
     <View style ={{alignItems: 'center'}}>
             <View style={styles.viewPrioridade}>
                 <View>
@@ -37,11 +41,12 @@ const Novogrupo = ({navigation}) => {
                 <TextInput style={styles.inputEmail}></TextInput>
 
                 <View style={styles.viewBtn}>
-                <TouchableOpacity onPress={() => navigation.navigate("New")} 
+                <TouchableOpacity  
                 style={styles.btnAdd}>
                    <MaterialIcons name="add"  size={25} color='black'/>
                 </TouchableOpacity>
-            </View>
+                </View>
+
                 </View>
                 </View>
 
@@ -50,36 +55,36 @@ const Novogrupo = ({navigation}) => {
           
             </View>
     </View>
-    <View style={styles.urgenteMedia}>
-        
-        <View style={styles.urgente}>
+   
+        {/* BOTOES CANCELAR E SALVAR */}
 
-        <View style={styles.viewBtnCancel}>
-                <TouchableOpacity onPress={() => navigation.navigate("Ranking")} 
-                style={styles.btnAddCancel}>
-                   <Feather name="x"  size={25} color='#6F8AB7'/>
-                </TouchableOpacity>
-            </View>
-         <Text style={styles.texto}>Cancelar</Text>
-        </View>
+            <View style ={styles.botoes}>
 
-       
+                <View style = {styles.cancelAdd}>
 
-        <View style={styles.medio}>
-        <View style={styles.viewBtnCancel}>
-                <TouchableOpacity onPress={() => navigation.navigate("Ranking")} 
-                style={styles.btnAddCancel}>
-                   <Feather name="check"  size={25} color='#6F8AB7'/>
-                </TouchableOpacity>
-            </View>
-         <Text style={styles.texto}>Salvar</Text>
-         
-        </View>
-        
-</View>
-        
+                <View style={styles.cancelar}>
+                 <TouchableOpacity onPress={() => navigation.navigate("Navigation")}
+                 style={styles.botao1} >
+                 <Feather name="x"  size={30} color='#6F8AB7'/>
+                 </TouchableOpacity>
+                 <Text style={styles.texto}>Cancelar</Text>
+                </View>
+
+                <View style={styles.salvar}>
+                 <TouchableOpacity style={styles.botao2}>
+                    <Feather name="check" size={30} color='#6F8AB7'/>
+                 </TouchableOpacity>
+                 <Text style={styles.texto}>Salvar</Text>
+                </View>
+
+                </View>
 
             </View>
+    
+        
+
+            </View>
+        </ScrollView>
             
         </View>
     )
