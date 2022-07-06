@@ -29,6 +29,7 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent:'center'
     },
+   
     inputs:{
         justifyContent:"center",
         alignItems:"center"
@@ -49,9 +50,22 @@ export default StyleSheet.create({
         },
         shadowRadius:5,
         shadowColor:'#333',
+    },
+
+    imputName:{
+        color:'#000',
+        fontSize:17,
+        width:'100%',
+        height:70,
         
-        
-     
+    },
+
+    textname:{
+        paddingLeft:5,
+        fontWeight:"bold",
+        color:'#615d6c',
+        fontSize:17,
+        marginTop:5,
     },
     data:{
         width:350,
@@ -67,7 +81,7 @@ export default StyleSheet.create({
     viewPrioridade:{
         marginTop: 20,
         width:'95%',
-        height:280,
+        height:355,
         borderRadius:5,
         backgroundColor:'#fff',
         paddingBottom:25,
@@ -107,8 +121,11 @@ export default StyleSheet.create({
         borderRadius:10
     },
     inputEmail:{
-        width:'83%',
-        height:25,
+        width:'80%',
+        height:28,
+        fontSize:17,
+        fontWeight:"bold",
+        color:'#615d6c',
        
             
     },
@@ -123,73 +140,52 @@ export default StyleSheet.create({
       alignItems:'center',
       justifyContent:'center',
       marginRight:10,
-      marginTop:-37,
+      marginTop:-38,
       borderRadius:100,
       },
-      urgenteMedia:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        paddingBottom:25,
-        marginLeft:22
-    },
-    urgenteMedia:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        paddingBottom:25,
-        marginLeft:22
-    },
-    
-    urgente:{
-        flexDirection:'row',
-        width:130,
-        marginTop:10,
-        
-    
-    },
-    
-    medio:{    
-        flexDirection:'row',
-        width:130,
-        marginTop:10,
-    },
 
-    botao:{
+      texto:{
+        paddingLeft:15,
+        fontWeight:"bold",
+        color:'#fff',
+        fontSize:17,
+       marginTop:10,
+        
+    },
+    
+      cancelAdd:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        paddingBottom:25,
+        marginLeft:22
+      },
+
+      cancelar:{
+        flexDirection:'row',
+        width:130,
+        marginTop:15
+      },
+
+      salvar:{
+        flexDirection:'row',
+        width:130,
+        marginTop:15
+      },
+
+      botao1:{
         width:40,
         height:40,
-        backgroundColor:'#FFF',
-        borderRadius:40,
-        alignSelf: "center",
+        backgroundColor:'#FFf',
         alignItems:'center',
+        justifyContent:'center',
+        borderRadius:40,
     },
     botao2:{
         width:40,
         height:40,
-        backgroundColor:'#fFF',
-        borderRadius:40
+        backgroundColor:'#FFf',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:40,
     },
-    texto:{
-        paddingLeft:15,
-        fontWeight:"bold",
-        color:'#FFF',
-        fontSize:17,
-       marginTop:20,
-        
-    },
-    viewBtnCancel:{
-        alignSelf: "flex-end",
-        alignItems:'flex-end',
-      },
-      btnAddCancel:{
-      backgroundColor:'#fFF',
-      width:40,
-      height:40,
-      alignItems:'center',
-      justifyContent:'center',
-      marginRight:10,
-      marginTop:-37,
-      borderRadius:100,
-      },
-
-
-
 })

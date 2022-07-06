@@ -19,9 +19,10 @@ const Ranking = ({navigation}) => {
                 <Text style={styles.titulo}>Ranking</Text>
                 <View style={styles.containerLista}>
                     <Text style={styles.grupoTitle}>Grupos</Text>
-                    <View style={styles.grupoList}>
+                    <TouchableOpacity onPress={() => navigation.navigate("Classificacao")}
+                    style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Grupo da Igreja</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={styles.viewBtn}>
