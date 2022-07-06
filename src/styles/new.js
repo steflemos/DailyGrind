@@ -48,8 +48,7 @@ name:{
         height:1
     },
     shadowRadius:5,
-    shadowColor:'#333',
-    
+    shadowColor:'#333'
     
  
 },
@@ -67,38 +66,14 @@ prioridade:{
     alignItems:"center",
    
 },
-viewDataAndAddLembrete:{
-    flex:1,
-    width:'95%',
-    marginTop:20,
-    flexDirection:"row",
-    fontWeight:"bold",
-    justifyContent:"space-between",
-   
-    
-   
-   
-},
-addLembrete:{
-    backgroundColor:'#fff',
-    width:'60%',
-    height:30,
-    color:'#615d6c',
-    shadowOffset:{
-        width:1,
-        height:1
-    },
-    shadowRadius:5,
-    shadowColor:'#333',
-    borderRadius:5,
-    alignItems:"center",
-    justifyContent:"center",
 
-},
 inputDate:{
-    width:'30%',
+    width:'95%',
+    marginTop: 20,
     alignItems:"center",
-    height:40,
+    height:55,
+    paddingBottom:25,
+    paddingLeft:5,
     borderRadius:5,
     backgroundColor:'#fff',
     fontWeight:"bold",
@@ -112,12 +87,11 @@ inputDate:{
 },
 
 viewPrioridade:{
-    marginTop: 20,
     width:'95%',
+    marginTop:20,
     height:185,
     borderRadius:5,
     backgroundColor:'#fff',
-    paddingBottom:25,
     fontSize:17,
     shadowOffset:{
         width:1,
