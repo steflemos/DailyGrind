@@ -35,12 +35,10 @@ const Opcoes = ({navigation}) => {
                                         Apelido
                                     </Text>
                                     <TouchableOpacity style={styles.btnEditarDados}>
-                                        <Text style={styles.txtEditarDados}>
-                                            Editar
-                                        </Text>
+                                        <FontAwesome name='edit' size={25} color='black'></FontAwesome>
                                     </TouchableOpacity>
                                 </View>
-                                <Text style={styles.textContaDadosTitleSenha}>
+                                <Text style={styles.textContaDadosSenha}>
                                         TeTeFANI666
                                 </Text>
                             </View>
@@ -62,19 +60,19 @@ const Opcoes = ({navigation}) => {
                                     Senha
                                 </Text>
                                 <TouchableOpacity style={styles.btnEditarDados}>
-                                    <Text style={styles.txtEditarDados}>
-                                        Editar
-                                    </Text>
+                                    <FontAwesome name='edit' size={25} color='black'></FontAwesome>
                                 </TouchableOpacity>
                             </View>
-                            <Text style={styles.textContaDadosTitleSenha}>
-                                    *********************************
+                            <Text style={styles.textContaDadosSenha}>
+                                    **************
                             </Text>
                         </View>
-
-                        <View style={styles.dadosContaBoxDelete}>
-                            <TouchableOpacity><Text style={styles.btnDeletar}>Deletar</Text></TouchableOpacity>
-                        </View>
+                        
+                      
+                        <TouchableOpacity style={styles.dadosContaBoxDelete}>
+                            <Text style={styles.btnDeletar}>Deletar</Text>
+                        </TouchableOpacity>
+                        
                     </View>
 
                 </View>

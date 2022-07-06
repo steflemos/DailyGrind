@@ -111,7 +111,6 @@ dadosContaBoxNick:{
   backgroundColor:'#fff',
   width:'95%',
   marginTop:20,
-  marginBottom: 20,
   height:75,
   justifyContent:"space-around",
   flexDirection:"column",
@@ -157,6 +156,7 @@ dadosContaBoxDelete:{
   justifyContent:"space-around",
   flexDirection:"column",
   alignItems:"center",
+  textAlign: "center",
   borderRadius:5,
   shadowOffset:{
   width:1,
@@ -168,7 +168,7 @@ dadosContaBoxDelete:{
 },
 
 upperDadosBox:{
-  height:20,
+  height:40,
   justifyContent:"space-around",
   flexDirection:"row",
   alignItems:"center",
@@ -186,15 +186,17 @@ textContaDadosTitleEmail:{
   fontSize:15,
   marginLeft: -300
 },
+textContaDadosSenha:{
+  color:'#000',
+  fontSize:20,
+  marginBottom: 15
+},
 btnEditarDados:{
   color:'#000',
-  fontSize:15,
   marginLeft: 100,
   alignItems:"center",
-  backgroundColor: '#c8c7c9',
   padding: 1,
   width: 50,
-  borderRadius: 4
 },
 textContaDados:{
   color:'#000',
@@ -208,7 +210,9 @@ btnDeletar:{
   fontSize: 15,
   width: '100%',
   fontWeight: 'bold',
-  color: "#fff"
+  color: "#fff",
+  alignItems:"center",
+  textAlign: "center",
 },
 header:{
   flexDirection:'row',
