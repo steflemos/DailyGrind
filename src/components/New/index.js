@@ -1,15 +1,24 @@
 import React, {useState} from "react";
-import { View,Text, TouchableOpacity, TextInput } from "react-native";
+import { View,Text, TouchableOpacity, TextInput, Plataform } from "react-native";
 import styles from "../../styles/new";
 import {FontAwesome} from '@expo/vector-icons'
-import DatePicker from "react-native";
+
 
 
 
 
 const New = () => {
     
-    const [data, setData] = useState()
+    const [data, setData] = useState(new Date(1598051730000))
+    const [exibirCalendario, setExibirCalendario] = useState(false)
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setDate(selectedDate);
+    };
+    const showDatePicker = () => {
+        setShow(true)
+    }
+
 
     return(
         <View style={styles.container}>
@@ -20,7 +29,11 @@ const New = () => {
             <View style={styles.inputs}>
                 <TextInput placeholder="Nome da tarefa" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
                 <TextInput placeholder="Descrição" style={styles.name} multiline={true}  placeholderTextColor="#615d6c"/>
-                <TextInput style={styles.inputDate} placeholder="Data" multiline={true} placeholderTextColor="#615d6c"/>  
+                 <View>
+                    <View>
+
+                    </View>
+                 </View>
             </View>
             <View style={styles.prioridade}>
             <View style={styles.viewPrioridade}>
