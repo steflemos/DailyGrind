@@ -58,6 +58,28 @@ containerLista:{
   alignItems:"center",
   marginTop:10,
 },
+containerPodio:{
+  width:'100%',
+  height:'95%',
+  alignItems:"center",
+  flexDirection:'column',
+  justifyContent:'space-around',
+
+},
+textpodio:{
+  color:'#615D6C',
+  fontWeight:"bold",
+  fontSize:20,
+  marginTop:-13,
+  marginBottom:-60
+},
+textpodio2:{
+  color:'#615D6C',
+  fontWeight:"bold",
+  fontSize:20,
+  marginTop:-40,
+  marginBottom:-60
+},
 
 grupoTitle:{
     marginTop: 14,
@@ -140,7 +162,7 @@ titulo:{
   tituloClassificacao:{
     color:"#fff",
     fontWeight:"bold",
-    fontSize:35,
+    fontSize:32,
     marginTop:10,
   },
 
