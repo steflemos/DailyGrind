@@ -57,8 +57,7 @@ containerLista:{
   width:'95%',
   height:'100%',
   borderRadius:7,
-  alignItems:"center",
-  marginTop:10
+  marginTop:10,
 },
 icon:{
   flex:1,

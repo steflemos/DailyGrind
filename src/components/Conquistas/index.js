@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image,Text, TouchableOpacity } from "react-native";
+import { View, Image,Text, TouchableOpacity, ScrollView } from "react-native";
 import styles from "../../styles/conquistas";
 
 
@@ -18,6 +18,7 @@ const Conquistas = ({navigation}) => {
             <View style={styles.main}>
                 <Text style={styles.titulo}>Conquistas</Text>
                 <View style={styles.containerLista}>
+                <ScrollView>
                     <View style={styles.icon}>
                         <View style={styles.iconBox}>
                             <Image style={styles.imgIcon} source={require('../../styles/assets/batman.png')} />
@@ -29,6 +30,7 @@ const Conquistas = ({navigation}) => {
                             <Image style={styles.imgIcon} source={require('../../styles/assets/coringa.png')} />
                         </View>
                     </View>
+                </ScrollView>
                 </View>
             </View>   
         </View>

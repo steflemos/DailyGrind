@@ -25,9 +25,6 @@ export default StyleSheet.create({
         fontStyle:"italic",
         fontWeight:"bold",
         color:"#fff",
-
-        
-
     },
     containerInputs:{
         display:"flex",
