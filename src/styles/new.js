@@ -234,6 +234,7 @@ cancelAdd:{
   },
   cancelar:{
     flexDirection:'row',
+    alignItems:'center',
     width:130,
     marginTop:15
   },
@@ -249,6 +250,7 @@ cancelAdd:{
 
 salvar:{
     flexDirection:'row',
+    alignItems:'center',
     width:130,
     marginTop:15
   },

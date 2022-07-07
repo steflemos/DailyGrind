@@ -15,7 +15,7 @@ const Sobre = ({navigation}) => {
          </TouchableOpacity>
 
          </View>
-            <Text style={styles.titulo}>Sobre o App</Text>
+            <Text style={styles.titulo}>Sobre</Text>
         </View>
         <View style = {styles.main}>
         <View style ={styles.containerSobre}>

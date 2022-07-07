@@ -82,17 +82,15 @@ const New = ({navigation}) => {
           </View>
           </View>
             </View>
-            
+            <View style={styles.botoes}>
             <View style ={styles.cancelAdd}>
-
             <View style={styles.cancelar}>
-
                  <TouchableOpacity onPress={() => navigation.navigate("Navigation")}
                  style={styles.botaoCancelar} >
                  <Feather name="x"  size={30} color='#6F8AB7'/>
                  </TouchableOpacity>
                  <Text style={styles.textoCancelar}>Cancelar</Text>
-
+                 </View>
                  <View style={styles.salvar}>
                  <TouchableOpacity style={styles.botaoSalvar}>
                     <Feather name="check" size={30} color='#6F8AB7'/>
@@ -100,10 +98,8 @@ const New = ({navigation}) => {
                  <Text style={styles.textoCancelar}>Salvar</Text>
                 </View>
             </View>
-
             </View>
-            
-        </View>
+            </View>
     )
 }
 

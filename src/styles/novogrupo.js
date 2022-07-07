@@ -117,12 +117,14 @@ export default StyleSheet.create({
         marginTop:5,
         width:'95%',
         height:60,
-        borderWidth:0.5,
-        borderRadius:10
+        borderBottomWidth:0.5,
+        borderBottomRadius:10,
+        borderBottomColor:'#615d6c',
     },
     inputEmail:{
         width:'80%',
         height:28,
+        alignItems:"center",
         fontSize:17,
         fontWeight:"bold",
         color:'#615d6c',
@@ -131,12 +133,14 @@ export default StyleSheet.create({
     },
     viewBtn:{
         alignSelf: "flex-end",
-        alignItems:'flex-end',
+      },
+    meio:{
+        alignItems:"center"
       },
       btnAdd:{
-      backgroundColor:'#ACEDFF',
-      width:40,
-      height:40,
+      backgroundColor:'#d4d4d4',
+      width:35,
+      height:35,
       alignItems:'center',
       justifyContent:'center',
       marginRight:10,
@@ -180,7 +184,7 @@ export default StyleSheet.create({
         justifyContent:'center',
         borderRadius:40,
     },
-    botao2:{
+      botao2:{
         width:40,
         height:40,
         backgroundColor:'#FFf',

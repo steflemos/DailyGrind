@@ -9,14 +9,15 @@ const Classificacao = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.header}>
-
         <View style ={styles.viewBtn}>
         <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Navigation")}>
                     <Ionicons name="arrow-back-circle-sharp"  size={45} color='#fff'/>
         </TouchableOpacity>
 
         </View>
+        <View>
         <Text style={styles.titulo}>Ranking</Text>
+        </View>
         </View>
             <View style={styles.main}>
                 <Text style={styles.tituloClassificacao}>Classificação</Text>

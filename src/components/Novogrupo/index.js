@@ -39,13 +39,12 @@ const Novogrupo = ({navigation}) => {
                  <Text style={styles.TextEmail}>Email do participante</Text>
                 <View style={styles.ViewImput}>
                 <TextInput style={styles.inputEmail}></TextInput>
-
                 <View style={styles.viewBtn}>
-                <TouchableOpacity  
-                style={styles.btnAdd}>
+                <TouchableOpacity style={styles.btnAdd}>
                    <MaterialIcons name="add"  size={25} color='black'/>
                 </TouchableOpacity>
                 </View>
+               
 
                 </View>
                 </View>
