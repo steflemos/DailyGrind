@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import { View,Text, TouchableOpacity, TextInput, Plataform } from "react-native";
 import styles from "../../styles/new";
-import {FontAwesome} from '@expo/vector-icons'
+import {FontAwesome, Feather} from '@expo/vector-icons'
 
 
 
 
 
-const New = () => {
+const New = ({navigation}) => {
     
     const [data, setData] = useState(new Date(1598051730000))
     const [exibirCalendario, setExibirCalendario] = useState(false)
@@ -81,6 +81,26 @@ const New = () => {
             </View>
           </View>
           </View>
+            </View>
+            
+            <View style ={styles.cancelAdd}>
+
+            <View style={styles.cancelar}>
+
+                 <TouchableOpacity onPress={() => navigation.navigate("Navigation")}
+                 style={styles.botaoCancelar} >
+                 <Feather name="x"  size={30} color='#6F8AB7'/>
+                 </TouchableOpacity>
+                 <Text style={styles.textoCancelar}>Cancelar</Text>
+
+                 <View style={styles.salvar}>
+                 <TouchableOpacity style={styles.botaoSalvar}>
+                    <Feather name="check" size={30} color='#6F8AB7'/>
+                 </TouchableOpacity>
+                 <Text style={styles.textoCancelar}>Salvar</Text>
+                </View>
+            </View>
+
             </View>
             
         </View>

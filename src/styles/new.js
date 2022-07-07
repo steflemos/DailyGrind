@@ -218,5 +218,49 @@ pontos:{
     fontSize:17,
 },
 
+textoCancelar:{
+    paddingLeft:15,
+    fontWeight:"bold",
+    color:'#fff',
+    fontSize:17,
+   marginTop:10,
+    
+},
+cancelAdd:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    paddingBottom:25,
+    marginLeft:22
+  },
+  cancelar:{
+    flexDirection:'row',
+    width:130,
+    marginTop:15
+  },
+
+  botaoCancelar:{
+    width:40,
+    height:40,
+    backgroundColor:'#FFf',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:40,
+},
+
+salvar:{
+    flexDirection:'row',
+    width:130,
+    marginTop:15
+  },
+
+  botaoSalvar:{
+    width:40,
+    height:40,
+    backgroundColor:'#FFf',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:40,
+},
+
 
 })
