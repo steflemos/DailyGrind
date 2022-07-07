@@ -206,6 +206,72 @@ textContaDados:{
 txtEditarDados:{
   color:'#000'
 },
+containerModal:{
+  flex: 1,
+  flexDirection: 'column',
+  marginTop: 600,
+  backgroundColor: '#615D6C',
+  width: "100%",
+  padding: 15,
+  borderTopLeftRadius: 40,
+  borderTopRightRadius: 40,
+},
+
+modalContent:{
+  height: 300,
+  width: "95%",
+  backgroundColor: '#fff', 
+  padding: 20,
+},
+containerInputs:{
+  display:"flex",
+  alignItems:"center",
+  flexDirection:"column",
+},
+btnExitModal:{
+  width: 50,
+},
+input:{
+  width:'70%',
+  height:47,
+  backgroundColor: '#fff',
+  borderRadius:10,
+  marginTop: 30,
+  fontSize: 17,
+  fontWeight:"bold",
+  paddingLeft: 15
+
+  
+
+},
+inputSenha:{
+  width:'70%',
+  height:47,
+  backgroundColor: '#fff',
+  marginTop:20,
+  borderRadius:10,
+  fontSize: 17,
+  fontWeight:"bold",
+  paddingLeft: 15
+
+  
+
+},
+btnLogin:{
+  backgroundColor:'#ACEDFF',
+  width:'70%',
+  height:47,
+  marginTop:20,
+  justifyContent: 'center',
+  borderRadius:10,
+},
+textBtnLogin:{
+  color:'#615D6C',
+  fontWeight:"bold",
+  fontSize: 17,
+  textAlign:"center",
+  
+},
 btnDeletar:{
   fontSize: 15,
   width: '100%',
