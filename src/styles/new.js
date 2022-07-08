@@ -66,18 +66,41 @@ prioridade:{
     alignItems:"center",
    
 },
+viewDateTime:{
+    width:'95%',
+    flexDirection:"row",
+    justifyContent:'space-between',
+},
 
 inputDate:{
-    width:'95%',
+    width:'50%',
     marginTop: 20,
     alignItems:"center",
-    height:55,
-    paddingBottom:25,
+    height:45,
+    justifyContent:"center",
     paddingLeft:5,
     borderRadius:5,
     backgroundColor:'#fff',
     fontWeight:"bold",
     fontSize:17,
+    shadowOffset:{
+        width:1,
+        height:1
+    },
+    shadowRadius:5,
+    shadowColor:'#333'
+},
+inputDataAparecer:{
+    width:'40%',
+    marginTop: 20,
+    alignItems:"center",
+    height:45,
+    justifyContent:"center",
+    paddingLeft:5,
+    borderRadius:5,
+    backgroundColor:'#fff',
+    fontWeight:"bold",
+    fontSize:14,
     shadowOffset:{
         width:1,
         height:1
