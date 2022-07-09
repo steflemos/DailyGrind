@@ -11,12 +11,12 @@ export default StyleSheet.create({
         display:"flex",
         alignItems:"center",
         flexDirection:"column",
-        marginTop: 80
+        marginTop: 40
 
     },
     controle:{
-        width:200,
-        height:200,
+        width:180,
+        height:180,
         marginBottom:-30
 
     },  
@@ -33,7 +33,10 @@ export default StyleSheet.create({
         width:'70%',
         height:47,
         backgroundColor: '#fff',
-        borderRadius:10,
+        borderTopEndRadius:10,
+        borderTopLeftRadius:10,
+        borderBottomLeftRadius:10,
+        borderBottomEndRadius:10,
         marginTop: 30,
         fontSize: 17,
         fontWeight:"bold",

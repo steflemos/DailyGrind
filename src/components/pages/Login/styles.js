@@ -38,9 +38,12 @@ export default StyleSheet.create({
         width:'70%',
         height:47,
         backgroundColor: '#fff',
-        borderRadius:10,
+        borderTopEndRadius:10,
+        borderTopLeftRadius:10,
+        borderBottomLeftRadius:10,
+        borderBottomEndRadius:10,
         marginTop: 30,
-        fontSize: 17,
+        fontSize: 10,
         fontWeight:"bold",
         paddingLeft: 15
 
@@ -93,7 +96,14 @@ export default StyleSheet.create({
         marginTop: 30,
         marginRight:240,
        
-      }
+      },
+      mensagemErro:{
+        marginTop:10,
+        color:'#fff',
+        fontWeight:"bold",
+        fontSize: 17,
+        textAlign:"center",
+      },
    
    
 

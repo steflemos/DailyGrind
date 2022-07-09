@@ -24,6 +24,7 @@ CREATE TABLE lista (
 
 CREATE TABLE grupo (
     idGrupo SERIAL PRIMARY KEY,
+    idUser INT NOT NULL,
     nome VARCHAR (45) NOT NULL,
     descricao VARCHAR (1000) NOT NULL,
     FOREIGN KEY (idUser) REFERENCES user (idUser),
