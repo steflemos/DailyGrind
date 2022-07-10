@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Image,Text, TouchableOpacity, TextInput, StyleSheet, Modal } from "react-native";
+import { View, Image,Text, TouchableOpacity, TextInput, StyleSheet, Modal, ScrollView } from "react-native";
 import styles from "./styles";
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 
@@ -8,6 +8,7 @@ const Conta = ({navigation}) => {
     const [modalAberto, setModalAberto] = useState(false);
     return(
         <View style={styles.container}>
+            <ScrollView>
             <View style={styles.header}>
                 <View style ={styles.viewBtn}>
                     <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Navigation")}>
@@ -107,6 +108,7 @@ const Conta = ({navigation}) => {
 
                 </View>
             </View>
+            </ScrollView>
         </View>
         
     )

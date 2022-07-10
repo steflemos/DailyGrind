@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity,KeyboardAvoidingView } from "react-native";
 import styles from './styles';
 import { TextInput} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -18,21 +18,21 @@ const Login = ({navigation}) =>{
       signIn({ email: emailInput, password: passwordInput })
     } else {
       setErrorMessage(null)
-      setErrorMessage("PREENCHA OS CAMPOS!")
+      setErrorMessage("PREENCHA OS CAMPOS!*")
       return;
     }
   }
 
     return(
   
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container}>
         <View style={styles.imgControle}>
         <Image style={styles.controle} source={require('../../../styles/assets/controle.png')} />
         <Text style={styles.TextLogin}>
             DailyGrind
         </Text>
         </View>
-        <View style={styles.containerInputs}>
+        <KeyboardAvoidingView style={styles.containerInputs}>
         
             <TextInput 
             value={emailInput}
@@ -56,6 +56,7 @@ const Login = ({navigation}) =>{
             activeUnderlineColor="#615D6C"
             underlineColor="#615D6C"
             />
+
             <Text style={styles.mensagemErro}>{errorMessage}</Text>
 
            
@@ -72,8 +73,8 @@ const Login = ({navigation}) =>{
             >
             <Text  style={styles.cadastrar}>Cadastrar-se</Text>
             </TouchableOpacity>
-        </View>
-      </View>
+        </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
   
     )
   

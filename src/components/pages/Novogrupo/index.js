@@ -28,6 +28,7 @@ const Novogrupo = ({navigation}) => {
 
     <View style ={{alignItems: 'center'}}>
             <View style={styles.viewPrioridade}>
+                <ScrollView>
                 <View>
                 <Text style={styles.textAdd}>
                     Adicionar Participante
@@ -49,9 +50,9 @@ const Novogrupo = ({navigation}) => {
                 </View>
                 </View>
 
-            </View>
-            </View>
-          
+                </View>
+                </View>
+                </ScrollView>
             </View>
     </View>
    

@@ -98,7 +98,8 @@ export default StyleSheet.create({
        
       },
       mensagemErro:{
-        marginTop:10,
+        marginTop:5,
+        marginBottom:-15,
         color:'#fff',
         fontWeight:"bold",
         fontSize: 17,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, TextInput, Button } from "react-native";
+import { View, Text, TouchableOpacity, TextInput, Button, ScrollView } from "react-native";
 import styles from "./styles";
 import { FontAwesome,  Feather } from '@expo/vector-icons'
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -19,6 +19,7 @@ const New = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            <ScrollView>
             <View style={styles.header}>
                 <Text style={styles.titulo}>Nova Tarefa</Text>
             </View>
@@ -106,6 +107,7 @@ const New = ({navigation}) => {
                 </View>
             </View>
             </View>
+            </ScrollView>
         </View>
     )
 }

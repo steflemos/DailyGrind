@@ -18,7 +18,7 @@ const Intro = ({navigation}) => {
 
         <View style={styles.textIntro}>
             <Text style={styles.textIntro}>
-            No DailyGrind, a cada tarefa que você conclui, pontos de expêriencia são ganhos. Conquistas são desbloqueadas ao longo da sua jornada no app.
+            No DailyGrind, a cada tarefa que você conclui, pontos de experiência são ganhos. Conquistas são desbloqueadas ao longo da sua jornada no app.
             </Text>
         </View>
         

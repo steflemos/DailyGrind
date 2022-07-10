@@ -120,11 +120,12 @@ dadosContaBoxNick:{
 view:{
   borderColor: "000",
   borderWidth: 2,
-  borderRadius:300,
+  borderRadius:120,
   justifyContent:"space-around",
   flexDirection:"row",
   alignItems:"center",
-  width: "30%",
+  height:120,
+  width: 120,
   padding: 25,
   margin: 40,
   backgroundColor: '#ebebeb',
@@ -189,7 +190,7 @@ textContaDadosTitleEmail:{
 textContaDadosSenha:{
   color:'#000',
   fontSize:20,
-  marginBottom: 15
+  marginBottom: 15,
 },
 btnEditarDados:{
   color:'#000',
