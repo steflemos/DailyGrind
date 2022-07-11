@@ -6,6 +6,7 @@ import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 
 const Conta = ({navigation}) => {
     const [modalAberto, setModalAberto] = useState(false);
+    const [modalAberto2, setModalAberto2] = useState(false);
     return(
         <View style={styles.container}>
             <ScrollView>
@@ -42,6 +43,34 @@ const Conta = ({navigation}) => {
                             <View style={styles.containerInputs}>
                             
                             <TextInput placeholder="Novo apelido" style={styles.input}
+                            />
+
+                            </View>
+                        </View>
+                    </View>
+                    
+                </Modal>
+                <Modal visible={modalAberto2} transparent={true}>
+                    
+                    <View style={styles.containerModal}>
+                        <View style={StyleSheet.modalContent}>
+                            <View style={{
+                                flexFlow: "end",
+                                justifyContent:'space-between',
+                                flexDirection:'row',
+                                width: "100%",
+                            }}>
+                                <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto2(false)}>
+                                    <Ionicons name='close-circle' size={50} color='white'></Ionicons>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto2(false)}>
+                                    <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
+                                </TouchableOpacity>
+                            </View>
+                            
+                            <View style={styles.containerInputs}>
+                            
+                            <TextInput placeholder="Nova Senha" style={styles.input}
                             />
 
                             </View>
@@ -90,7 +119,7 @@ const Conta = ({navigation}) => {
                                 <Text style={styles.textContaDadosTitle}>
                                     Senha
                                 </Text>
-                                <TouchableOpacity style={styles.btnEditarDados}>
+                                <TouchableOpacity style={styles.btnEditarDados} onPress={() => setModalAberto2(true)}>
                                     <FontAwesome name='edit' size={25} color='black'></FontAwesome>
                                 </TouchableOpacity>
                             </View>
