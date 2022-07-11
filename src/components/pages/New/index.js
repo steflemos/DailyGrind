@@ -52,7 +52,7 @@ const New = ({navigation}, props) => {
                     <TextInput placeholder="Descrição" style={styles.name} multiline={true} placeholderTextColor="#615d6c" />
                     <View style={styles.viewDateTime}>
                         <TextInput style={styles.inputDataAparecer} placeholder="Data Selecionada:" placeholderTextColor="#615d6c" ></TextInput>
-                         <TouchableOpacity  style={styles.inputDate} onPress={showDatepicker}><Text>Selecione a Data</Text></TouchableOpacity>
+                         <TouchableOpacity  style={styles.inputDate} onPress={showDatepicker}><Text style={styles.textSelecionar}>Selecione a Data</Text></TouchableOpacity>
                     </View>
                         {show && (
                             <DateTimePicker
