@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { View, Image,Text, TouchableOpacity, TextInput, StyleSheet, Modal, ScrollView } from "react-native";
 import styles from "./styles";
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
+import { KeyboardAvoidingView } from "react-native";
 
 
 const Conta = ({navigation}) => {
@@ -51,31 +52,35 @@ const Conta = ({navigation}) => {
                     
                 </Modal>
                 <Modal visible={modalAberto2} transparent={true}>
+
+                 
                     
-                    <View style={styles.containerModal}>
-                        <View style={StyleSheet.modalContent}>
+                    <View style={styles.containerModal2}>
+                        <View style={StyleSheet.modalContent2}>
                             <View style={{
                                 flexFlow: "end",
                                 justifyContent:'space-between',
                                 flexDirection:'row',
                                 width: "100%",
                             }}>
-                                <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto2(false)}>
+                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto2(false)}>
                                     <Ionicons name='close-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto2(false)}>
+                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto2(false)}>
                                     <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
                             </View>
                             
-                            <View style={styles.containerInputs}>
+                            <View style={styles.containerInputs2}>
                             
-                            <TextInput placeholder="Nova Senha" style={styles.input}
-                            />
+                            <TextInput placeholder="Senha Atual" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
+                            <TextInput placeholder="Nova Senha" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
+                            <TextInput placeholder="Repita a Nova Senha" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
 
                             </View>
                         </View>
                     </View>
+                  
                     
                 </Modal>
                     <View style={styles.viewInputs}>

@@ -45,6 +45,7 @@ export default StyleSheet.create({
         marginTop: 30,
         fontSize: 17,
         fontWeight:"bold",
+        borderBottomColor:"#fff",
         paddingLeft: 15
 
         

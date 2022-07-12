@@ -217,8 +217,24 @@ containerModal:{
   borderTopLeftRadius: 40,
   borderTopRightRadius: 40,
 },
-
+containerModal2:{
+  flex: 1,
+  flexDirection: 'column',
+  marginTop: 460,
+  backgroundColor: '#615D6C',
+  width: "100%",
+  padding: 15,
+  borderTopLeftRadius: 40,
+  borderTopRightRadius: 40,
+},
 modalContent:{
+  height: 300,
+  width: "95%",
+  backgroundColor: '#fff', 
+  padding: 20,
+},
+
+modalContent2:{
   height: 300,
   width: "95%",
   backgroundColor: '#fff', 
@@ -229,7 +245,15 @@ containerInputs:{
   alignItems:"center",
   flexDirection:"column",
 },
+containerInputs2:{
+  display:"flex",
+  alignItems:"center",
+  flexDirection:"column",
+},
 btnExitModal:{
+  width: 50,
+},
+btnExitModal2:{
   width: 50,
 },
 input:{
@@ -245,6 +269,27 @@ input:{
   
 
 },
+input2:{
+  marginTop: 20,
+    width:'95%',
+    height:55,
+    borderRadius:5,
+    backgroundColor:'#615D6C',
+    paddingBottom:25,
+    paddingLeft:5,
+    fontWeight:"bold",
+    fontSize:17,
+    shadowOffset:{
+        width:1,
+        height:1
+    },
+    shadowRadius:5,
+    shadowColor:'#333'
+    
+  
+
+},
+
 inputSenha:{
   width:'70%',
   height:47,
