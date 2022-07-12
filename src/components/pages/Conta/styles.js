@@ -151,9 +151,9 @@ dadosContaBox:{
 dadosContaBoxDelete:{
   backgroundColor:'#e05a5a',
   width:'95%',
-  marginTop:20,
-  marginBottom: 20,
-  height:75,
+  marginTop:5,
+  marginBottom: 40,
+  height:55,
   justifyContent:"space-around",
   flexDirection:"column",
   alignItems:"center",

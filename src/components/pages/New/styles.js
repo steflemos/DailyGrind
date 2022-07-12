@@ -52,6 +52,11 @@ name:{
     
  
 },
+textSelecionar:{
+    fontSize:17,
+    fontWeight:"bold",
+    color:'#615d6c'
+},
 data:{
     width:350,
     height: 350
@@ -81,8 +86,6 @@ inputDate:{
     paddingLeft:5,
     borderRadius:5,
     backgroundColor:'#fff',
-    fontWeight:"bold",
-    fontSize:17,
     shadowOffset:{
         width:1,
         height:1
@@ -100,7 +103,7 @@ inputDataAparecer:{
     borderRadius:5,
     backgroundColor:'#fff',
     fontWeight:"bold",
-    fontSize:14,
+    fontSize:17,
     shadowOffset:{
         width:1,
         height:1

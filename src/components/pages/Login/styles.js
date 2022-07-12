@@ -43,7 +43,7 @@ export default StyleSheet.create({
         borderBottomLeftRadius:10,
         borderBottomEndRadius:10,
         marginTop: 30,
-        fontSize: 10,
+        fontSize: 17,
         fontWeight:"bold",
         paddingLeft: 15
 

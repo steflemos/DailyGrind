@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, TextInput, Button, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, TextInput, ScrollView } from "react-native";
 import styles from "./styles";
 import { FontAwesome,  Feather } from '@expo/vector-icons'
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-const New = ({navigation}) => {
-
+const New = ({navigation}, props) => {
+    const [nome, setNome] = useState('')
     const [date, setDate] = useState(new Date())
     const [show, setShow] = useState(false)
     const onChange = (event, selectedDate) => {
@@ -15,6 +15,29 @@ const New = ({navigation}) => {
     };
     const showDatepicker = () => {
         setShow(true)
+    }
+    const handleNomeChange = nome => setNome(nome)
+    const postTarefa = async () => {
+        if(nome != ""){
+            try{
+                const requestOptions = {
+                    method: 'post',
+                    headers: {'Content-Type' : 'application/json '},
+                    body: JSON.stringify({
+                        nome: nome
+                    })
+                }
+                await fetch ('http://localhost:3000/task/', requestOptions)
+                props.addTarefa()
+
+            }catch(error){
+                console.log("erro" + error);
+                setNome('')
+
+            }
+        }else{
+
+        }
     }
 
     return (
@@ -29,7 +52,7 @@ const New = ({navigation}) => {
                     <TextInput placeholder="Descrição" style={styles.name} multiline={true} placeholderTextColor="#615d6c" />
                     <View style={styles.viewDateTime}>
                         <TextInput style={styles.inputDataAparecer} placeholder="Data Selecionada:" placeholderTextColor="#615d6c" ></TextInput>
-                         <TouchableOpacity  style={styles.inputDate} onPress={showDatepicker}><Text>Selecione a Data</Text></TouchableOpacity>
+                         <TouchableOpacity  style={styles.inputDate} onPress={showDatepicker}><Text style={styles.textSelecionar}>Selecione a Data</Text></TouchableOpacity>
                     </View>
                         {show && (
                             <DateTimePicker
@@ -100,7 +123,7 @@ const New = ({navigation}) => {
                  <Text style={styles.textoCancelar}>Cancelar</Text>
                  </View>
                  <View style={styles.salvar}>
-                 <TouchableOpacity style={styles.botaoSalvar}>
+                 <TouchableOpacity onPress={postTarefa} style={styles.botaoSalvar}>
                     <Feather name="check" size={30} color='#6F8AB7'/>
                  </TouchableOpacity>
                  <Text style={styles.textoCancelar}>Salvar</Text>
