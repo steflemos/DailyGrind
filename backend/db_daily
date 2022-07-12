@@ -1,32 +1,38 @@
-CREATE DATABASE application_database
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1;
-    
+
 CREATE TABLE user (
     idUser SERIAL PRIMARY KEY,
     nome VARCHAR (100) NOT NULL,
     email VARCHAR (45) NOT NULL,
     senha VARCHAR (45) NOT NULL,
     pt_recompensa INT NOT NULL,
+    imagem INT NOT NULL,
     PRIMARY KEY (idUser)
 );
 
-CREATE TABLE lista (
-    idLista SERIAL PRIMARY KEY,
+CREATE TABLE conquistas(
+    idConquistas SERIAL PRIMARY kEY,
+    imagem INT NOT NULL,
+    descricao VARCHAR (1000) NOT NULL,
+    primary key(idConquistas)
+);
+
+CREATE TABLE tarefa (
+    idTarefa SERIAL PRIMARY KEY,
     nome VARCHAR (45) NOT NULL,
     descricao VARCHAR (1000) NOT NULL,
     data_tarefa DATE,
     prioridade INT NOT NULL,
-    PRIMARY KEY (idLista)
+    PRIMARY KEY (idTarefa)
 );
 
 CREATE TABLE grupo (
     idGrupo SERIAL PRIMARY KEY,
     idUser INT NOT NULL,
-    nome VARCHAR (45) NOT NULL,
+    nome VARCHAR (100) NOT NULL,
     descricao VARCHAR (1000) NOT NULL,
     FOREIGN KEY (idUser) REFERENCES user (idUser),
+    PRIMARY KEY (idGrupo)
     
 );
+
+

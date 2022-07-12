@@ -7,7 +7,17 @@ import api from '../../../api/index'
 const Cadastro = ({navigation}) =>{
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [passwordInput, setPasswordInput] = useState('')
+  const [passwordInput, setPasswordInput] = useState('');
+  const [confirm, setconfirm] = useState('');
+  const [ErrorNome, setErrorNome] = useState(null)
+  const [ErrorEmail, setErrorEmail] = useState(null)
+  const [ErrorSenha, setErrorSenha] = useState(null)
+  const [ErroConfirmar, setErroConfirmar] = useState(null)
+
+  const validar = () =>{
+
+  }
+
 
     return(
   
@@ -55,9 +65,9 @@ const Cadastro = ({navigation}) =>{
             />
 
             <TextInput 
-            value={passwordInput}
-            onChangeText={setPasswordInput}
-            label="Senha"
+            value={confirm}
+            onChangeText={setconfirm}
+            label="Confirmar"
             left={<TextInput.Icon name="lock" color = "#615D6C"/>}
             style={styles.input}
             placeholder='***********'
@@ -65,7 +75,8 @@ const Cadastro = ({navigation}) =>{
             activeUnderlineColor="#615D6C"
             underlineColor="#615D6C"
             />
-            <TouchableOpacity onPress={() => navigation.navigate('Navigation')} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity>
+            {/* <TouchableOpacity onPress={() => salvar()} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity> */}
+            <TouchableOpacity onPress={() =>navigation.navigate('Navigation')} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}><Text style={styles.cadastrar}>Ja possuo uma conta</Text></TouchableOpacity>
             
         </View>
