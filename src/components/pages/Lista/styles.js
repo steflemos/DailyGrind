@@ -23,6 +23,25 @@ controleIndex:{
     marginLeft:'10%',
    
 },
+containerModal:{
+  flex: 1,
+  flexDirection: 'column',
+  marginTop: 600,
+  backgroundColor: '#615D6C',
+  width: "100%",
+  padding: 15,
+  borderTopLeftRadius: 40,
+  borderTopRightRadius: 40,
+},
+modalContent:{
+  height: 300,
+  width: "95%",
+  backgroundColor: '#fff', 
+  padding: 20,
+},
+btnExitModal:{
+  width: 50,
+},
 levels:{
 height:35,
 width:35,
@@ -43,6 +62,24 @@ form:{
   borderTopWidth: 1,
   borderColor: "#fff"
 },
+containerInputs:{
+  display:"flex",
+  alignItems:"center",
+  flexDirection:"column",
+},
+input:{
+  width:'70%',
+  height:47,
+  backgroundColor: '#fff',
+  borderRadius:10,
+  marginTop: 30,
+  fontSize: 17,
+  fontWeight:"bold",
+  paddingLeft: 15
+
+  
+
+},
 titulo:{
   color:"#fff",
   fontWeight:"bold",
@@ -60,7 +97,7 @@ containerLista:{
 },
 tarefaCriada:{
   backgroundColor:'#CAE5FF',
-  width:'90%',
+  width:'100%',
   marginTop:30,
   height:70,
   justifyContent:"space-around",
@@ -74,6 +111,9 @@ tarefaCriada:{
   shadowRadius:5,
   shadowColor:'#C1C1C1',
   elevation: 3
+},
+btnTarefa:{
+  width:'90%'
 },
 textTarefa:{
   fontWeight:"bold",
