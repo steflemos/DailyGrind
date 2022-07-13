@@ -19,7 +19,15 @@ export default StyleSheet.create({
         height:180,
         marginBottom:-30
 
-    },  
+    }, 
+    setError:{
+        marginTop:5,
+        marginBottom:-15,
+        color:'#fff',
+        fontWeight:"bold",
+        fontSize: 14,
+        textAlign:"center",
+    },
 
     containerInputs:{
         display:"flex",

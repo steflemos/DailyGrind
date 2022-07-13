@@ -103,7 +103,7 @@ export default StyleSheet.create({
         marginBottom:-15,
         color:'#fff',
         fontWeight:"bold",
-        fontSize: 17,
+        fontSize: 14,
         textAlign:"center",
       },
    
