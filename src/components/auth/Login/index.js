@@ -63,7 +63,8 @@ const Login = ({navigation}) =>{
 
             <TouchableOpacity
               style={styles.btnLogin}
-              onPress={validateLogin}
+              // onPress={validateLogin}
+              onPress={() =>navigation.navigate('Navigation')}
               >
               <Text style={styles.textBtnLogin}>Login</Text>
             </TouchableOpacity>
