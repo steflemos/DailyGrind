@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 import {TextInput} from 'react-native-paper'
 import styles from './styles'
 import api from '../../../api/index'
-import { set } from "react-native-reanimated";
+
 
 const Cadastro = ({navigation}) =>{
   const [name, setName] = useState('');
@@ -11,17 +11,19 @@ const Cadastro = ({navigation}) =>{
   const [passwordInput, setPasswordInput] = useState('');
   const [confirm, setconfirm] = useState('');
   const [error, setError] = useState(null)
-  
+ 
 
   const validarCadastro = () =>{
     if((name, email, passwordInput, confirm !== "")){
-      signIn({nome : name,email : email, password : passwordInput, confirmar : confirm })
+      signIn({nome : name, email : email, password : passwordInput, confirmar : confirm })
     }else{
       setError(null)
       setError('PREENCHA TODOS OS CAMPOS')
       return
     }
   }
+  
+  
 
 
     return(
@@ -79,10 +81,12 @@ const Cadastro = ({navigation}) =>{
             secureTextEntry={true}
             activeUnderlineColor="#615D6C"
             underlineColor="#615D6C"
+           
             />
             <Text style={styles.setError}>{error}</Text>
+           
             {/* <TouchableOpacity onPress={() => salvar()} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity> */}
-            <TouchableOpacity onPress={() =>navigation.navigate('Navigation')} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity>
+            <TouchableOpacity onPress={validarCadastro} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}><Text style={styles.cadastrar}>Ja possuo uma conta</Text></TouchableOpacity>
             
         </View>
