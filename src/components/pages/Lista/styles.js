@@ -26,7 +26,6 @@ controleIndex:{
 containerModal:{
   flex: 1,
   flexDirection: 'column',
-  marginTop: 600,
   backgroundColor: '#615D6C',
   width: "100%",
   padding: 15,
