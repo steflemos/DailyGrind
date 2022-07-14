@@ -6,8 +6,22 @@ import {FontAwesome,MaterialIcons, Ionicons, Feather} from '@expo/vector-icons'
 
 
 const ItemListaModal = (props) =>{
+    const [tarefa, setTarefa] = useState([])
+
+    if(props.id != null){
+        setTarefa(props.tarefa)
+        varJustOneTime = id+1
+    }
+    
+
+    const [modalAberto, setModalAberto] = useState(false);
+    const [descricao, setDescricao] = useState('')
+    const [data, setData] = useState('')
+    const [prioridade, setPrioridade] = useState('')
     const [date, setDate] = useState(new Date())
     const [show, setShow] = useState(false)
+
+    
     const onChange = (event, selectedDate) => {
         console.log('----->>>Data: ' + date)
         setDate(selectedDate);
@@ -16,8 +30,52 @@ const ItemListaModal = (props) =>{
     const showDatepicker = () => {
         setShow(true)
     }
-    const [descricao, setDescricao] = useState('')
-    const handleDescricaoTarefaChange = descricaoTarefa => setDescricao(descricao)
+    const handleNomeChange = (Tarefa) => {
+        console.log('Tarefa a receber - ' + Tarefa)
+        setTarefa(Tarefa)
+        console.log('Tarefa recebida - ' + tarefa)
+    }
+    const handleDescricaoChange = descricao => setDescricao(descricao)
+    const handleDataChange = data => setData(data)
+    const handlePrioridadeChange = prioridade => setPrioridade(prioridade)
+
+
+
+    
+    const putTarefa = async idSelecionado => {
+        if(tarefa != ""){
+            
+            try{
+                const requestOptions = {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json '},
+                    body: JSON.stringify({
+                        nome: tarefa,
+                        descricao: descricao,
+                        data_tarefa: "201",
+                        prioridade: prioridade,
+                        idTarefa: idSelecionado
+                    })
+                }
+                const response = await fetch('http://localhost:3000/tarefa/' + idSelecionado, requestOptions)
+                const dadosId = response.json()
+                console.log('val', dadosId)
+                dadosId.then(
+                    (val) => setTarefa(val)
+                    
+                )
+            }catch(error){
+                console.log("erro" + error);
+                setTarefa('')
+
+            }
+            // navigation.navigate("Navigation")
+            // navigation.navigate("Lista")
+        }else{
+            console.log("erro campos vazios");
+        }
+        console.log('wgreger:', tarefa)
+    }
     
     return (
             <View style={styles.container}>
@@ -27,10 +85,10 @@ const ItemListaModal = (props) =>{
                 </View>
                 <View style={styles.main}>
                     <View style={styles.inputs}>
-                        <Text style={styles.name} multiline={true}> {props.tarefa}</Text>
+                        <TextInput style={styles.name}  onChangeText={(text) => {handleNomeChange(text)}} value={tarefa} multiline={true}> </TextInput>
                         <TextInput
-                        onChangeText={handleDescricaoTarefaChange}
-                        value={descricao}
+                        onChangeText={handleDescricaoChange}
+                        value={props.descricao}
                         style={styles.name} multiline={true}/>
                         <View style={styles.viewDateTime}>
                             <Text style={styles.inputDataAparecer} >{props.data_tarefa}</Text>
@@ -91,7 +149,7 @@ const ItemListaModal = (props) =>{
                             <Text style={styles.text}>Pontos de recompensa</Text>
                             <View style={styles.row}>
                                 <FontAwesome style={styles.diamont} name='diamond' size={20} color='#615d6c' />
-                                <Text style={styles.pontos}>{props.prioridade}</Text>
+                                <TextInput value={props.prioridade} style={styles.pontos}></TextInput>
                             </View>
                         </View>
                     </View>
@@ -99,14 +157,14 @@ const ItemListaModal = (props) =>{
                 <View style={styles.botoes}>
                 <View style ={styles.cancelAdd}>
                 <View style={styles.cancelar}>
-                    <TouchableOpacity onPress={() => setModalAberto(false)}
+                    <TouchableOpacity onPress={() => navigation.navigate("Navigation")}
                     style={styles.botaoCancelar} >
                     <Feather name="x"  size={30} color='#6F8AB7'/>
                     </TouchableOpacity>
                     <Text style={styles.textoCancelar}>Cancelar</Text>
                     </View>
                     <View style={styles.salvar}>
-                    <TouchableOpacity style={styles.botaoSalvar}>
+                    <TouchableOpacity style={styles.botaoSalvar} onPress={() => putTarefa(props.id)}>
                         <Feather name="check" size={30} color='#6F8AB7'/>
                     </TouchableOpacity>
                     <Text style={styles.textoCancelar}>Salvar</Text>

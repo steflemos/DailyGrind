@@ -47,6 +47,8 @@ const New = ({navigation} ) => {
                 setNome('')
 
             }
+            navigation.navigate("Navigation")
+            navigation.navigate("Lista")
         }else{
             console.log("erro campos vazios");
         }
