@@ -17,6 +17,11 @@ header:{
   borderBottomColor: "#fff",
   borderBottomWidth: 1,
 },
+containerInputs:{
+  display:"flex",
+  alignItems:"center",
+  flexDirection:"column",
+},
 controleIndex:{
     height:45,
     width:45,

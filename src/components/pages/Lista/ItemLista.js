@@ -1,18 +1,22 @@
-import React, {useState} from "react";
-import { View, Image,Text, TouchableOpacity, Modal, TextInput
- } from "react-native";
-import styles from "./styles";
-import {FontAwesome,MaterialIcons, Ionicons} from '@expo/vector-icons'
+import React from "react";
+import {View, Text, TouchableOpacity} from "react-native"
+import {MaterialIcons} from "@expo/vector-icons"
+import {styles} from "./styles";
 
-const ItemLista = (props) =>{
+const Taskitem = (props) => {
     return(
-        
-    <View style={styles.textContainer}>       
-        <Text style={styles.textTarefa}>{props.tarefa}</Text>
-        <Text style={styles.textTarefa}>{props.index}</Text>
-        <FontAwesome name="check-square-o" size={35} color={"#5DC277"}/>
-    </View>
-
+        <View>
+            <View style={StyleSheet.containerInputs}>
+                <Text>{props.task}</Text>
+                <Text>{props.xp}</Text>
+                <TouchableOpacity onPress={() => props.deleteTask()}>
+                    <MaterialIcons name="delete"/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => props.updateTaskHandle()}>
+                    <MaterialIcons name="edit"/>
+                </TouchableOpacity>
+            </View>
+        </View>
     )
 }
-export default ItemLista;
+export default Taskitem
