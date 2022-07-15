@@ -79,7 +79,7 @@ const App = () => {
         <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
     </View>
     <View style={styles.main}>
-        <Text style={styles.titulo}>Conta</Text>
+        <Text style={styles.titulo}>Tarefas</Text>
         <View style={styles.containerLista}>
             <ScrollView style= {{ width:'100%'}}>
               
@@ -129,10 +129,18 @@ const App = () => {
                     })
                   }
                 </ScrollView>
-                <Taskinputfield addTask={addTask} />
+                
               </View>
           </ScrollView>
+
         </View>
+        <View style={styles.containerLista2}>
+                <Taskinputfield addTask={addTask} />
+                </View>
+
+      </View>
+      <View>
+        
       </View>
     </View>
   )

@@ -1,5 +1,6 @@
 import react, { useState } from "react"
-import { KeyboardAvoidingView, TextInput, TouchableOpacity, View } from "react-native"
+import { KeyboardAvoidingView, TouchableOpacity, View } from "react-native"
+import {TextInput} from 'react-native-paper'
 import { MaterialIcons } from "@expo/vector-icons"
 import styles from "./styles"
 
@@ -34,20 +35,38 @@ const Taskinputfield = (props) => {
     }
     return (
         <KeyboardAvoidingView>
-            <TextInput
+            <View style ={styles.ViewTask}>
+        <View style ={styles.viewInput}>
+            <View style ={{backgroundColor:'#c2c2c2',
+            height:'100%'
+        }}>
+            <TextInput 
+            multiline={true}
+                style = {styles.inputAdd}
                 value={descricao}
                 placeholder="Escreva uma tarefa"
                 onChangeText={handleDescricaoChange}
             />
+            </View>
+           
+       <View>
             <TextInput
+             
                 value={xp}
+                style = {styles.inputAdd}
                 placeholder="XP"
+                type="number"
                 onChangeText={handleXpChange}
             />
-            <TouchableOpacity onPress={postTask}>
-                <MaterialIcons name="add" size={24} />
+         </View>
+             </View>
+             <View style = {styles.btnAdd}>
+             <TouchableOpacity onPress={postTask}>
+                <MaterialIcons name="add" size={30} />
             </TouchableOpacity>
-
+            </View>
+           
+            </View>
         </KeyboardAvoidingView>
     )
 }

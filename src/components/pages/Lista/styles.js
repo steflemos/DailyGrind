@@ -66,11 +66,7 @@ form:{
   borderTopWidth: 1,
   borderColor: "#fff"
 },
-containerInputs:{
-  display:"flex",
-  alignItems:"center",
-  flexDirection:"column",
-},
+
 input:{
   width:'70%',
   height:47,
@@ -94,10 +90,20 @@ titulo:{
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'100%',
-  borderRadius:7,
+  height:'80%',
+  borderTopLeftRadius:7,
+  borderTopRightRadius:7,
   alignItems:"center",
   marginTop:10,
+},
+containerLista2:{
+  backgroundColor:"#fff",
+  width:'95%',
+  height:'20%',
+  borderBottomLeftRadius:7,
+  borderBottomRightRadius:7,
+  alignItems:"center",
+  marginTop:-1,
 },
 tarefaCriada:{
   backgroundColor:'#CAE5FF',
@@ -132,14 +138,37 @@ viewBtn:{
 },
 btnAdd:{
 backgroundColor:'#ACEDFF',
-width:50,
-height:50,
+width:70,
+height:70,
 alignItems:'center',
 justifyContent:'center',
 marginRight:25,
-marginTop:-7.5,
 borderRadius:100,
 
 },
+inputAdd:{
+  backgroundColor:'#c2c2c2',
+  width:'120%',
+  height:50,
+  marginLeft:-30
+  
+
+},
+ViewTask:{
+  backgroundColor:'#000',
+justifyContent:'space-between',
+flexDirection:'row',
+alignItems:'center',
+marginRight:-30
+},
+viewInput:{
+  justifyContent:'space-around',
+  flexDirection:'column'
+},
+viewTextTask:{
+  backgroundColor:'#c2c2c2',
+  width:'80%',
+  height:50,
+}
 
 })
