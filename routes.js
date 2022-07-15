@@ -5,8 +5,8 @@ import Navigation from './src/components/Navigation'
 import Intro from './src/components/pages/Intro';
 
 
-import Login from './src/components/auth/Login';
-import Cadastro from './src/components/auth/Cadastro';
+import Login from './src/components/pages/Login';
+import Cadastro from './src/components/pages/Cadastro';
 
 import New from './src/components/pages/New';
 
