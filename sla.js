@@ -9,20 +9,21 @@ const Conta = ({navigation}) => {
     const [modalAberto, setModalAberto] = useState(false);
     const [modalAberto2, setModalAberto2] = useState(false);
     return(
-        
         <View style={styles.container}>
+            <ScrollView>
             <View style={styles.header}>
-            <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
-                <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
-            </TouchableOpacity>
-                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-                <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
+                <View style ={styles.viewBtn}>
+                    <TouchableOpacity style={styles.btnVoltar} onPress={() => navigation.navigate("Navigation")}>
+                        <Ionicons name="arrow-back-circle-sharp"  size={45} color='#fff'/>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.titulo}>Conta</Text>
             </View>
             <View style={styles.main}>
-                <Text style={styles.titulo}>Conta</Text>
+               
+                
                 <View style={styles.containerLista}>
-                    <ScrollView style= {{ width:'100%'}}>
-                <Modal visible={modalAberto} transparent={true}>
+                    <Modal visible={modalAberto} transparent={true}>
                     
                     <View style={styles.containerModal}>
                         <View style={StyleSheet.modalContent}>
@@ -82,60 +83,69 @@ const Conta = ({navigation}) => {
                   
                     
                 </Modal>
-
-                <View style={styles.viewInputs}>
-
-                    <View style={styles.nickBox}>
-                        <View style={styles.usuarioBox}>
-                            <View style={styles.view}>
-                                <View style={styles.iconBox}>
-                                <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
-                                </View>  
+                    <View style={styles.viewInputs}>
+                        <View style={styles.nickBox}>
+                            <View style={styles.usuarioBox}>
+                                <View style={styles.view}>
+                                    <View style={styles.iconBox}>
+                                        <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                                    </View>
+                                </View>
+                                
                             </View>
-                        </View>
 
-                        <View style={styles.dadosContaBoxNick}>
-
-                            <View style={styles.upperDadosBox}>
-                            <Text style={styles.textContaDadosTitle}>Apelido</Text>
-                            <TouchableOpacity style={styles.btnEditarDados} onPress={() => setModalAberto(true)}>
-                                <FontAwesome name='edit' size={25} color='black'></FontAwesome>
-                             </TouchableOpacity>
+                            <View style={styles.dadosContaBoxNick}>
+                                <View style={styles.upperDadosBox}>
+                                    <Text style={styles.textContaDadosTitle}>
+                                        Apelido
+                                    </Text>
+                                    <TouchableOpacity style={styles.btnEditarDados} onPress={() => setModalAberto(true)}>
+                                        <FontAwesome name='edit' size={25} color='black'></FontAwesome>
+                                    </TouchableOpacity>
+                                </View>
+                                <Text style={styles.textContaDadosSenha}>
+                                        TeTeFANI666
+                                </Text>
                             </View>
-                            <Text style={styles.textContaDadosSenha}>TeTeFANI666 </Text>
-                        </View>
-
-                    </View>
-
-                    <View style={styles.dadosContaBox}>
-                        <View style={styles.upperDadosBox}>
-                        <Text style={styles.textContaDadosTitleEmail}> Email </Text>
-
-                        </View>
-                        <Text style={styles.textContaDados}>vini22bubu@gmail.com </Text>
-
-                    </View>
-
-                    <View style={styles.dadosContaBox}>
-                        <View style={styles.upperDadosBox}>
-                        <Text style={styles.textContaDadosTitle}> Senha </Text>
-                        <TouchableOpacity style={styles.btnEditarDados} onPress={() => setModalAberto2(true)}>
-                             <FontAwesome name='edit' size={25} color='black'></FontAwesome>
-                        </TouchableOpacity>
                             
                         </View>
-                        <Text style={styles.textContaDadosSenha}> ************** </Text>
-                    </View>
-                    <TouchableOpacity style={styles.dadosContaBoxDelete}>
+                        <View style={styles.dadosContaBox}>
+                            <View style={styles.upperDadosBox}>
+                                <Text style={styles.textContaDadosTitleEmail}>
+                                    Email
+                                </Text>
+                            </View>
+                            <Text style={styles.textContaDados}>
+                                vini22bubu@gmail.com
+                            </Text>
+                        </View>
+                        
+                        <View style={styles.dadosContaBox}>
+                            <View style={styles.upperDadosBox}>
+                                <Text style={styles.textContaDadosTitle}>
+                                    Senha
+                                </Text>
+                                <TouchableOpacity style={styles.btnEditarDados} onPress={() => setModalAberto2(true)}>
+                                    <FontAwesome name='edit' size={25} color='black'></FontAwesome>
+                                </TouchableOpacity>
+                            </View>
+                            <Text style={styles.textContaDadosSenha}>
+                                    **************
+                            </Text>
+                        </View>
+                        
+                      
+                        <TouchableOpacity style={styles.dadosContaBoxDelete}>
                             <Text style={styles.btnDeletar}>Deletar</Text>
                         </TouchableOpacity>
+                        
+                    </View>
 
                 </View>
-                
-                </ScrollView>
-                </View>
             </View>
+            </ScrollView>
         </View>
+        
     )
 }
 
