@@ -12,41 +12,22 @@ const Lista = ({ navigation }) => {
     const [modalAberto, setModalAberto] = useState(false);
     const [tarefa, setTarefa] = useState([])
     const getTarefaById = async idSelecionado => {
+        setModalAberto(true);
         const requestOptions = {
             method: 'GET',
             headers: { 'Content-type': 'application/json' }
         }
         try {
-            await fetch('http://localhost:3000/tarefa/' + idSelecionado, requestOptions)
-            setTarefa(tarefa.filter(tarefa => tarefa.id != idSelecionado))
+            const response = await fetch('http://localhost:3000/tarefa/' + idSelecionado, requestOptions)
+            const dadosId = response.json()
+            dadosId.then(
+                (val) => setTarefa(val)
+            )
+            tarefa.filter((idDesejado) => {return idSelecionado == idDesejado.idTarefa})
         } catch (error) {
             console.error(error)
             setTarefa([])
         }
-        tarefa.map((dados) => {
-        return (
-            <Modal visible={modalAberto} transparent={true}>
-
-                <ScrollView style={styles.containerModal}>
-                    <View style={styles.modalContent}>
-                    
-                        <View style={{
-                            flexFlow: "end",
-                            justifyContent: 'space-between',
-                            flexDirection: 'row',
-                            width: "100%",
-                        }}
-                        key={dados.idtarefa}>
-                        <ItemListaModal tarefa={dados.nome} data_tarefa={dados.data_tarefa}
-                            descricao={dados.descricao} prioridade={dados.prioridade}>
-                        </ItemListaModal>
-                        </View>
-                    </View>
-                </ScrollView>
-            </Modal>
-        )})
-        const [modalAberto, setModalAberto] = useState(false);
-        setModalAberto(true);
     }
     const getTarefa = async () => {
         try {
@@ -78,6 +59,30 @@ const Lista = ({ navigation }) => {
                 <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
             </View>
 
+            <Modal visible={modalAberto} transparent={true}>
+                <ScrollView style={styles.containerModal}>
+                    <View style={styles.modalContent}>
+                    {
+                        tarefa.map((dadosId) => {
+                        return (
+                        <View style={{
+                            flexFlow: "end",
+                            justifyContent: 'space-between',
+                            flexDirection: 'row',
+                            width: "100%",
+                        }}
+                        key={dadosId.idtarefa}>
+                        <ItemListaModal id={dadosId.tarefa} tarefa={dadosId.nome} data_tarefa={dadosId.data_tarefa}
+                            descricao={dadosId.descricao} prioridade={dadosId.prioridade}>
+                        </ItemListaModal>
+                        </View>
+                            )
+                        })
+                    }
+                    </View>
+                </ScrollView>
+            </Modal>
+
             <View style={styles.main}>
                 <Text style={styles.titulo}>Lista de Tarefas</Text>
                 <View style={styles.containerLista}>
@@ -93,11 +98,11 @@ const Lista = ({ navigation }) => {
                                         <ItemLista tarefa={dados.nome}>
                                         </ItemLista>
                                     </TouchableOpacity>
-
+                                
 
                                     
-                            </View>
-                            )
+                                    </View>
+                                    )
                         })
                     }
                 </View>

@@ -1,12 +1,13 @@
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Lista from './pages/Lista';
-import Ranking from './pages/Ranking';
+// import Ranking from './pages/Ranking';
 import Conquistas from './pages/Conquistas';
 import Opcoes from './pages/Opcoes';
+import Conta from './pages/Conta'
 
 
-import {Entypo, Feather, MaterialCommunityIcons } from '@expo/vector-icons'
+import {Entypo,FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
 
@@ -33,18 +34,26 @@ export default function Routes(){
             }}
             />
 
-            <Tab.Screen name="Ranking" component={Ranking}
+            {/* <Tab.Screen name="Ranking" component={Ranking}
             options={{
                 tabBarIcon:({size,color})=>(
                     <MaterialCommunityIcons name="podium-gold"size={size} color={color}/>
                 )
             }}
-            />
+            /> */}
 
             <Tab.Screen name="Conquistas" component={Conquistas}
              options={{
                 tabBarIcon:({size,color})=>(
                     <MaterialCommunityIcons name="star-check" size={size} color={color} />
+                )
+            }}
+            />
+
+<Tab.Screen name="Conta" component={Conta}
+            options={{
+                tabBarIcon:({size,color})=>(
+                    <FontAwesome5 name="user-circle"size={size} color={color}/>
                 )
             }}
             />

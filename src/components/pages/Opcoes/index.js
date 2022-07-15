@@ -12,16 +12,16 @@ const Opcoes = ({navigation}) => {
             <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
                 <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
             </TouchableOpacity>
-                <Text style={styles.numerosHeader}>3/3</Text>
+                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
                 <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
             </View>
             <View style={styles.main}>
                 <Text style={styles.titulo}>Opções</Text>
                 <View style={styles.containerLista}>
                     
-                <TouchableOpacity onPress={() => navigation.navigate("Conta")}style={styles.grupoList}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate("Conta")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Conta</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     
                     <TouchableOpacity onPress={() => navigation.navigate("Ajuda")}style={styles.grupoList}>
                         <Text style={styles.textTarefa}>Ajuda</Text>

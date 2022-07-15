@@ -64,7 +64,11 @@ const Login = ({navigation}) =>{
             <TouchableOpacity
               style={styles.btnLogin}
               // onPress={validateLogin}
+<<<<<<< HEAD:src/components/auth/Login/index.js
               onPress={() =>navigation.navigate('Navigation')}
+=======
+              onPress={() => navigation.navigate('Navigation')} 
+>>>>>>> fcc39a67801f9a2d833d47668ce5ac29a81fb89a:src/components/pages/Login/index.js
               >
               <Text style={styles.textBtnLogin}>Login</Text>
             </TouchableOpacity>

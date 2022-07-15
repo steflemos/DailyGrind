@@ -12,9 +12,10 @@ const Conquistas = ({navigation}) => {
                 <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
                 <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
             </TouchableOpacity>
-                <Text style={styles.numerosHeader}>3/3</Text>
+                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
                 <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
             </View>
+            
             <View style={styles.main}>
                 <Text style={styles.titulo}>Conquistas</Text>
                 <View style={styles.containerLista}>
