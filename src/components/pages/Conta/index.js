@@ -24,8 +24,8 @@ const Conta = ({navigation}) => {
                     <ScrollView style= {{ width:'100%'}}>
                 <Modal visible={modalAberto} transparent={true}>
                     
-                    <View style={styles.containerModal}>
-                        <View style={StyleSheet.modalContent}>
+                    <View style={styles.containerModal2}>
+                        <View style={StyleSheet.modalContent2}>
                             <View style={{
                                 flexFlow: "end",
                                 justifyContent:'space-between',
@@ -50,6 +50,7 @@ const Conta = ({navigation}) => {
                     </View>
                     
                 </Modal>
+
                 <Modal visible={modalAberto2} transparent={true}>
 
                  
@@ -70,11 +71,11 @@ const Conta = ({navigation}) => {
                                 </TouchableOpacity>
                             </View>
                             
-                            <View style={styles.containerInputs2}>
+                            <View style={styles.containerInputs}>
                             
-                            <TextInput placeholder="Senha Atual" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
-                            <TextInput placeholder="Nova Senha" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
-                            <TextInput placeholder="Repita a Nova Senha" style={styles.input2} multiline={true} placeholderTextColor="#fff" />
+                            <TextInput placeholder="Senha Atual" style={styles.input}/>
+                            <TextInput placeholder="Nova Senha" style={styles.input}/>
+                            <TextInput placeholder="Repita a Nova Senha" style={styles.input}/>
 
                             </View>
                         </View>

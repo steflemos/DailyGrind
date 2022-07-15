@@ -203,11 +203,10 @@ dadosContaBoxDelete:{
 },
 
 containerModal:{
-  flex: 1,
-  flexDirection: 'column',
-  marginTop: 600,
   backgroundColor: '#615D6C',
   width: "100%",
+  height:200,
+  alignContent:"flex-end",
   padding: 15,
   borderTopLeftRadius: 40,
   borderTopRightRadius: 40,
