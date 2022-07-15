@@ -128,6 +128,7 @@ const App = () => {
                       )
                     })
                   }
+                  
                 </ScrollView>
                 
               </View>
