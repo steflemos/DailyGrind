@@ -117,17 +117,18 @@ dadosContaBoxNick:{
 
 upperDadosBox:{
   height:40,
-  justifyContent:"space-around",
+  justifyContent:'space-between',
   flexDirection:"row",
   alignItems:"center",
   marginLeft: 20,
   marginRight: 20,
-  width: '100%'
+  width: '100%',
+ 
 },
 textContaDadosTitle:{
   color:'#000',
   fontSize:15,
-  marginRight: 100
+ 
 },
 textContaDadosSenha:{
   color:'#000',
@@ -137,7 +138,7 @@ textContaDadosSenha:{
 
 btnEditarDados:{
   color:'#000',
-  marginLeft: 100,
+  
   alignItems:"center",
   padding: 1,
   width: 50,
@@ -165,7 +166,7 @@ dadosContaBox:{
 textContaDadosTitleEmail:{
   color:'#000',
   fontSize:15,
-  marginLeft: -300
+  
 },
 textContaDados:{
   color:'#000',
