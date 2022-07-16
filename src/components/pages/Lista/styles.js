@@ -17,11 +17,11 @@ header:{
   borderBottomColor: "#fff",
   borderBottomWidth: 1,
 },
-containerInputs:{
-  display:"flex",
-  alignItems:"center",
-  flexDirection:"column",
-},
+// containerInputs:{
+//   display:"flex",
+//   alignItems:"center",
+//   flexDirection:"column",
+// },
 controleIndex:{
     height:45,
     width:45,
@@ -102,8 +102,7 @@ containerLista2:{
   height:'20%',
   borderBottomLeftRadius:7,
   borderBottomRightRadius:7,
-  alignItems:"center",
-  marginTop:-1,
+  marginTop:2,
 },
 tarefaCriada:{
   backgroundColor:'#CAE5FF',
@@ -146,29 +145,51 @@ marginRight:25,
 borderRadius:100,
 
 },
-inputAdd:{
-  backgroundColor:'#c2c2c2',
-  width:'120%',
-  height:50,
-  marginLeft:-30
+ViewAddTask:{
+  width:'100%',
+  height:'100%',
+  alignItems:'center',
+  justifyContent:'space-between',
+
   
 
 },
-ViewTask:{
-  backgroundColor:'#000',
-justifyContent:'space-between',
-flexDirection:'row',
-alignItems:'center',
-marginRight:-30
+ContainerInputs:{
+  flexDirection:'row',
+  width:'100%',
+  height:'100%',
+
 },
-viewInput:{
-  justifyContent:'space-around',
-  flexDirection:'column'
+InputTask:{
+  backgroundColor:'#C7DFFF',
+  height: 50,
+  color:'#6A6A6A',
+  marginTop:10,
+  fontSize:17,
+  fontWeight:'bold',
+  borderTopLeftRadius:7,
+  borderTopRightRadius:7,
+  marginLeft:20
+
 },
-viewTextTask:{
-  backgroundColor:'#c2c2c2',
-  width:'80%',
-  height:50,
+ViewInputTextAdd:{
+  width:'70%'
+
+},
+Viewbotao:{
+  width:'30%',
+  height:'100%',
+  alignItems:'center',
+justifyContent:'center',
+
+},
+viewBotaoAdd:{
+  height:90,
+  width:90,
+  backgroundColor:'#89BBFE',
+  borderRadius:90,
+  alignItems:'center',
+  justifyContent:'center',
 }
 
 })

@@ -1,7 +1,7 @@
 import react, { useState } from "react"
 import { KeyboardAvoidingView, TouchableOpacity, View } from "react-native"
-import {TextInput} from 'react-native-paper'
-import { MaterialIcons } from "@expo/vector-icons"
+ import {TextInput} from 'react-native-paper'
+import { MaterialIcons,FontAwesome} from "@expo/vector-icons"
 import styles from "./styles"
 
 const Taskinputfield = (props) => {
@@ -34,40 +34,46 @@ const Taskinputfield = (props) => {
 
     }
     return (
-        <KeyboardAvoidingView>
-            <View style ={styles.ViewTask}>
-        <View style ={styles.viewInput}>
-            <View style ={{backgroundColor:'#c2c2c2',
-            height:'100%'
-        }}>
-            <TextInput 
-            multiline={true}
-                style = {styles.inputAdd}
+        <KeyboardAvoidingView style ={styles.ViewAddTask}>
+        <View style ={styles.ContainerInputs}>
+
+    <View style ={styles.ViewInputTextAdd}>
+
+            <View >
+                <TextInput style ={styles.InputTask}
+                multiline={true}
+                activeUnderlineColor="#615D6C"
+                underlineColor="#615D6C"
                 value={descricao}
-                placeholder="Escreva uma tarefa"
+                label="Escreva uma tarefa"
                 onChangeText={handleDescricaoChange}
-            />
+                />
             </View>
-           
-       <View>
-            <TextInput
-             
+
+        <View >
+            <TextInput style ={styles.InputTask}
                 value={xp}
-                style = {styles.inputAdd}
-                placeholder="XP"
+                label="XP"
+                placeholder="Pontos de Recompensa"
                 type="number"
+                left={<TextInput.Icon name="diamond" size ={20} color = "#615D6C"/>}
+                activeUnderlineColor="#615D6C"
+                underlineColor="#615D6C"
                 onChangeText={handleXpChange}
-            />
-         </View>
-             </View>
-             <View style = {styles.btnAdd}>
+                />
+        </View>
+     </View>
+
+        <View style ={styles.Viewbotao}>
+            <View style ={styles.viewBotaoAdd}>
              <TouchableOpacity onPress={postTask}>
-                <MaterialIcons name="add" size={30} />
+                <MaterialIcons name="add" size={50} />
             </TouchableOpacity>
             </View>
-           
-            </View>
-        </KeyboardAvoidingView>
+        </View>
+
+    </View>
+ </KeyboardAvoidingView>
     )
 }
 export default Taskinputfield
