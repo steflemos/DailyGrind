@@ -5,13 +5,80 @@ import { TextInput} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 
+export const usuarioLogado = []
 
 
-
-const Login = ({navigation}) =>{
+ function Login  ({navigation}) {
+  const [usuario, setUsuario] = useState([]);
   const [emailInput, setEmailInput] = useState('')
   const [passwordInput, setPasswordInput] = useState('')
   const [errorMessage, setErrorMessage] = useState(null)
+
+
+  const getUsuario = async () => {
+    try{
+         const response = await fetch('http://localhost:3000/usuario')
+         const data = response.json()
+         data.then(
+           (val) => setUsuario(val)
+         )
+       } catch(error){
+         console.log('Erro: ' + error)
+         setUsuario([])
+       }
+  }
+
+  getUsuario()
+
+  const [loading, setLoading] = useState(false)
+  const [textLoading, setTextLoading] = useState('Carregando, aguarde um momento.')
+  const [loadingColor, setLoadingColor] = useState('#fff')
+  const [loadingBackground, setLoadingBackground] = useState('none')
+
+  const verificaLogin = async () => {
+    
+    setTimeout(() => {
+      console.log(usuario)
+      if(usuario.find((login) => {return emailInput === login.email || login.nome === emailInput }) != undefined){
+           console.log('Logado', usuario.filter(login => {return emailInput === login.email}))
+           if(usuario.find((login) => {return passwordInput === login.senha}) != undefined){
+                setTimeout(() => {
+                     usuarioLogado.push(usuario.find((login) => {return login.email === emailInput && passwordInput === login.senha}))
+                     console.log(usuarioLogado)
+                     setTimeout(() => {
+                          setLoading(false)
+                          navigation.navigate('Lista')
+                     },400)
+                     
+                }, 600)
+           }else{
+                console.log('error2')
+                setTimeout(() => {
+                     setTextLoading('Email ou senha errados!')
+                     setLoadingBackground('#f01707')
+                     setTimeout(() => {
+                          setLoading(false)
+                          setTextLoading('Carregando, aguarde um momento.')
+                          setLoadingBackground('none')
+                     },3000)
+                },400)
+           }
+      }else{
+           console.log('error1')
+           setTimeout(() => {
+                setTextLoading('Email ou senha errados!')
+                setLoadingBackground('#f01707')
+                setTimeout(() => {
+                     setLoading(false)
+                     setTextLoading('Carregando, aguarde um momento.')
+                     setLoadingBackground('none')
+                },3000)
+           },400)
+           
+      }
+ }, 1000)   
+
+  }
 
   function validateLogin() {
     if ((emailInput, passwordInput) !== '') {
@@ -66,7 +133,7 @@ const Login = ({navigation}) =>{
               // onPress={validateLogin}
               // onPress={() =>navigation.navigate('Navigation')}
 
-              onPress={() => navigation.navigate('Navigation')} 
+              onPress={() => verificaLogin()} 
               >
               <Text style={styles.textBtnLogin}>Login</Text>
             </TouchableOpacity>
