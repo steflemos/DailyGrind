@@ -5,21 +5,32 @@ export default StyleSheet.create({
 
     container:{
         backgroundColor:'#6F8AB7',
-        height:'100%',    
+        height:'100%',  
+        alignItems:'center',
+        justifyContent:'center'     
     },
     imgControle:{
         display:"flex",
         alignItems:"center",
         flexDirection:"column",
-        marginTop: 40
+        marginBottom:30,
+        width:'100%',
+        marginTop:-40
+
 
     },
     controle:{
-        width:180,
-        height:180,
+        width:200,
+        height:200,
         marginBottom:-30
 
-    }, 
+    },
+    TextLogin:{
+        fontSize:45,
+        fontStyle:"italic",
+        fontWeight:"bold",
+        color:"#fff",
+    },
     setError:{
         marginTop:5,
         marginBottom:-15,
@@ -32,7 +43,10 @@ export default StyleSheet.create({
     containerInputs:{
         display:"flex",
         alignItems:"center",
+        justifyContent:'center',
         flexDirection:"column",
+        width:'100%',
+
         
 
 
@@ -45,7 +59,7 @@ export default StyleSheet.create({
         borderTopLeftRadius:10,
         borderBottomLeftRadius:10,
         borderBottomEndRadius:10,
-        marginTop: 30,
+        marginTop: 15,
         fontSize: 17,
         fontWeight:"bold",
         paddingLeft: 15
@@ -70,7 +84,7 @@ export default StyleSheet.create({
         backgroundColor:'#ACEDFF',
         width:'70%',
         height:47,
-        marginTop:20,
+        marginTop:25,
         justifyContent: 'center',
         borderRadius:10,
     },

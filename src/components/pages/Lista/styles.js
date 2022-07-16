@@ -180,7 +180,6 @@ containerLista:{
   height:'80%',
   borderTopLeftRadius:7,
   borderTopRightRadius:7,
-  alignItems:"center",
   marginTop:10,
 },
 containerLista2:{
@@ -277,6 +276,8 @@ viewBotaoAdd:{
   borderRadius:90,
   alignItems:'center',
   justifyContent:'center',
-}
+},
+
+
 
 })

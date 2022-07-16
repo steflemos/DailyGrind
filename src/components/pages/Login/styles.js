@@ -5,7 +5,9 @@ export default StyleSheet.create({
 
     container:{
         backgroundColor:'#6F8AB7',
-        height:'100%',    
+        height:'100%', 
+        alignItems:'center',
+        justifyContent:'center'   
     },
     imgControle:{
         display:"flex",
@@ -30,6 +32,7 @@ export default StyleSheet.create({
         display:"flex",
         alignItems:"center",
         flexDirection:"column",
+        width:'100%',
         
 
 
@@ -42,7 +45,7 @@ export default StyleSheet.create({
         borderTopLeftRadius:10,
         borderBottomLeftRadius:10,
         borderBottomEndRadius:10,
-        marginTop: 30,
+        marginTop: 15,
         fontSize: 17,
         fontWeight:"bold",
         borderBottomColor:"#fff",
@@ -68,7 +71,7 @@ export default StyleSheet.create({
         backgroundColor:'#ACEDFF',
         width:'70%',
         height:47,
-        marginTop:20,
+        marginTop:25,
         justifyContent: 'center',
         borderRadius:10,
     },
