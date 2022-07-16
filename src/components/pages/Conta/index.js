@@ -15,10 +15,44 @@ const Conta = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
     const [confirm, setConfirm] = useState('');
+    const [newPasswordInput, setNewPasswordInput] = useState('');
     const ptsXp = 10;
     const [error, setError] = useState(null);
     console.log(UsuarioLogado[0].apelido);
     const id = UsuarioLogado[0].idusuario;
+
+    
+    const putUsuarioSenha = async () => {
+        if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
+            try {
+                const requestOptions = {
+                    method: 'put',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        senha: newPasswordInput
+                    })
+                }
+                const response = await fetch('http://localhost:3000/tarefa/' + id, requestOptions)
+                const data = response.json()
+                console.log(data);
+                data.then(
+                  (val) => setUsuario(val)
+                )
+                UsuarioLogado[0].splice(0, 1, usuario.find((login) => {login.senha}))
+                setModalAberto(false)
+                console.log(UsuarioLogado);
+            } catch (error) {
+                console.log('Erro:' + error)
+                setNewPasswordInput('')
+                setPasswordInput('')
+                setConfirm('')
+            }
+        } else {
+            
+        }
+
+
+    }
 
     
   const deleteUsuario = async () => {
@@ -93,16 +127,20 @@ const Conta = ({navigation}) => {
                                 <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto2(false)}>
                                     <Ionicons name='close-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto2(false)}>
+                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => putUsuarioSenha()}>
                                     <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
                             </View>
                             
                             <View style={styles.containerInputs}>
                             
-                            <TextInput placeholder="Senha Atual" style={styles.input}/>
-                            <TextInput placeholder="Nova Senha" style={styles.input}/>
-                            <TextInput placeholder="Repita a Nova Senha" style={styles.input}/>
+                            <TextInput placeholder="Senha Atual" onChangeText={passwordInput => setPasswordInput(passwordInput)}
+                            value={passwordInput}
+                            style={styles.input}/>
+                            <TextInput placeholder="Nova Senha"onChangeText={newPassword => setNewPasswordInput(newPassword)}
+                            value={newPasswordInput} style={styles.input}/>
+                            <TextInput placeholder="Repita a Nova Senha"onChangeText={confirm => setConfirm(confirm)}
+                            value={confirm} style={styles.input}/>
 
                             </View>
                         </View>
