@@ -1,12 +1,40 @@
-import React from "react";
-import {View, Text, TouchableOpacity} from "react-native"
-import {MaterialIcons, Feather,FontAwesome} from "@expo/vector-icons"
-import {styles} from "./styles";
-import { StyleSheet } from "react-native";
+import React, {useState} from "react";
+import {View, Text, TouchableOpacity, Modal, TextInput} from "react-native"
+import {MaterialIcons, Feather,FontAwesome, Ionicons} from "@expo/vector-icons"
+import styles from "./styles";
 
 const Taskitem = (props) => {
+    const [modalAberto, setModalAberto] = useState(false);
     return(
+        
     <View style ={{  alignItems:"center", flexDirection:'column'}}>
+        <Modal visible={modalAberto} transparent={true}>
+                    <View style={styles.containerModal2}>
+                        <View styles={styles.aaa}>
+                        <View style={styles.viewbtnFechar}>
+                            <View style={{fontWeight:"bold", color:"#fff", marginLeft:10}}>DailyGrind:</View>
+                            <TouchableOpacity style={styles.btnFechar}>
+                                <Text style={styles.x}>X</Text>
+                            </TouchableOpacity>
+                        </View>
+                        
+                         <View style={styles.viewText}><Text style={styles.textExcluir}>Você deseja excluir a tarefa ?</Text></View>
+                         </View>
+                        <View style={styles.posicionarView}>
+                        <View style={styles.viewFantasma}></View>
+                            <View style={styles.viewBtnModal}>
+                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto(false)}>
+                                    <Text style={styles.textBtnModal}>Cancelar</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => props.deleteTask()}>
+                                    <Text style={styles.textBtnModal}>Ok!</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+                </Modal>
+
+
         <View style ={{backgroundColor:'#E2E2E2',width:'90%', marginTop:20,borderRadius:10,
          shadowOffset:{
             width:1,
@@ -75,7 +103,7 @@ const Taskitem = (props) => {
                      alignItems:'center',
                      justifyContent:'center'
                 }}>
-                <TouchableOpacity onPress={() => props.deleteTask()}>
+                <TouchableOpacity onPress={() => setModalAberto(true)}>
                     <MaterialIcons name="delete-forever" size={30} color ='#e34242'/>
                 </TouchableOpacity>
                 </View>
@@ -83,6 +111,7 @@ const Taskitem = (props) => {
              </View>  
             </View>
         </View>
+      
     </View>
     )
 }

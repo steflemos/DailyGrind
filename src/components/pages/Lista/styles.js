@@ -28,6 +28,93 @@ controleIndex:{
     marginLeft:'10%',
    
 },
+
+containerModal2:{
+  height: 150,
+  backgroundColor: '#6F8AB7',
+  width: "60%",
+  marginLeft:'20%',
+  marginTop:285,
+  justifyContent:"center",
+  borderRadius:20,
+  flexDirection:"column",
+  
+  
+  
+},
+posicionarView:{
+width:'100%',
+justifyContent:"space-between",
+flexDirection:"row",
+marginBottom:60
+
+},
+viewFantasma:{
+width:'1%'
+
+},
+viewBtnModal:{
+  flexDirection:"row",
+  alignItems:"center",
+  width:'70%',
+  justifyContent:"space-between",
+  marginTop:60,
+  marginRight:10
+},
+viewText:{
+  width:'100%',
+  marginLeft:10
+},
+textExcluir:{
+  fontWeight:"bold",
+  color:'#fff',
+},
+aaa:{
+width:'100%',
+},
+
+x:{
+  fontWeight:"bold",
+  color:'#fff',
+  marginRight:1.5,
+  marginTop:1
+},
+viewbtnFechar:{
+  flexDirection:"row",
+  justifyContent:"space-between",
+  alignItems:"center",
+  marginTop:60,
+  width:'100%'
+  
+},
+btnFechar:{
+  height: 30,
+  width: 30,
+  borderRadius:30,
+  backgroundColor:'#cd5c5c',
+  justifyContent:"center",
+  alignItems:"center",
+  marginRight:10
+},
+btnExitModal2:{
+  padding:6,
+  backgroundColor:'#91ABD6',
+  borderRadius:20
+},
+
+textBtnModal:{
+  fontWeight:"bold",
+  fontSize:14,
+  color:'#fff'
+},
+containerInputs2:{
+  display:"flex",
+  alignItems:"center",
+  flexDirection:"column",
+},
+
+
+
 containerModal:{
   flex: 1,
   flexDirection: 'column',
