@@ -5,7 +5,7 @@ import { TextInput} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 
-export const usuarioLogado = []
+export const UsuarioLogado = []
 
 
  function Login  ({navigation}) {
@@ -43,11 +43,11 @@ export const usuarioLogado = []
            console.log('Logado', usuario.filter(login => {return emailInput === login.email}))
            if(usuario.find((login) => {return passwordInput === login.senha}) != undefined){
                 setTimeout(() => {
-                     usuarioLogado.push(usuario.find((login) => {return login.email === emailInput && passwordInput === login.senha}))
-                     console.log(usuarioLogado)
+                     UsuarioLogado.push(usuario.find((login) => {return login.email === emailInput && passwordInput === login.senha}))
+                     console.log(UsuarioLogado)
                      setTimeout(() => {
                           setLoading(false)
-                          navigation.navigate('Lista')
+                          navigation.navigate('Navigation')
                      },400)
                      
                 }, 600)

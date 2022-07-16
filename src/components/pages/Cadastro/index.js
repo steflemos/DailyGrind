@@ -54,6 +54,7 @@ const Cadastro = ({navigation}) =>{
               })
           }
           await fetch('http://localhost:3000/usuario/', requestOptions)
+          navigation.navigate('Login')
       } catch (error) {
           console.log('Erro:' + error)
           setUsuario('')

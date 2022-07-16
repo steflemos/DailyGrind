@@ -3,11 +3,38 @@ import { View, Image,Text, TouchableOpacity, TextInput, StyleSheet, Modal, Scrol
 import styles from "./styles";
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
+import { UsuarioLogado } from "../Login";
 
 
 const Conta = ({navigation}) => {
     const [modalAberto, setModalAberto] = useState(false);
     const [modalAberto2, setModalAberto2] = useState(false);
+    const [usuario, setUsuario] = useState([]);
+    //const [aDadosUsuario, setADadosUsuario] = useState([]);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [passwordInput, setPasswordInput] = useState('');
+    const [confirm, setConfirm] = useState('');
+    const ptsXp = 10;
+    const [error, setError] = useState(null);
+    console.log(UsuarioLogado[0].apelido);
+    const id = UsuarioLogado[0].idusuario;
+
+    
+  const deleteUsuario = async () => {
+    const requestOptions = {
+      method: 'delete',
+      headers: {'Content-type': 'application/json'}
+    }
+    try{
+      await fetch('http://localhost:3000/usuario/' + id, requestOptions)
+      navigation.navigate('Login')
+    } catch(error){
+      console.log("Erro: " + error)
+    }
+  }
+
+
     return(
         
         <View style={styles.container}>
@@ -16,7 +43,7 @@ const Conta = ({navigation}) => {
                 <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
             </TouchableOpacity>
                 {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-                <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
+                <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
             </View>
             <View style={styles.main}>
                 <Text style={styles.titulo}>Conta</Text>
@@ -103,7 +130,7 @@ const Conta = ({navigation}) => {
                                 <FontAwesome name='edit' size={25} color='black'></FontAwesome>
                              </TouchableOpacity>
                             </View>
-                            <Text style={styles.textContaDadosSenha}>TeTeFANI666 </Text>
+                            <Text style={styles.textContaDadosSenha}>{UsuarioLogado[0].apelido}</Text>
                         </View>
 
                     </View>
@@ -113,7 +140,7 @@ const Conta = ({navigation}) => {
                         <Text style={styles.textContaDadosTitleEmail}> Email </Text>
 
                         </View>
-                        <Text style={styles.textContaDados}>vini22bubu@gmail.com </Text>
+                        <Text style={styles.textContaDados}>{UsuarioLogado[0].email}</Text>
 
                     </View>
 
@@ -128,7 +155,7 @@ const Conta = ({navigation}) => {
                         <Text style={styles.textContaDadosSenha}> ************** </Text>
                     </View>
                     <TouchableOpacity style={styles.dadosContaBoxDelete}>
-                            <Text style={styles.btnDeletar}>Deletar</Text>
+                            <Text style={styles.btnDeletar} onPress={() => deleteUsuario()}>Deletar</Text>
                         </TouchableOpacity>
 
                 </View>
