@@ -83,21 +83,15 @@ const App = () => {
         <View style={styles.containerLista}>
             <ScrollView style= {{ width:'100%'}}>
               
-            <Modal visible={modalAberto} transparent={true}>
-                  <View style={styles.containerModal}>
+            <Modal visible={modalAberto} transparent={true} animationType='slide' style={{}}>
+            <View style={styles.containerModal}>
                       <View style={StyleSheet.modalContent}>
-                          <View style={{
-                              flexFlow: "end",
-                              justifyContent:'space-between',
-                              flexDirection:'row',
-                              width: "100%",
-                          }}>
+                          <View style={{flexDirection:'row', width: "100%",justifyContent:'space-between',}}>
+                          <View></View>
+                          <Text style={styles.titulo2}>Editar Tarefa</Text>
 
                               <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
                                   <Ionicons name='close-circle' size={50} color='white'></Ionicons>
-                              </TouchableOpacity>
-                              <TouchableOpacity style={styles.btnExitModal} onPress={() => getTasks()}>
-                                  <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
                               </TouchableOpacity>
                           </View>
                         {
@@ -110,7 +104,7 @@ const App = () => {
                           })
                         }
                   </View>
-                </View>              
+                </View>             
               </Modal>
               <View>
                 <ScrollView>

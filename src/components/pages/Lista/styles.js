@@ -118,15 +118,16 @@ containerInputs2:{
 containerModal:{
   flex: 1,
   flexDirection: 'column',
-  backgroundColor: '#615D6C',
+  backgroundColor: '#827f8a',
   width: "100%",
+  marginTop:'100%',
   padding: 15,
   borderTopLeftRadius: 40,
   borderTopRightRadius: 40,
 },
 modalContent:{
-  height: 300,
-  width: "95%",
+ 
+  width: "100%",
   backgroundColor: '#fff', 
   padding: 20,
 },
@@ -172,6 +173,13 @@ titulo:{
   fontWeight:"bold",
   fontSize:35,
   marginTop:10,
+
+},
+titulo2:{
+  color:"#fff",
+  fontWeight:"bold",
+  fontSize:35,
+  marginLeft:35
 
 },
 containerLista:{
@@ -277,6 +285,8 @@ viewBotaoAdd:{
   alignItems:'center',
   justifyContent:'center',
 },
+
+
 
 
 

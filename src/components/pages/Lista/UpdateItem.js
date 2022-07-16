@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, Keyboard, TextInput, Modal, TouchableOpacity, Image, StyleSheet} from "react-native"
+import { View, Text, ScrollView, Keyboard, Modal, TouchableOpacity, Image, StyleSheet} from "react-native"
 import Taskinputfield from "./ItemListaModal"
+import {TextInput} from 'react-native-paper'
 import Taskitem from "./ItemLista"
 import styles from "./styles"
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
@@ -43,7 +44,7 @@ const UpdateItem = (props) => {
 
     }
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style >
             
             <TextInput
                 value={descricao}
