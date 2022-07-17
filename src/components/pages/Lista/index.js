@@ -116,12 +116,24 @@ const App = () => {
     <View style={styles.header}>
 
         <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
-
+        <Text style={styles.titulo}>Tarefas</Text>
         {/* <Text style={styles.numerosHeader}>3/3</Text> */}
+      <View style={{flexDirection:"column",marginRight:'7%'}}>
+        <View style ={styles.viewUp}>
+          <Image style={styles.up} source={require('../../../styles/assets/up.png')} />
+        </View>
+        <View style ={styles.viewXP}>
+       <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
         <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
+        <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
+        </View>
+        <View style ={styles.viewUp}>
+          <Image style={styles.up} source={require('../../../styles/assets/retangulo.png')} />
+        </View>
+     </View>
     </View>
     <View style={styles.main}>
-        <Text style={styles.titulo}>Tarefas</Text>
+       
         <View style={styles.containerLista}>
             <ScrollView style= {{ width:'100%'}}>
               
@@ -133,7 +145,7 @@ const App = () => {
                           <Text style={styles.titulo2}>Editar Tarefa</Text>
 
                               <TouchableOpacity style={styles.btnExitModal} onPress={() => getTasks()}>
-                                  <Ionicons name='close-circle' size={50} color='white'></Ionicons>
+                                  <Ionicons name='close-circle' size={50} color='#4A4848'></Ionicons>
                               </TouchableOpacity>
                           </View>
                         {

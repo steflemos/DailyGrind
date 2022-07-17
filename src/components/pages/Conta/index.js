@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import { View, Image,Text, TouchableOpacity, TextInput, StyleSheet, Modal, ScrollView } from "react-native";
+import { View, Image,Text, TouchableOpacity,  StyleSheet, Modal, ScrollView } from "react-native";
 import styles from "./styles";
+import {TextInput} from 'react-native-paper'
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 import { UsuarioLogado } from "../Login";
@@ -112,16 +113,30 @@ const Conta = ({navigation}) => {
         
         <View style={styles.container}>
             <View style={styles.header}>
-            <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
-                <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
-            </TouchableOpacity>
-                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-                <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
-            </View>
-            <View style={styles.main}>
+
+                <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
+                    <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
+                </TouchableOpacity>
                 <Text style={styles.titulo}>Conta</Text>
+                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
+                <View style={{flexDirection:"column",marginRight:'7%'}}>
+                <View style ={styles.viewUp}>
+                <Image style={styles.up} source={require('../../../styles/assets/up.png')} />
+                </View>
+                <View style ={styles.viewXP}>
+                <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
+                <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
+                <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
+                </View>
+                <View style ={styles.viewUp}>
+                <Image style={styles.up} source={require('../../../styles/assets/retangulo.png')} />
+                </View>
+                </View>
+                </View>
+            <View style={styles.main}>
                 <View style={styles.containerLista}>
                     <ScrollView style= {{ width:'100%'}}>
+
                 <Modal visible={modalAberto} transparent={true}>
                     
                     <View style={styles.containerModal2}>
@@ -133,16 +148,24 @@ const Conta = ({navigation}) => {
                                 width: "100%",
                             }}>
                                 <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
-                                    <Ionicons name='close-circle' size={50} color='white'></Ionicons>
+                                    <Ionicons name='close-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.btnExitModal} onPress={() => putUsuarioApelido()}>
-                                    <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
+                                    <Ionicons name='checkmark-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
                             </View>
                             
                             <View style={styles.containerInputs}>
                             
-                            <TextInput placeholder="Novo apelido" value={newApelidoInput} onChangeText={(apelido) => setNewApelidoInput(apelido)} style={styles.input}
+                            <TextInput
+                             value={newApelidoInput} 
+                             onChangeText={(apelido) => setNewApelidoInput(apelido)} 
+                             placeholder="Novo apelido" 
+                             style={styles.inputApelido}
+                             type="text"
+                             activeUnderlineColor="#B8B8B8"
+                             underlineColor="#B8B8B8"
+                             
                             />
 
                             </View>

@@ -28,6 +28,25 @@ controleIndex:{
     marginLeft:'10%',
    
 },
+stars:{
+  height:20,
+  width:20,
+},
+up:{
+  height:20,
+  width:20,
+},
+viewXP:{
+  flexDirection:"row",
+  justifyContent:'center',
+  marginRight:'5%'
+},
+viewUp:{
+  alignItems:'center',
+  justifyContent:'center',
+  marginRight:'5%'
+
+},
 
 containerModal2:{
   height: 150,
@@ -118,7 +137,7 @@ containerInputs2:{
 containerModal:{
   flex: 1,
   flexDirection: 'column',
-  backgroundColor: '#827f8a',
+  backgroundColor: '#B8B8B8',
   width: "100%",
   marginTop:'100%',
   padding: 15,
@@ -135,9 +154,8 @@ btnExitModal:{
   width: 50,
 },
 levels:{
-height:35,
-width:35,
-marginRight:'10%',
+color:'#fff',
+fontSize:15,
 
 },
 numerosHeader:{
@@ -173,10 +191,12 @@ titulo:{
   fontWeight:"bold",
   fontSize:35,
   marginTop:10,
+  marginLeft:10
+
 
 },
 titulo2:{
-  color:"#fff",
+  color:"#4A4848",
   fontWeight:"bold",
   fontSize:35,
   marginLeft:35
@@ -185,7 +205,7 @@ titulo2:{
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'80%',
+  height:'90%',
   borderTopLeftRadius:7,
   borderTopRightRadius:7,
   marginTop:10,
@@ -278,10 +298,10 @@ justifyContent:'center',
 
 },
 viewBotaoAdd:{
-  height:90,
-  width:90,
+  height:70,
+  width:70,
   backgroundColor:'#89BBFE',
-  borderRadius:90,
+  borderRadius:70,
   alignItems:'center',
   justifyContent:'center',
 },

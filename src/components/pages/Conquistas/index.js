@@ -110,16 +110,30 @@ const Conquistas = ({navigation}) => {
       }, [navigation]);
     return(
         <View style={styles.container}>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
+             <View style={styles.header}>
+
+            <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
                 <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
             </TouchableOpacity>
-                {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-                <Text style={styles.levels}>XP{xpUsuarioDisplay}</Text>
+            <Text style={styles.titulo}>Conquistas</Text>
+            {/* <Text style={styles.numerosHeader}>3/3</Text> */}
+            <View style={{flexDirection:"column",marginRight:'7%'}}>
+            <View style ={styles.viewUp}>
+            <Image style={styles.up} source={require('../../../styles/assets/up.png')} />
+            </View>
+            <View style ={styles.viewXP}>
+            <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
+            <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
+            <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
+            </View>
+            <View style ={styles.viewUp}>
+            <Image style={styles.up} source={require('../../../styles/assets/retangulo.png')} />
+            </View>
+            </View>
             </View>
               
             <View style={styles.main}>
-                <Text style={styles.titulo}>Conquistas</Text>
+                
                 <View style={styles.containerLista}>
                 <ScrollView contentContainerStyle={styles.iconList} style={styles.iconListOutside}>
                     <View style={styles.icon}>

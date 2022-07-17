@@ -25,10 +25,29 @@ controleIndex:{
 btnControle:{
   marginLeft:'10%',
 },
+stars:{
+  height:20,
+  width:20,
+},
+up:{
+  height:20,
+  width:20,
+},
+viewXP:{
+  flexDirection:"row",
+  justifyContent:'center',
+  marginRight:'5%'
+},
+viewUp:{
+  alignItems:'center',
+  justifyContent:'center',
+  marginRight:'5%'
+
+},
 levels:{
-height:35,
-width:35,
-marginRight:'10%',
+color:'#fff',
+fontSize:15,
+
 
 },
 numerosHeader:{
@@ -50,12 +69,13 @@ titulo:{
   fontWeight:"bold",
   fontSize:35,
   marginTop:10,
+  marginLeft:10
 
 },
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'100%',
+  height:'110%',
   borderRadius:7,
   marginTop:10,
 },

@@ -3,7 +3,7 @@ import { View, Text, ScrollView, Keyboard, Modal, TouchableOpacity, Image, Style
 import Taskinputfield from "./ItemListaModal"
 import {TextInput} from 'react-native-paper'
 import Taskitem from "./ItemLista"
-import styles from "./styles"
+import styles from "./styleUpdateTask"
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 
@@ -44,20 +44,31 @@ const UpdateItem = (props) => {
 
     }
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style ={styles.container}>
             
             <TextInput
                 value={descricao}
-                placeholder="Escreva uma tarefa"
                 onChangeText={handleDescricaoChange}
+                label="Nome da Tarefa"
+                style={styles.input}
+                type="text"
+                activeUnderlineColor="#B8B8B8"
+                underlineColor="#B8B8B8"
             />
             <TextInput
                 value={xp}
-                placeholder="XP"
                 onChangeText={handleXpChange}
+                placeholder="Pontos de Recompensa"
+                label="XP"
+                style={styles.inputXP}
+                type="text"
+                left={<TextInput.Icon name="diamond" color = "#615D6C" />}
+                activeUnderlineColor="#B8B8B8"
+                underlineColor="#B8B8B8"
             />
-            <TouchableOpacity onPress={postTask}>
-                <MaterialIcons name="add" size={24} />
+
+            <TouchableOpacity onPress={postTask} style ={styles.btnSalvar}>
+            <Text style ={styles.textSalvar}>SALVAR</Text>
             </TouchableOpacity>
 
         </KeyboardAvoidingView>

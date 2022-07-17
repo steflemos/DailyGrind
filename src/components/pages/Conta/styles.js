@@ -26,10 +26,28 @@ btnControle:{
 marginLeft:'10%',
 },
 
+stars:{
+  height:20,
+  width:20,
+},
+up:{
+  height:20,
+  width:20,
+},
+viewXP:{
+  flexDirection:"row",
+  justifyContent:'center',
+  marginRight:'5%'
+},
+viewUp:{
+  alignItems:'center',
+  justifyContent:'center',
+  marginRight:'5%'
+
+},
 levels:{
-    height:35,
-    width:35,
-    marginRight:'10%',
+color:'#fff',
+fontSize:15,
 
 },
 
@@ -44,12 +62,13 @@ titulo:{
   color:"#fff",
   fontWeight:"bold",
   fontSize:35,
-  marginTop:10
+  marginTop:10,
+  marginLeft:10
 },
 containerLista:{
   backgroundColor:"#fff",
   width:'95%',
-  height:'100%',
+  height:'110%',
   borderRadius:7,
   alignItems:"center",
   marginTop:10,
@@ -233,8 +252,8 @@ containerModal:{
 containerModal2:{
   flex: 1,
   flexDirection: 'column',
-  marginTop: 460,
-  backgroundColor: '#615D6C',
+  marginTop: 600,
+  backgroundColor: '#B8B8B8',
   width: "100%",
   padding: 15,
   borderTopLeftRadius: 40,
@@ -271,15 +290,18 @@ containerInputs2:{
   flexDirection:"column",
 },
 
-input:{
-  width:'70%',
-  height:47,
-  backgroundColor: '#fff',
-  borderRadius:10,
-  marginTop: 30,
-  fontSize: 17,
-  fontWeight:"bold",
-  paddingLeft: 15
+inputApelido:{
+  width:'90%',
+        height:60,
+        backgroundColor: '#D9D9D9',
+        borderTopLeftRadius:15,
+        borderTopRightRadius:15,
+        borderBottomLeftRadius:15,
+        borderBottomRightRadius:15,
+        fontSize: 17,
+        fontWeight:"bold",
+        marginTop:25,
+        paddingLeft: 15
 
   
 
