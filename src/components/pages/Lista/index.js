@@ -6,10 +6,13 @@ import styles from "./styles"
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 import UpdateItem from "./UpdateItem";
+import { UsuarioLogado } from "../Login";
 
 const App = () => {
   const[modalAberto, setModalAberto] = useState(false)
   const [tasks, setTasks] = useState([])
+  const [usuario, setUsuario] = ([]);
+  let xpUsuario = UsuarioLogado[0].pontos_recompensa
   const addTask = () => {
     getTasks()
     Keyboard.dismiss()
@@ -22,6 +25,45 @@ const App = () => {
     try{
       await fetch('http://localhost:3000/tarefa/' + deleteid, requestOptions)
       setTasks(tasks.filter(task => task.id != deleteid))
+      getTasks()
+    } catch(error){
+      console.log("Erro: " + error)
+      setTasks([])
+    }
+  }
+
+  const updateUsuario = async () => {
+    try {
+        const requestOptions = {
+            method: 'put',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                apelido: UsuarioLogado[0].apelido,
+                email: UsuarioLogado[0].email,
+                pontos_recompensa: UsuarioLogado[0].pontos_recompensa,
+                senha: UsuarioLogado[0].senha
+            })
+        }
+        const response = await fetch('http://localhost:3000/usuario/' + UsuarioLogado[0].idusuario, requestOptions)
+        const data = response.json()
+        data.then(
+          (val) => setUsuario(val)
+        )
+    } catch (error) {
+        console.log('Erro:' + error)
+    }
+
+}
+  const taskDone = async (deleteid, xptarefa) => {
+    const requestOptions = {
+      method: 'delete',
+      headers: {'Content-type': 'application/json'}
+    }
+    try{
+      await fetch('http://localhost:3000/tarefa/' + deleteid, requestOptions)
+      setTasks(tasks.filter(task => task.id != deleteid))
+      UsuarioLogado[0].pontos_recompensa = xpUsuario + xptarefa;
+      updateUsuario()
       getTasks()
     } catch(error){
       console.log("Erro: " + error)
@@ -76,7 +118,7 @@ const App = () => {
         <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
 
         {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-        <Image style={styles.levels} source={require('../../../styles/assets/levels.png')} />
+        <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
     </View>
     <View style={styles.main}>
         <Text style={styles.titulo}>Tarefas</Text>
@@ -117,6 +159,7 @@ const App = () => {
                           xp= {data.pontos_recompensa}
                           deleteTask={() => deleteTask(data.idtarefa)}
                           updateTaskHandle={() => getTaskById(data.idtarefa)}
+                          taskDone={() => taskDone(data.idtarefa, data.pontos_recompensa)}
                           />
                         </View>
                       )

@@ -17,7 +17,6 @@ const Conta = ({navigation}) => {
     const [confirm, setConfirm] = useState('');
     const [newPasswordInput, setNewPasswordInput] = useState('');
     const [newApelidoInput, setNewApelidoInput] = useState('');
-    const ptsXp = 10;
     const [error, setError] = useState(null);
     
 

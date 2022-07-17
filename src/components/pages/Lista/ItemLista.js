@@ -12,7 +12,7 @@ const Taskitem = (props) => {
                     <View style={styles.containerModal2}>
                         <View styles={styles.aaa}>
                         <View style={styles.viewbtnFechar}>
-                            <View style={{fontWeight:"bold", color:"#fff", marginLeft:10}}>DailyGrind:</View>
+                            <View style={{fontWeight:"bold", color:"#fff", marginLeft:10}}><Text>Confirmação</Text></View>
                             <TouchableOpacity style={styles.btnFechar} onPress={() => setModalAberto(false)}>
                                 <Text style={styles.x}>X</Text>
                             </TouchableOpacity>
@@ -83,7 +83,7 @@ const Taskitem = (props) => {
             <View style = {{flexDirection:'column', alignContent:'space-between',width:'20%',height:'90%',marginLeft:20}}>
 
                 <View style ={{height:'33%', alignItems:'center',justifyContent:'center',}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => props.taskDone()}>
                     <FontAwesome name="check-square-o" size={27} color ='#0dad0a'/>
                 </TouchableOpacity>
                 </View>

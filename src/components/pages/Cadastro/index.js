@@ -12,7 +12,7 @@ const Cadastro = ({navigation}) =>{
   const [email, setEmail] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   const [confirm, setConfirm] = useState('');
-  const ptsXp = 10;
+  const ptsXp = 0;
   const [error, setError] = useState(null);
      
   const getUsuario = async () => {
