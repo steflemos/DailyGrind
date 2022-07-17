@@ -90,7 +90,7 @@ const App = () => {
                           <View></View>
                           <Text style={styles.titulo2}>Editar Tarefa</Text>
 
-                              <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
+                              <TouchableOpacity style={styles.btnExitModal} onPress={() => getTasks()}>
                                   <Ionicons name='close-circle' size={50} color='white'></Ionicons>
                               </TouchableOpacity>
                           </View>

@@ -44,7 +44,7 @@ const UpdateItem = (props) => {
 
     }
     return (
-        <KeyboardAvoidingView style >
+        <KeyboardAvoidingView>
             
             <TextInput
                 value={descricao}

@@ -59,12 +59,19 @@ containerLista:{
   borderRadius:7,
   marginTop:10,
 },
+iconList:{
+  flex:1,
+  flexDirection:"column",
+  justifyContent:'space-around',
+  paddingTop:30,
+  paddingBottom: 10
+},
+
 icon:{
   flex:1,
   flexDirection:"row",
   justifyContent:'space-around',
   width:'100%',
-  marginTop:30,
 },
 iconBox:{
   shadowOffset:{
@@ -82,6 +89,7 @@ iconBox:{
 imgIcon:{
   marginTop: 22,
   width:55,
+  height: 50,
 },
 
 

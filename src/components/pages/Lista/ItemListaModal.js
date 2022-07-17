@@ -67,7 +67,7 @@ const Taskinputfield = (props) => {
         <View style ={styles.Viewbotao}>
             <View style ={styles.viewBotaoAdd}>
              <TouchableOpacity onPress={postTask}>
-                <MaterialIcons name="add" size={50} />
+                <MaterialIcons name="add" size={30} />
             </TouchableOpacity>
             </View>
         </View>

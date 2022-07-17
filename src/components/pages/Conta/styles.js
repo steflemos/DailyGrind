@@ -181,7 +181,26 @@ btnDeletar:{
   alignItems:"center",
   textAlign: "center",
 },
-
+dadosContaBoxLogout:{
+  
+  backgroundColor:'#888695',
+  width:'95%',
+  marginTop:15,
+  marginBottom: 25,
+  height:55,
+  justifyContent:"space-around",
+  flexDirection:"column",
+  alignItems:"center",
+  textAlign: "center",
+  borderRadius:5,
+  shadowOffset:{
+  width:1,
+  height:1,
+  },
+  shadowRadius:5,
+  shadowColor:'#C1C1C1',
+  elevation: 3
+},
 dadosContaBoxDelete:{
   backgroundColor:'#e05a5a',
   width:'95%',

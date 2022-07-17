@@ -16,36 +16,74 @@ const Conta = ({navigation}) => {
     const [passwordInput, setPasswordInput] = useState('');
     const [confirm, setConfirm] = useState('');
     const [newPasswordInput, setNewPasswordInput] = useState('');
+    const [newApelidoInput, setNewApelidoInput] = useState('');
     const ptsXp = 10;
     const [error, setError] = useState(null);
-    console.log(UsuarioLogado[0].apelido);
-    const id = UsuarioLogado[0].idusuario;
+    
+
 
     
     const putUsuarioSenha = async () => {
-        if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
+        if ((UsuarioLogado[0].senha == ApelidoInput && newPasswordInput == confirm)) {
             try {
+                console.log(newPasswordInput);
                 const requestOptions = {
                     method: 'put',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
+                        apelido: UsuarioLogado[0].apelido,
+                        email: UsuarioLogado[0].email,
+                        pontos_recompensa: UsuarioLogado[0].pontos_recompensa,
                         senha: newPasswordInput
                     })
                 }
-                const response = await fetch('http://localhost:3000/tarefa/' + id, requestOptions)
+                const response = await fetch('http://localhost:3000/usuario/' + UsuarioLogado[0].idusuario, requestOptions)
                 const data = response.json()
-                console.log(data);
                 data.then(
                   (val) => setUsuario(val)
                 )
-                UsuarioLogado[0].splice(0, 1, usuario.find((login) => {login.senha}))
-                setModalAberto(false)
-                console.log(UsuarioLogado);
+                console.log(UsuarioLogado[0]);
+                UsuarioLogado[0].senha = newPasswordInput
+                console.log(UsuarioLogado[0]);
+                setModalAberto2(false)
             } catch (error) {
                 console.log('Erro:' + error)
                 setNewPasswordInput('')
                 setPasswordInput('')
                 setConfirm('')
+            }
+        } else {
+            
+        }
+
+
+    }
+    const putUsuarioApelido = async () => {
+        if ((newApelidoInput != "")) {
+            try {
+                console.log(newApelidoInput);
+                const requestOptions = {
+                    method: 'put',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        senha: UsuarioLogado[0].senha,
+                        email: UsuarioLogado[0].email,
+                        pontos_recompensa: UsuarioLogado[0].pontos_recompensa,
+                        apelido: newApelidoInput
+                    })
+                }
+                const response = await fetch('http://localhost:3000/usuario/' + UsuarioLogado[0].idusuario, requestOptions)
+                const data = response.json()
+                data.then(
+                  (val) => setUsuario(val)
+                )
+                console.log(UsuarioLogado[0]);
+                UsuarioLogado[0].apelido = newApelidoInput
+                console.log(UsuarioLogado[0]);
+                setModalAberto(false)
+            } catch (error) {
+                console.log('Erro:' + error)
+                setNewApelidoInput('')
             }
         } else {
             
@@ -96,14 +134,14 @@ const Conta = ({navigation}) => {
                                 <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
                                     <Ionicons name='close-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
+                                <TouchableOpacity style={styles.btnExitModal} onPress={() => putUsuarioApelido()}>
                                     <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
                                 </TouchableOpacity>
                             </View>
                             
                             <View style={styles.containerInputs}>
                             
-                            <TextInput placeholder="Novo apelido" style={styles.input}
+                            <TextInput placeholder="Novo apelido" value={newApelidoInput} onChangeText={(apelido) => setNewApelidoInput(apelido)} style={styles.input}
                             />
 
                             </View>
@@ -192,9 +230,12 @@ const Conta = ({navigation}) => {
                         </View>
                         <Text style={styles.textContaDadosSenha}> ************** </Text>
                     </View>
+                    <TouchableOpacity style={styles.dadosContaBoxLogout}>
+                            <Text style={styles.btnDeletar} onPress={() => navigation.navigate('Login')}>Sair da conta</Text>
+                    </TouchableOpacity>
                     <TouchableOpacity style={styles.dadosContaBoxDelete}>
                             <Text style={styles.btnDeletar} onPress={() => deleteUsuario()}>Deletar</Text>
-                        </TouchableOpacity>
+                    </TouchableOpacity>
 
                 </View>
                 
