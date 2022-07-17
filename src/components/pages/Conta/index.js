@@ -4,9 +4,11 @@ import styles from "./styles";
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 import { UsuarioLogado } from "../Login";
+import { ImagemConta } from "../Conquistas";
 
 
 const Conta = ({navigation}) => {
+    console.log(ImagemConta[0]);
     const [modalAberto, setModalAberto] = useState(false);
     const [modalAberto2, setModalAberto2] = useState(false);
     const [usuario, setUsuario] = useState([]);
