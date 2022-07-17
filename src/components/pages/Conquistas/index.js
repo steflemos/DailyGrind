@@ -4,7 +4,7 @@ import styles from "./styles";
 import { UsuarioLogado } from "../Login";
 
 
-
+export const imagemConta= 0;
 const Conquistas = ({navigation}) => {
     const [viewImagem, setViewImagem] = useState('none')
     const [viewImagem2, setViewImagem2] = useState('none')
@@ -24,6 +24,7 @@ const Conquistas = ({navigation}) => {
         setXpUsuarioDisplay(xpUsuario);
         if (xpUsuario >= 15 && xpUsuario < 75){
             setViewImagem("flex");
+            imagemConta= 1;
         }
         else if(xpUsuario >= 75 && xpUsuario < 150){
             setViewImagem("flex")           
