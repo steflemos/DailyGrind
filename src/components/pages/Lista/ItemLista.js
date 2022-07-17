@@ -13,7 +13,7 @@ const Taskitem = (props) => {
                         <View styles={styles.aaa}>
                         <View style={styles.viewbtnFechar}>
                             <View style={{fontWeight:"bold", color:"#fff", marginLeft:10}}>DailyGrind:</View>
-                            <TouchableOpacity style={styles.btnFechar}>
+                            <TouchableOpacity style={styles.btnFechar} onPress={() => setModalAberto(false)}>
                                 <Text style={styles.x}>X</Text>
                             </TouchableOpacity>
                         </View>
@@ -23,9 +23,6 @@ const Taskitem = (props) => {
                         <View style={styles.posicionarView}>
                         <View style={styles.viewFantasma}></View>
                             <View style={styles.viewBtnModal}>
-                                <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto(false)}>
-                                    <Text style={styles.textBtnModal}>Cancelar</Text>
-                                </TouchableOpacity>
                                 <TouchableOpacity style={styles.btnExitModal2} onPress={() => props.deleteTask()}>
                                     <Text style={styles.textBtnModal}>Ok!</Text>
                                 </TouchableOpacity>

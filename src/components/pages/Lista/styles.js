@@ -56,8 +56,8 @@ width:'1%'
 viewBtnModal:{
   flexDirection:"row",
   alignItems:"center",
-  width:'70%',
-  justifyContent:"space-between",
+  width:'100%',
+  justifyContent:"center",
   marginTop:60,
   marginRight:10
 },
