@@ -6,89 +6,99 @@ import { UsuarioLogado } from "../Login";
 
 
 const Conquistas = ({navigation}) => {
+    const [viewImagem, setViewImagem] = useState('none')
+    const [viewImagem2, setViewImagem2] = useState('none')
+    const [viewImagem3, setViewImagem3] = useState('none')
+    const [viewImagem4, setViewImagem4] = useState('none')
+    const [viewImagem5, setViewImagem5] = useState('none')
+    const [viewImagem6, setViewImagem6] = useState('none')
+    const [viewImagem7, setViewImagem7 ]= useState('none')
+    const [viewImagem8, setViewImagem8 ]= useState('none')
+    const [viewImagem9, setViewImagem9 ]= useState('none')
     let xpUsuario = UsuarioLogado[0].pontos_recompensa;
-    let [viewImagem, viewImagem2, viewImagem3, viewImagem4, viewImagem5, viewImagem6, viewImagem7, viewImagem8, viewImagem9] = ["none", "none", "none", "none", "none", "none", "none", "none", "none"];
+    const [xpUsuarioDisplay, setXpUsuarioDisplay] = useState(xpUsuario)
+    // let [viewImagem, viewImagem2, viewImagem3, viewImagem4, viewImagem5, viewImagem6, viewImagem7, viewImagem8, viewImagem9] = ["none", "none", "none", "none", "none", "none", "none", "none", "none"];
     const showConquistas = async() => {
         xpUsuario = UsuarioLogado[0].pontos_recompensa;
         console.log(xpUsuario);
+        setXpUsuarioDisplay(xpUsuario);
         if (xpUsuario >= 15 && xpUsuario < 75){
-            viewImagem= "flex";
+            setViewImagem("flex");
         }
         else if(xpUsuario >= 75 && xpUsuario < 150){
-            viewImagem= "flex";
-            viewImagem2= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
         }
         else if(xpUsuario >= 150 && xpUsuario < 300){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
         }
         else if(xpUsuario >= 300 && xpUsuario < 400){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
         }
         else if(xpUsuario >= 400 && xpUsuario < 500){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
-            viewImagem5= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
+            setViewImagem5("flex")
         }
         else if(xpUsuario >= 500 && xpUsuario < 600){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
-            viewImagem5= "flex";
-            viewImagem6= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
+            setViewImagem5("flex")
+            setViewImagem6("flex")
         }
         else if(xpUsuario >= 600 && xpUsuario < 700){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
-            viewImagem5= "flex";
-            viewImagem6= "flex";
-            viewImagem7= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
+            setViewImagem5("flex")
+            setViewImagem6("flex")
+            setViewImagem7("flex")
         }
         else if(xpUsuario >= 700 && xpUsuario < 800){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
-            viewImagem5= "flex";
-            viewImagem6= "flex";
-            viewImagem7= "flex";
-            viewImagem8= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
+            setViewImagem5("flex")
+            setViewImagem6("flex")
+            setViewImagem7("flex")
+            setViewImagem8("flex")
         }
         else if(xpUsuario >= 800){
-            viewImagem= "flex";
-            viewImagem2= "flex";
-            viewImagem3= "flex";
-            viewImagem4= "flex";
-            viewImagem5= "flex";
-            viewImagem6= "flex";
-            viewImagem7= "flex";
-            viewImagem8= "flex";
-            viewImagem9= "flex";
+            setViewImagem("flex")           
+            setViewImagem2("flex")
+            setViewImagem3("flex")
+            setViewImagem4("flex")
+            setViewImagem5("flex")
+            setViewImagem6("flex")
+            setViewImagem7("flex")
+            setViewImagem8("flex")
+            setViewImagem9("flex")
         }
     else{
         }
-        return xpUsuario;
-    }    
+    }  
+
     React.useEffect(() => {
         const unsubscribe = navigation.addListener('focus', () => {
-            showConquistas()
           // The screen is focused
+          showConquistas()
           // Call any action and update data
         });
     
         // Return the function to unsubscribe from the event so it gets removed on unmount
         return unsubscribe;
       }, [navigation]);
-
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -96,7 +106,7 @@ const Conquistas = ({navigation}) => {
                 <Image style={styles.controleIndex} source={require('../../../styles/assets/controle.png')} />
             </TouchableOpacity>
                 {/* <Text style={styles.numerosHeader}>3/3</Text> */}
-                <Text style={styles.levels} value={showConquistas()}></Text>
+                <Text style={styles.levels}>XP{xpUsuarioDisplay}</Text>
             </View>
               
             <View style={styles.main}>
