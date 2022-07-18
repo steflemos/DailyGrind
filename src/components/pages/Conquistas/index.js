@@ -138,35 +138,35 @@ const Conquistas = ({navigation}) => {
                 <ScrollView contentContainerStyle={styles.iconList} style={styles.iconListOutside}>
                     <View style={styles.icon}>
                         <View style={[styles.iconBox, {display: viewImagem}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/spiderman.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem2}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/deadpool.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/ww.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem3}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/coringa.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/ferro.png')} />
                         </View>
                     </View>
                     <View style={styles.icon}>
                         <View style={[styles.iconBox, {display: viewImagem4}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/thor.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem5}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/deadpool.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/groot.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem6}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/coringa.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/catwoman.png')} />
                         </View>
                     </View>
                     <View style={styles.icon}>
                         <View style={[styles.iconBox, {display: viewImagem7}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/superhero.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem8}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/deadpool.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
                         </View>
                         <View style={[styles.iconBox, {display: viewImagem9}]}>
-                            <Image style={styles.imgIcon} source={require('../../../styles/assets/coringa.png')} />
+                            <Image style={styles.imgIcon} source={require('../../../styles/assets/superman.png')} />
                         </View>
                     </View>
                 </ScrollView>
