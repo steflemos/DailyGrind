@@ -34,7 +34,16 @@ const Conta = ({navigation}) => {
     const [newPasswordInput, setNewPasswordInput] = useState('');
     const [newApelidoInput, setNewApelidoInput] = useState('');
     const [error, setError] = useState(null);
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('focus', () => {
+          // The screen is focused
+          colocaImagem()
+          // Call any action and update data
+        });
     
+        // Return the function to unsubscribe from the event so it gets removed on unmount
+        return unsubscribe;
+      }, [navigation]);
 
 
     
