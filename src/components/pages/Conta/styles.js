@@ -252,7 +252,7 @@ containerModal:{
 containerModal2:{
   flex: 1,
   flexDirection: 'column',
-  marginTop: 600,
+  marginTop: 500,
   backgroundColor: '#B8B8B8',
   width: "100%",
   padding: 15,
@@ -325,6 +325,12 @@ input2:{
     
   
 
+},
+TextEditName:{
+  color:"#4A4848",
+  fontWeight:"bold",
+  fontSize:30,
+  marginTop:10,
 },
 
 

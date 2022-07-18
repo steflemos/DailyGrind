@@ -124,7 +124,7 @@ const App = () => {
         </View>
         <View style ={styles.viewXP}>
        <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
-        <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
+        <Text style={styles.levels} >{UsuarioLogado[0].pontos_recompensa}</Text>
         <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
         </View>
         <View style ={styles.viewUp}>

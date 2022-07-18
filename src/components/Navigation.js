@@ -26,10 +26,10 @@ export default function Routes(){
             tabBarInactiveTintColor: '#fff'
             }}
         >
-            <Tab.Screen name="Lista" component={Lista}
+            <Tab.Screen name="Home" component={Lista}
             options={{
                 tabBarIcon:({size,color})=>(
-                    <Entypo name= "add-to-list" size={size} color={color}/>
+                    <Entypo name= "home" size={size} color={color}/>
                 )
             }}
             />

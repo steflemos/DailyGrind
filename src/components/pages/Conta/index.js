@@ -125,7 +125,7 @@ const Conta = ({navigation}) => {
                 </View>
                 <View style ={styles.viewXP}>
                 <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
-                <Text style={styles.levels} >XP {UsuarioLogado[0].pontos_recompensa}</Text>
+                <Text style={styles.levels} >{UsuarioLogado[0].pontos_recompensa}</Text>
                 <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
                 </View>
                 <View style ={styles.viewUp}>
@@ -137,7 +137,7 @@ const Conta = ({navigation}) => {
                 <View style={styles.containerLista}>
                     <ScrollView style= {{ width:'100%'}}>
 
-                <Modal visible={modalAberto} transparent={true}>
+                <Modal visible={modalAberto} transparent={true} animationType='slide'>
                     
                     <View style={styles.containerModal2}>
                         <View style={StyleSheet.modalContent2}>
@@ -150,6 +150,7 @@ const Conta = ({navigation}) => {
                                 <TouchableOpacity style={styles.btnExitModal} onPress={() => setModalAberto(false)}>
                                     <Ionicons name='close-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
+                                <Text style ={styles.TextEditName}>Editar Apelido</Text>
                                 <TouchableOpacity style={styles.btnExitModal} onPress={() => putUsuarioApelido()}>
                                     <Ionicons name='checkmark-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
@@ -174,7 +175,7 @@ const Conta = ({navigation}) => {
                     
                 </Modal>
 
-                <Modal visible={modalAberto2} transparent={true}>
+                <Modal visible={modalAberto2} transparent={true} animationType='slide'>
 
                  
                     
@@ -187,22 +188,42 @@ const Conta = ({navigation}) => {
                                 width: "100%",
                             }}>
                                 <TouchableOpacity style={styles.btnExitModal2} onPress={() => setModalAberto2(false)}>
-                                    <Ionicons name='close-circle' size={50} color='white'></Ionicons>
+                                    <Ionicons name='close-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
+                                <Text style ={styles.TextEditName}>Editar Senha</Text>
                                 <TouchableOpacity style={styles.btnExitModal2} onPress={() => putUsuarioSenha()}>
-                                    <Ionicons name='checkmark-circle' size={50} color='white'></Ionicons>
+                                    <Ionicons name='checkmark-circle' size={50} color='#4A4848'></Ionicons>
                                 </TouchableOpacity>
                             </View>
                             
                             <View style={styles.containerInputs}>
                             
-                            <TextInput placeholder="Senha Atual" onChangeText={passwordInput => setPasswordInput(passwordInput)}
+                            <TextInput
+                             placeholder="Senha Atual" 
+                             onChangeText={passwordInput => setPasswordInput(passwordInput)}
                             value={passwordInput}
-                            style={styles.input}/>
-                            <TextInput placeholder="Nova Senha"onChangeText={newPassword => setNewPasswordInput(newPassword)}
-                            value={newPasswordInput} style={styles.input}/>
-                            <TextInput placeholder="Repita a Nova Senha"onChangeText={confirm => setConfirm(confirm)}
-                            value={confirm} style={styles.input}/>
+                           style={styles.inputApelido}
+                           type="text"
+                           activeUnderlineColor="#B8B8B8"
+                           underlineColor="#B8B8B8"
+                            />
+                            <TextInput
+                             placeholder="Nova Senha"
+                             onChangeText={newPassword => setNewPasswordInput(newPassword)}
+                            value={newPasswordInput} 
+                           style={styles.inputApelido}
+                           type="text"
+                           activeUnderlineColor="#B8B8B8"
+                           underlineColor="#B8B8B8"/>
+
+                            <TextInput
+                            placeholder="Repita a Nova Senha"
+                            onChangeText={confirm => setConfirm(confirm)}
+                            value={confirm} 
+                           style={styles.inputApelido}
+                           type="text"
+                           activeUnderlineColor="#B8B8B8"
+                           underlineColor="#B8B8B8"/>
 
                             </View>
                         </View>
