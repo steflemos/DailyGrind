@@ -30,10 +30,7 @@ export const UsuarioLogado = []
 
   getUsuario()
 
-  const [loading, setLoading] = useState(false)
-  const [textLoading, setTextLoading] = useState('Carregando, aguarde um momento.')
-  const [loadingColor, setLoadingColor] = useState('#fff')
-  const [loadingBackground, setLoadingBackground] = useState('none')
+  const [textLoading, setTextLoading] = useState(null)
 
   const verificaLogin = async () => {
     
@@ -46,7 +43,7 @@ export const UsuarioLogado = []
                      UsuarioLogado.push(usuario.find((login) => {return login.email === emailInput && passwordInput === login.senha}))
                      console.log(UsuarioLogado)
                      setTimeout(() => {
-                          setLoading(false)
+                          
                           navigation.navigate('Navigation')
                      },400)
                      
@@ -54,24 +51,22 @@ export const UsuarioLogado = []
            }else{
                 console.log('error2')
                 setTimeout(() => {
-                     setTextLoading('Email ou senha errados!')
-                     setLoadingBackground('#f01707')
+                    setErrorMessage("Não encontramos seu email e/ou senha!*")
                      setTimeout(() => {
-                          setLoading(false)
+                          
                           setTextLoading('Carregando, aguarde um momento.')
-                          setLoadingBackground('none')
+                          
                      },3000)
                 },400)
            }
       }else{
            console.log('error1')
            setTimeout(() => {
-                setTextLoading('Email ou senha errados!')
-                setLoadingBackground('#f01707')
+                setErrorMessage("Não encontramos seu email e/ou senha!*")
                 setTimeout(() => {
-                     setLoading(false)
+                     
                      setTextLoading('Carregando, aguarde um momento.')
-                     setLoadingBackground('none')
+                     
                 },3000)
            },400)
            
@@ -82,7 +77,7 @@ export const UsuarioLogado = []
 
   function validateLogin() {
     if ((emailInput, passwordInput) !== '') {
-      signIn({ email: emailInput, password: passwordInput })
+      signIn({ email: emailInput, password: passwordInput }) 
     } else {
       setErrorMessage(null)
       setErrorMessage("PREENCHA OS CAMPOS!*")
@@ -125,6 +120,7 @@ export const UsuarioLogado = []
             />
 
             <Text style={styles.mensagemErro}>{errorMessage}</Text>
+            {/* <Text style={styles.mensagemErro}>{textLoading}</Text> */}
 
            
 

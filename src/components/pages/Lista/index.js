@@ -72,12 +72,13 @@ const App = () => {
   }
   const getTaskById = async idSelecionado => {
      setModalAberto(true);
+     console.log(idSelecionado);
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-type': 'application/json' }
     }
     try {
-        const response = await fetch('http://localhost:3000/tarefa/' + idSelecionado, requestOptions)
+        const response = await fetch('http://localhost:3000/tarefa/byid/' + idSelecionado, requestOptions)
         const dataById = response.json()
         dataById.then(
             (val) => setTasks(val)

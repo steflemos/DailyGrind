@@ -11,6 +11,9 @@ const Cadastro = ({navigation}) =>{
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
+  const [errorMessageEmail, setErrorMessageEmail] = useState(null)
+  const [errorMessageSenha, setErrorMessageSenha] = useState(null)
+  const [errorMessageNome, setErrorMessageNome] = useState(null)
   const [confirm, setConfirm] = useState('');
   const ptsXp = 0;
   const [error, setError] = useState(null);
@@ -83,19 +86,25 @@ const getUsuarioDados = () => {
                            console.log('usuario existe')
                       }
                  }else{
-                      console.log('email existe')
+                      setErrorMessageNome(null)
+                      setErrorMessageSenha(null)
+                      setErrorMessageEmail("Email já cadastrado")
                  }
                }else{
-                    console.log("senhas diferentes");
+                    setErrorMessageSenha("Senhas diferentes, tente novamente")
+                    setErrorMessageNome(null)
+                    setErrorMessageEmail(null)
                }
             }else{
                  console.log('Nome incorreto')
             }
        }else{
-            console.log('nome curto')
+            setErrorMessageNome("Apelido muito curto")
+            setErrorMessageEmail(null)
+            setErrorMessageSenha(null)
        }
   }else{
-       console.log('email errado')
+       setErrorMessageEmail("Email inválido!")
   }
 }
 
@@ -134,6 +143,7 @@ const getUsuarioDados = () => {
             activeUnderlineColor="#615D6C"
             underlineColor="#615D6C"
             />
+            <Text style={styles.mensagemErro}>{errorMessageNome}</Text>
 
             <TextInput  onChangeText={email => setEmail(email)}
             value={email}
@@ -146,6 +156,7 @@ const getUsuarioDados = () => {
             underlineColor="#615D6C"
 
             />
+            <Text style={styles.mensagemErro}>{errorMessageEmail}</Text>
 
             <TextInput 
             onChangeText={passwordInput => setPasswordInput(passwordInput)}
@@ -171,7 +182,7 @@ const getUsuarioDados = () => {
             underlineColor="#615D6C"
            
             />
-            <Text style={styles.setError}>{error}</Text>
+            <Text style={styles.mensagemErro}>{errorMessageSenha}</Text>
            
             {/* <TouchableOpacity onPress={() => salvar()} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity> */}
             <TouchableOpacity onPress={() => getUsuarioDados()} style={styles.btnLogin}><Text style={styles.textBtnLogin}>Cadastrar</Text></TouchableOpacity>
