@@ -69,36 +69,40 @@ const Conta = ({navigation}) => {
         navigation.navigate('Login');
     }
     const putUsuarioSenha = async () => {
-        if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
-            try {
-                console.log(newPasswordInput);
-                const requestOptions = {
-                    method: 'put',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        apelido: UsuarioLogado[0].apelido,
-                        email: UsuarioLogado[0].email,
-                        pontos_recompensa: UsuarioLogado[0].pontos_recompensa,
-                        senha: newPasswordInput
-                    })
+        if ((UsuarioLogado[0].senha == passwordInput)) {
+            if(newPasswordInput == confirm){
+                try {
+                    console.log(newPasswordInput);
+                    const requestOptions = {
+                        method: 'put',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            apelido: UsuarioLogado[0].apelido,
+                            email: UsuarioLogado[0].email,
+                            pontos_recompensa: UsuarioLogado[0].pontos_recompensa,
+                            senha: newPasswordInput
+                        })
+                    }
+                    const response = await fetch('http://localhost:3000/usuario/' + UsuarioLogado[0].idusuario, requestOptions)
+                    const data = response.json()
+                    data.then(
+                    (val) => setUsuario(val)
+                    )
+                    console.log(UsuarioLogado[0]);
+                    UsuarioLogado[0].senha = newPasswordInput
+                    console.log(UsuarioLogado[0]);
+                    setModalAberto2(false)
+                } catch (error) {
+                    console.log('Erro:' + error)
+                    setNewPasswordInput('')
+                    setPasswordInput('')
+                    setConfirm('')
                 }
-                const response = await fetch('http://localhost:3000/usuario/' + UsuarioLogado[0].idusuario, requestOptions)
-                const data = response.json()
-                data.then(
-                  (val) => setUsuario(val)
-                )
-                console.log(UsuarioLogado[0]);
-                UsuarioLogado[0].senha = newPasswordInput
-                console.log(UsuarioLogado[0]);
-                setModalAberto2(false)
-            } catch (error) {
-                console.log('Erro:' + error)
-                setNewPasswordInput('')
-                setPasswordInput('')
-                setConfirm('')
+            }else{
+                setError("Senhas diferentes")
             }
         } else {
-            
+            setError("Senha errada")
         }
 
 
@@ -278,7 +282,7 @@ const Conta = ({navigation}) => {
                            type="text"
                            activeUnderlineColor="#B8B8B8"
                            underlineColor="#B8B8B8"/>
-
+                            <Text color="#fff">{error}</Text>
                             </View>
                         </View>
                     </View>

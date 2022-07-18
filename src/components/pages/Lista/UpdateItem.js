@@ -12,6 +12,8 @@ import { UsuarioLogado } from "../Login";
 const UpdateItem = (props) => {
     const [descricao, setDescricao] = useState('')
     const [xp, setXp] = useState('')
+    const [errorMessage, setErrorMessage] = useState(null);
+    const [sucessMessage, setSucessMessage] = useState(null);
     const id = props.id
     console.log("olha ai bicho" + id);
     const handleDescricaoChange = descricao => setDescricao(descricao)
@@ -27,6 +29,8 @@ const UpdateItem = (props) => {
                     idusuario: UsuarioLogado[0].idusuario
                 })
               }
+              setErrorMessage(null)
+              setSucessMessage("Tarefa atualizada");
             try{
                 const response = await fetch('http://localhost:3000/tarefa/' + id, requestOptions)
                 const data = response.json()
@@ -40,7 +44,7 @@ const UpdateItem = (props) => {
                 setXp('')
             }
         } else {
-            
+            setErrorMessage("Preencha os campos")
         }
 
 
@@ -68,7 +72,8 @@ const UpdateItem = (props) => {
                 activeUnderlineColor="#B8B8B8"
                 underlineColor="#B8B8B8"
             />
-
+            <Text>{sucessMessage}</Text>
+            <Text>{errorMessage}</Text>
             <TouchableOpacity onPress={postTask} style ={styles.btnSalvar}>
             <Text style ={styles.textSalvar}>SALVAR</Text>
             </TouchableOpacity>
