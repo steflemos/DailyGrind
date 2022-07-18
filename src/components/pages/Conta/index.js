@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { View, Image,Text, TouchableOpacity,  StyleSheet, Modal, ScrollView } from "react-native";
 import styles from "./styles";
 import {TextInput} from 'react-native-paper'
@@ -11,11 +11,13 @@ import { UsuarioLogado } from "../Login";
 const Conta = ({navigation}) => {
     
     let xpUsuario = UsuarioLogado[0].pontos_recompensa;
+    const [xpUsuarioDisplay, setXpUsuarioDisplay] = useState(xpUsuario)
     const colocaImagem = async () => {
     //     console.log(ImagemConta.length);
     //     console.log(ImagemConta);
         xpUsuario = UsuarioLogado[0].pontos_recompensa;
         console.log(xpUsuario);
+        setXpUsuarioDisplay(xpUsuario);
         if (xpUsuario >= 15 && xpUsuario < 75){
             setImagemPerfil(require('../../../styles/assets/spiderman.png'));
         }
@@ -62,19 +64,7 @@ const Conta = ({navigation}) => {
     const [newPasswordInput, setNewPasswordInput] = useState('');
     const [newApelidoInput, setNewApelidoInput] = useState('');
     const [error, setError] = useState(null);
-    React.useEffect(() => {
-        const unsubscribe = navigation.addListener('focus', () => {
-          // The screen is focused
-          colocaImagem()
-          // Call any action and update data
-        });
-    
-        // Return the function to unsubscribe from the event so it gets removed on unmount
-        return unsubscribe;
-      }, [navigation]);
 
-
-    
     const putUsuarioSenha = async () => {
         if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
             try {
@@ -157,7 +147,16 @@ const Conta = ({navigation}) => {
       console.log("Erro: " + error)
     }
   }
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      // The screen is focused
+      colocaImagem()
+      // Call any action and update data
+    });
 
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [navigation]);
 
     return(
         
@@ -175,7 +174,7 @@ const Conta = ({navigation}) => {
                 </View>
                 <View style ={styles.viewXP}>
                 <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
-                <Text style={styles.levels} >{UsuarioLogado[0].pontos_recompensa}</Text>
+            <Text style={styles.levels} >{xpUsuarioDisplay}</Text>
                 <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
                 </View>
                 <View style ={styles.viewUp}>

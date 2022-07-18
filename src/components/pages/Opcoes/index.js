@@ -1,11 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Image,Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import {FontAwesome} from '@expo/vector-icons'
+import { UsuarioLogado } from "../Login";
 
 
 const Opcoes = ({navigation}) => {
+    let xpUsuario = UsuarioLogado[0].pontos_recompensa;
+    const [xpUsuarioDisplay, setXpUsuarioDisplay] = useState(xpUsuario)
+    const funcUpdate = async () =>{
+        xpUsuario = UsuarioLogado[0].pontos_recompensa;
+        console.log(xpUsuario);
+        setXpUsuarioDisplay(xpUsuario);
+    }
+
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('focus', () => {
+          // The screen is focused
+          funcUpdate()
+          // Call any action and update data
+        });
     
+        // Return the function to unsubscribe from the event so it gets removed on unmount
+        return unsubscribe;
+      }, [navigation]);
+
     return(
         <View style={styles.container}>
            <View style={styles.header}>
@@ -21,7 +40,7 @@ const Opcoes = ({navigation}) => {
                     </View>
                     <View style ={styles.viewXP}>
                     <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
-                    <Text style={styles.levels} >XP </Text>
+                    <Text style={styles.levels} >{xpUsuarioDisplay}</Text>
                     <Image style={styles.stars} source={require('../../../styles/assets/stars.png')}/>
                     </View>
                     <View style ={styles.viewUp}>
