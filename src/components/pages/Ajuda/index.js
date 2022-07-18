@@ -22,8 +22,8 @@ const Ajuda = ({navigation}) => {
                     <View styles = {styles.textos}>
                         <Text style = {styles.oque}>Como adicionar uma tarefa?</Text>
                         <Text style = {styles.text1}>Na tela de Tarefas, clique no botão (+) e preencha os campos da tela de Nova Tarefa.</Text>
-                        <Text style = {styles.qual}>Como excluir uma tarefa?</Text>
-                        <Text style = {styles.text2}>O objetivo do DailyGrind é ajudá-lo organizar sua rotina de forma simples e divertida.</Text>
+                        <Text style = {styles.qual}>Como funcionam as conquistas?</Text>
+                        <Text style = {styles.text2}>Quanto mais atividades você concluir, mais xp ganhará. O xp libera conquistas</Text>
                     </View>
                 </View>
             </View>
