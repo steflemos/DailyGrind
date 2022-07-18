@@ -5,20 +5,48 @@ import {TextInput} from 'react-native-paper'
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 import { UsuarioLogado } from "../Login";
-import { ImagemConta } from "../Conquistas";
+// import { ImagemConta } from "../Conquistas";
 
 
 const Conta = ({navigation}) => {
     
+    let xpUsuario = UsuarioLogado[0].pontos_recompensa;
     const colocaImagem = async () => {
-        console.log(ImagemConta.length);
-        console.log(ImagemConta);
-        if (ImagemConta.length > 0){
-        let i = ImagemConta.length - 1;
-        console.log(ImagemConta[i]);
-        setImagemPerfil(ImagemConta[i]);
+    //     console.log(ImagemConta.length);
+    //     console.log(ImagemConta);
+        xpUsuario = UsuarioLogado[0].pontos_recompensa;
+        console.log(xpUsuario);
+        if (xpUsuario >= 15 && xpUsuario < 75){
+            setImagemPerfil(require('../../../styles/assets/spiderman.png'));
         }
-    }
+        else if(xpUsuario >= 75 && xpUsuario < 150){
+            setImagemPerfil(require('../../../styles/assets/ww.png'));
+        }
+        else if(xpUsuario >= 150 && xpUsuario < 300){
+            setImagemPerfil(require('../../../styles/assets/ferro.png'));
+        }
+        else if(xpUsuario >= 300 && xpUsuario < 400){
+            setImagemPerfil(require('../../../styles/assets/thor.png'));
+        }
+        else if(xpUsuario >= 400 && xpUsuario < 500){
+            setImagemPerfil(require('../../../styles/assets/groot.png'));
+        }
+        else if(xpUsuario >= 500 && xpUsuario < 600){           
+            setImagemPerfil(require('../../../styles/assets/catwoman.png'));
+        }
+        else if(xpUsuario >= 600 && xpUsuario < 700){
+            setImagemPerfil(require('../../../styles/assets/superhero.png'));
+        }
+        else if(xpUsuario >= 700 && xpUsuario < 800){
+            setImagemPerfil(require('../../../styles/assets/batman.png'));
+        }
+        else if(xpUsuario >= 800){
+                       
+            setImagemPerfil(require('../../../styles/assets/superman.png'));
+        }
+    else{
+        }
+    }  
     const [imagemPerfil, setImagemPerfil] = useState(require('../../../styles/assets/user.png'));
 
 
