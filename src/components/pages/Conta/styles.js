@@ -122,6 +122,10 @@ view:{
   margin: 40,
   backgroundColor: '#ebebeb',
 },
+imgIcon:{
+  width: 50,
+  height: 50
+},
 
 dadosContaBoxNick:{
   backgroundColor:'#fff',

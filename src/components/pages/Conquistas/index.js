@@ -4,7 +4,7 @@ import styles from "./styles";
 import { UsuarioLogado } from "../Login";
 
 
-// export const ImagemConta = [];
+export const ImagemConta = [];
 const Conquistas = ({navigation}) => {
     const [viewImagem, setViewImagem] = useState('none')
     const [viewImagem2, setViewImagem2] = useState('none')
@@ -24,25 +24,25 @@ const Conquistas = ({navigation}) => {
         setXpUsuarioDisplay(xpUsuario);
         if (xpUsuario >= 15 && xpUsuario < 75){
             setViewImagem("flex");
-            // ImagemConta[0].push(1);
+            ImagemConta.push(require('../../../styles/assets/spiderman.png'));
         }
         else if(xpUsuario >= 75 && xpUsuario < 150){
             setViewImagem("flex")           
             setViewImagem2("flex")
-            // ImagemConta[0].push(2);
+            ImagemConta.push(require('../../../styles/assets/ww.png'));
         }
         else if(xpUsuario >= 150 && xpUsuario < 300){
             setViewImagem("flex")           
             setViewImagem2("flex")
             setViewImagem3("flex")
-            // ImagemConta[0].push(3);
+            ImagemConta.push(require('../../../styles/assets/ferro.png'));
         }
         else if(xpUsuario >= 300 && xpUsuario < 400){
             setViewImagem("flex")           
             setViewImagem2("flex")
             setViewImagem3("flex")
             setViewImagem4("flex")
-            // ImagemConta[0].push(4);
+            ImagemConta.push(require('../../../styles/assets/thor.png'));
         }
         else if(xpUsuario >= 400 && xpUsuario < 500){
             setViewImagem("flex")           
@@ -50,7 +50,7 @@ const Conquistas = ({navigation}) => {
             setViewImagem3("flex")
             setViewImagem4("flex")
             setViewImagem5("flex")
-            // ImagemConta[0].push(5);
+            ImagemConta.push(require('../../../styles/assets/groot.png'));
         }
         else if(xpUsuario >= 500 && xpUsuario < 600){
             setViewImagem("flex")           
@@ -59,7 +59,7 @@ const Conquistas = ({navigation}) => {
             setViewImagem4("flex")
             setViewImagem5("flex")
             setViewImagem6("flex")
-            // ImagemConta[0].push(6);
+            ImagemConta.push(require('../../../styles/assets/catwoman.png'));
         }
         else if(xpUsuario >= 600 && xpUsuario < 700){
             setViewImagem("flex")           
@@ -69,7 +69,7 @@ const Conquistas = ({navigation}) => {
             setViewImagem5("flex")
             setViewImagem6("flex")
             setViewImagem7("flex")
-            // ImagemConta[0].push(7);
+            ImagemConta.push(require('../../../styles/assets/superhero.png'));
         }
         else if(xpUsuario >= 700 && xpUsuario < 800){
             setViewImagem("flex")           
@@ -80,7 +80,7 @@ const Conquistas = ({navigation}) => {
             setViewImagem6("flex")
             setViewImagem7("flex")
             setViewImagem8("flex")
-            // ImagemConta[0].push(8);
+            ImagemConta.push(require('../../../styles/assets/batman.png'));
         }
         else if(xpUsuario >= 800){
             setViewImagem("flex")           
@@ -92,7 +92,7 @@ const Conquistas = ({navigation}) => {
             setViewImagem7("flex")
             setViewImagem8("flex")
             setViewImagem9("flex")
-            // ImagemConta[0].push(9);
+            ImagemConta.push(require('../../../styles/assets/superman.png'));
         }
     else{
         }

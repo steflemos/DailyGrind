@@ -5,11 +5,24 @@ import {TextInput} from 'react-native-paper'
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
 import { UsuarioLogado } from "../Login";
-// import { ImagemConta } from "../Conquistas";
+import { ImagemConta } from "../Conquistas";
 
 
 const Conta = ({navigation}) => {
-    // console.log(ImagemConta[0]);
+    
+    const colocaImagem = async () => {
+        console.log(ImagemConta.length);
+        console.log(ImagemConta);
+        if (ImagemConta.length > 0){
+        let i = ImagemConta.length - 1;
+        console.log(ImagemConta[i]);
+        setImagemPerfil(ImagemConta[i]);
+        }
+    }
+    const [imagemPerfil, setImagemPerfil] = useState(require('../../../styles/assets/user.png'));
+
+
+
     const [modalAberto, setModalAberto] = useState(false);
     const [modalAberto2, setModalAberto2] = useState(false);
     const [usuario, setUsuario] = useState([]);
@@ -240,7 +253,7 @@ const Conta = ({navigation}) => {
                         <View style={styles.usuarioBox}>
                             <View style={styles.view}>
                                 <View style={styles.iconBox}>
-                                <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                                <Image style={styles.imgIcon} source={imagemPerfil} />
                                 </View>  
                             </View>
                         </View>
