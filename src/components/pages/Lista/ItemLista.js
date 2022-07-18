@@ -12,7 +12,7 @@ const Taskitem = (props) => {
                     <View style={styles.containerModal2}>
                         <View styles={styles.aaa}>
                         <View style={styles.viewbtnFechar}>
-                            <View style={{fontWeight:"bold", color:"#fff", marginLeft:10}}><Text>Confirmação</Text></View>
+                            <View><Text style={{fontWeight:"bold", color:"#4A4848", marginLeft:10}}>Confirmação:</Text></View>
                             <TouchableOpacity style={styles.btnFechar} onPress={() => setModalAberto(false)}>
                                 <Text style={styles.x}>X</Text>
                             </TouchableOpacity>
@@ -30,7 +30,6 @@ const Taskitem = (props) => {
                         </View>
                     </View>
                 </Modal>
-
 
      <View style ={{backgroundColor:'#E2E2E2',width:'90%', marginTop:10,borderRadius:10,marginBottom:10,
          shadowOffset:{

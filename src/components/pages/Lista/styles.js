@@ -50,7 +50,7 @@ viewUp:{
 
 containerModal2:{
   height: 150,
-  backgroundColor: '#6F8AB7',
+  backgroundColor: '#B8B8B8',
   width: "60%",
   marginLeft:'20%',
   marginTop:285,
@@ -86,7 +86,8 @@ viewText:{
 },
 textExcluir:{
   fontWeight:"bold",
-  color:'#fff',
+  color:'#4A4848',
+
 },
 aaa:{
 width:'100%',
@@ -94,9 +95,9 @@ width:'100%',
 
 x:{
   fontWeight:"bold",
-  color:'#fff',
-  marginRight:1.5,
-  marginTop:1
+  color:'#B8B8B8',
+  marginRight:0.6,
+  marginTop:0.8
 },
 viewbtnFechar:{
   flexDirection:"row",
@@ -110,28 +111,27 @@ btnFechar:{
   height: 30,
   width: 30,
   borderRadius:30,
-  backgroundColor:'#cd5c5c',
+  backgroundColor:'#4A4848',
   justifyContent:"center",
   alignItems:"center",
   marginRight:10
 },
 btnExitModal2:{
   padding:6,
-  backgroundColor:'#91ABD6',
+  backgroundColor:'#4A4848',
   borderRadius:20
 },
 
 textBtnModal:{
   fontWeight:"bold",
   fontSize:14,
-  color:'#fff'
+  color:'#B8B8B8'
 },
 containerInputs2:{
   display:"flex",
   alignItems:"center",
   flexDirection:"column",
 },
-
 
 
 containerModal:{
