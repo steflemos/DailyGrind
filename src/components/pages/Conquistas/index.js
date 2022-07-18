@@ -6,6 +6,15 @@ import { UsuarioLogado } from "../Login";
 
 // export const ImagemConta = [];
 const Conquistas = ({navigation}) => {
+    const [modalAberto1, setModalAberto1] = useState(false)
+    const [modalAberto2, setModalAberto2] = useState(false)
+    const [modalAberto3, setModalAberto3] = useState(false)
+    const [modalAberto4, setModalAberto4] = useState(false)
+    const [modalAberto5, setModalAberto5] = useState(false)
+    const [modalAberto6, setModalAberto6] = useState(false)
+    const [modalAberto7, setModalAberto7] = useState(false)
+    const [modalAberto8, setModalAberto8] = useState(false)
+    const [modalAberto9, setModalAberto9] = useState(false)
     const [viewImagem, setViewImagem] = useState('none')
     const [viewImagem2, setViewImagem2] = useState('none')
     const [viewImagem3, setViewImagem3] = useState('none')
@@ -109,7 +118,119 @@ const Conquistas = ({navigation}) => {
         return unsubscribe;
       }, [navigation]);
     return(
+
+
+
+
         <View style={styles.container}>
+            <Modal visible={modalAberto1} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/spiderman.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Homem-Aranha </Text>
+                        <Text style={styles.textoHeroi}>Com grandes poderes vêm grandes responsabilidades, parabéns pela sua primeira conquista!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto1(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto2} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/ww.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Mulher Maravilha </Text>
+                        <Text style={styles.textoHeroi}>A guerreira amazona! Continue assim!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto2(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto3} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/ferro.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Homem de Ferro </Text>
+                        <Text style={styles.textoHeroi}>Infelizmente, nem todos nascem ricos como o Tony Stark. Continue a sua jornada!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto3(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto4} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/thor.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Thor </Text>
+                        <Text style={styles.textoHeroi}>O filho de Odin! Que a honra e a força dele esteja com você!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto4(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto5} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/groot.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Groot </Text>
+                        <Text style={styles.textoHeroi}>I am Groot. Continue o trabalho!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto5(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto6} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/catwoman.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Mulher-Gato </Text>
+                        <Text style={styles.textoHeroi}>A vida não foi fácil para Selina Kyle, e nem será para você. Continue em frente!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto6(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto7} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/superhero.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Pantera Negra </Text>
+                        <Text style={styles.textoHeroi}>Príncipe T'Challa! Se continuar assim, você vai longe!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto7(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto8} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Batman </Text>
+                        <Text style={styles.textoHeroi}>O homem-morcego nos ensinou que não importa quanto dinheiro você tenha, sempre há motivo para ficar preocupado! Mantenha a humildade, campeão.</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto8(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
+            <Modal visible={modalAberto9} transparent={true} animationType='slide'>
+                <View style={styles.modalHeroi}>
+                    <View style={styles.boxImgHeroi}>
+                        <Image style={styles.imgIcon} source={require('../../../styles/assets/superman.png')} />
+                    </View>
+                    <View style={styles.boxHeroi}>
+                        <Text style={styles.tituloHeroi}> Super-Homem </Text>
+                        <Text style={styles.textoHeroi}>Parabéns!!!! Você conquistou tudo!!! Super!!</Text>
+                    </View>
+                    <TouchableOpacity style={styles.btnHeroi} onPress={() => setModalAberto9(false)}><Text>Fechar</Text>  </TouchableOpacity>
+                </View>
+            </Modal>
              <View style={styles.header}>
 
             <TouchableOpacity onPress={() => navigation.navigate("Lista")} style ={styles.btnControle}>
@@ -137,37 +258,37 @@ const Conquistas = ({navigation}) => {
                 <View style={styles.containerLista}>
                 <ScrollView contentContainerStyle={styles.iconList} style={styles.iconListOutside}>
                     <View style={styles.icon}>
-                        <View style={[styles.iconBox, {display: viewImagem}]}>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem}]} onPress={() => setModalAberto1(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/spiderman.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem2}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem2}]} onPress={() => setModalAberto2(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/ww.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem3}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem3}]}onPress={() => setModalAberto3(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/ferro.png')} />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.icon}>
-                        <View style={[styles.iconBox, {display: viewImagem4}]}>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem4}]} onPress={() => setModalAberto4(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/thor.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem5}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem5}]} onPress={() => setModalAberto5(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/groot.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem6}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem6}]} onPress={() => setModalAberto6(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/catwoman.png')} />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.icon}>
-                        <View style={[styles.iconBox, {display: viewImagem7}]}>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem7}]} onPress={() => setModalAberto7(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/superhero.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem8}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem8}]} onPress={() => setModalAberto8(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/batman.png')} />
-                        </View>
-                        <View style={[styles.iconBox, {display: viewImagem9}]}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.iconBox, {display: viewImagem9}]} onPress={() => setModalAberto9(true)}>
                             <Image style={styles.imgIcon} source={require('../../../styles/assets/superman.png')} />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
                 </View>

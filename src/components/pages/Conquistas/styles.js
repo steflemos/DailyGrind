@@ -8,6 +8,44 @@ export default StyleSheet.create({
     backgroundColor:"#6F8AB7",
     paddingTop:15
 },
+modalHeroi:{
+  width: "60%",
+  marginLeft:'20%',
+  backgroundColor:"#fff",
+  height: 300,
+  justifyContent:"center",
+  alignItems: "center",
+  textAlign: "center",
+  flexDirection: 'column',
+  marginTop: 300,
+  marginBottom: 150,
+  alignContent:"flex-end",
+  padding: 15,
+  borderTopLeftRadius: 40,
+  borderTopRightRadius: 40,
+  borderBottomLeftRadius: 40,
+  borderBottomRightRadius: 40,
+  borderColor: "#000",
+  borderWidth: 1
+},
+boxImgHeroi:{
+
+},
+tituloHeroi:{
+  fontSize: 22,
+  fontWeight: "bold"
+},
+textoHeroi:{
+  marginTop: 5,
+  marginBottom: 15,
+  fontSize: 16,
+  fontWeight: 550
+},
+btnHeroi:{
+  backgroundColor: "#dedede",
+  borderRadius: 10,
+  padding: 5
+},
 header:{
   flexDirection: "row",
   justifyContent:"space-between",
