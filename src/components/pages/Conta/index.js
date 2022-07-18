@@ -209,6 +209,7 @@ const Conta = ({navigation}) => {
                             />
                             <TextInput
                              placeholder="Nova Senha"
+                             label=""
                              onChangeText={newPassword => setNewPasswordInput(newPassword)}
                             value={newPasswordInput} 
                            style={styles.inputApelido}
@@ -218,6 +219,7 @@ const Conta = ({navigation}) => {
 
                             <TextInput
                             placeholder="Repita a Nova Senha"
+                            label=""
                             onChangeText={confirm => setConfirm(confirm)}
                             value={confirm} 
                            style={styles.inputApelido}

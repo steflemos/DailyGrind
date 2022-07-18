@@ -8,17 +8,17 @@ const Taskitem = (props) => {
     return(
         
     <View style={{alignItems:"center", flexDirection:'column'}}>
-        <Modal visible={modalAberto} transparent={true}>
+        <Modal visible={modalAberto} transparent={true} animationType='fade' >
                     <View style={styles.containerModal2}>
                         <View styles={styles.aaa}>
                         <View style={styles.viewbtnFechar}>
                             <View><Text style={{fontWeight:"bold", color:"#4A4848", marginLeft:10}}>Confirmação:</Text></View>
                             <TouchableOpacity style={styles.btnFechar} onPress={() => setModalAberto(false)}>
-                                <Text style={styles.x}>X</Text>
+                            <Ionicons name="close" size={30} color ='#B8B8B8'/>  
                             </TouchableOpacity>
                         </View>
                         
-                         <View style={styles.viewText}><Text style={styles.textExcluir}>Você deseja excluir a tarefa ?</Text></View>
+                         <View style={styles.viewText}><Text style={styles.textExcluir}>Você deseja excluir a tarefa?</Text></View>
                          </View>
                         <View style={styles.posicionarView}>
                         <View style={styles.viewFantasma}></View>

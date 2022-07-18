@@ -87,7 +87,6 @@ viewText:{
 textExcluir:{
   fontWeight:"bold",
   color:'#4A4848',
-
 },
 aaa:{
 width:'100%',
@@ -95,9 +94,9 @@ width:'100%',
 
 x:{
   fontWeight:"bold",
-  color:'#B8B8B8',
-  marginRight:0.6,
-  marginTop:0.8
+  color:'#fff',
+  marginRight:1.5,
+  marginTop:1
 },
 viewbtnFechar:{
   flexDirection:"row",
@@ -132,6 +131,7 @@ containerInputs2:{
   alignItems:"center",
   flexDirection:"column",
 },
+
 
 
 containerModal:{
