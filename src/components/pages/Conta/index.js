@@ -26,7 +26,7 @@ const Conta = ({navigation}) => {
 
     
     const putUsuarioSenha = async () => {
-        if ((UsuarioLogado[0].senha == NewApelidoInput && newPasswordInput == confirm)) {
+        if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
             try {
                 console.log(newPasswordInput);
                 const requestOptions = {
