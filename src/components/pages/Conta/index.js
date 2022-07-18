@@ -64,7 +64,10 @@ const Conta = ({navigation}) => {
     const [newPasswordInput, setNewPasswordInput] = useState('');
     const [newApelidoInput, setNewApelidoInput] = useState('');
     const [error, setError] = useState(null);
-
+    const logOut = async () => {
+        UsuarioLogado.length = 0;
+        navigation.navigate('Login');
+    }
     const putUsuarioSenha = async () => {
         if ((UsuarioLogado[0].senha == passwordInput && newPasswordInput == confirm)) {
             try {
@@ -327,7 +330,7 @@ const Conta = ({navigation}) => {
                         <Text style={styles.textContaDadosSenha}> ************** </Text>
                     </View>
                     <TouchableOpacity style={styles.dadosContaBoxLogout}>
-                            <Text style={styles.btnDeletar} onPress={() => navigation.navigate('Login')}>Sair da conta</Text>
+                            <Text style={styles.btnDeletar} onPress={() => logOut()}>Sair da conta</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.dadosContaBoxDelete}>
                             <Text style={styles.btnDeletar} onPress={() => deleteUsuario()}>Deletar</Text>

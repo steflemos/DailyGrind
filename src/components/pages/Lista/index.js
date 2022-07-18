@@ -90,8 +90,12 @@ const App = () => {
 }
 
   const getTasks =  async () => {
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Content-type': 'application/json' }
+  }
     try{
-      const response = await fetch('http://localhost:3000/tarefa')
+      const response = await fetch('http://localhost:3000/tarefa/' + UsuarioLogado[0].idusuario, requestOptions)
       const data = response.json()
       data.then(
         (val) => setTasks(val)

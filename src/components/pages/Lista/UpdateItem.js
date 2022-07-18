@@ -6,6 +6,7 @@ import Taskitem from "./ItemLista"
 import styles from "./styleUpdateTask"
 import {MaterialIcons, FontAwesome, Ionicons} from '@expo/vector-icons'
 import { KeyboardAvoidingView } from "react-native";
+import { UsuarioLogado } from "../Login";
 
 
 const UpdateItem = (props) => {
@@ -22,7 +23,8 @@ const UpdateItem = (props) => {
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify({
                     descricao: descricao,
-                    pontos_recompensa: xp
+                    pontos_recompensa: xp,
+                    idusuario: UsuarioLogado[0].idusuario
                 })
               }
             try{

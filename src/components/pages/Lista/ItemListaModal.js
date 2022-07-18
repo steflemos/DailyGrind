@@ -3,6 +3,7 @@ import { KeyboardAvoidingView, TouchableOpacity, View } from "react-native"
  import {TextInput} from 'react-native-paper'
 import { MaterialIcons,FontAwesome} from "@expo/vector-icons"
 import styles from "./styles"
+import { UsuarioLogado } from "../Login"
 
 const Taskinputfield = (props) => {
     const [descricao, setDescricao] = useState('')
@@ -17,7 +18,8 @@ const Taskinputfield = (props) => {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         descricao: descricao,
-                        pontos_recompensa: xp
+                        pontos_recompensa: xp,
+                        idusuario: UsuarioLogado[0].idusuario
                     })
                 }
                 await fetch('http://localhost:3000/tarefa/', requestOptions)
